@@ -1,11 +1,20 @@
 !!!
 %head
   %title Hot Sheet
+  - get_css( controller ).each do |sheet|
+    = stylesheet_link_tag sheet
+  - get_js( controller ).each do |js|
+    = javascript_include_tag js
 %body
   #header
     #navigation
-    #dropdown
+      = render :partial => 'shared/navigation'
     #flash
-      = flash[:notice]
+      #message
+        - if flash[:notice]
+          %p.notice= flash[:notice]
+        - if flash[:error]
+          %p.error= flash[:error]
+      %h1 Capacity
   #content
     = yield

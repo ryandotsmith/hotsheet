@@ -1,0 +1,85 @@
+body {
+  background-color: #e8e8e8;
+  margin: 0;
+  padding: 0;
+  font-family: Lucida Grande; }
+
+a img {
+  border: none; }
+
+h1 {
+  font-family: Arial;
+  font-size: 24pt;
+  font-weight: normal; }
+
+form label {
+  display: block; }
+
+#header #flash {
+  width: 100%;
+  position: absolute; }
+  #header #flash #message {
+    position: absolute;
+    width: 100%;
+    background-color: #333333; }
+    #header #flash #message p.notice {
+      margin: 0;
+      padding: 0;
+      color: #99ccff; }
+    #header #flash #message p.error {
+      margin: 0;
+      padding: 0;
+      color: #ff6666; }
+
+#navigation {
+  height: 50px;
+  background-color: #666666; }
+  #navigation a {
+    color: #333366;
+    float: left;
+    padding: 10px 0 0 0;
+    text-align: center;
+    width: 100px;
+    height: 38px;
+    border-right: 1px solid #333333; }
+
+#content {
+  margin: 100px 0 0 0; }
+
+#center {
+  background: #FFFFFF url(/images/right-bg.gif) repeat-y scroll right center;
+  width: 600px;
+  margin: 0 0 0 50px;
+  padding: 5px 10px 0 10px; }
+  #center #capacity_today #capacity_today_table {
+    margin: 0 auto;
+    width: 510px;
+    border-collapse: collapse; }
+  #center #capacity_today thead tr {
+    color: white;
+    background-color: #666666; }
+  #center #capacity_today thead th {
+    font-size: 9pt; }
+  #center #capacity_today tbody tr {
+    background-color: #99ccff;
+    border: 1px solid white; }
+  #center #capacity_today tbody td {
+    font-size: 14pt; }
+  #center #new_capacity {
+    width: 500px;
+    margin: 40px auto;
+    padding: 0 0 15px 0;
+    overflow: hidden; }
+    #center #new_capacity .form_box {
+      margin: 0 10px 0 0;
+      float: left; }
+    #center #new_capacity .form_box_right {
+      float: right; }
+    #center #new_capacity .buttons {
+      clear: both;
+      float: right;
+      margin: 10px 0 0 0; }
+
+#right {
+  background-color: white;
+  width: 300px; }

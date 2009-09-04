@@ -10,4 +10,4 @@ Feature: Add more capacity
     And I select "09/05/2009" as the date
     And I fill in "Notes" with "need a hot load"
     When I press "save"
-    Then I should see "More capacity was added in Kansas City"
+    Then I should see "More capacity was added in Kansas CityMore Capacity was added in Kansas City"

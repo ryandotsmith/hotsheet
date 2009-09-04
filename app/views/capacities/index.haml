@@ -1,4 +1,5 @@
 #center
+  %h1 Friday 09/04
   #capacity_today
     %table{ :id => "capacity_today_table" }
       %thead
@@ -11,10 +12,25 @@
         = render @capacities
   #new_capacity
     = link_to image_tag('buttons/add_more_capacity.png'), new_capacity_url, :id=> "AddMoreCapacity"
-    #new_capacity_form{ :style => "display:none;" }
+    #new_capacity_form{ :style => "display:none" }
       - form_for @new_capacity do |form|
-        = render :partial => 'form', :locals => {:form => form}
-        = form.date_select :available_on
-        = form.submit "save", :name => 'save'
+        .form_box
+          = form.label :location, "Location"
+          = form.text_field :location
+
+          = form.label :driver_id, "Driver"
+          = form.text_field :driver_id
+
+          = form.label :priority, "Priority"
+          = form.select :priority, {:normal => 0, :high => 1, :top => 2}
+        .form_box_right
+          = form.label :notes, "Notes"
+          = form.text_field :notes
+          = form.label :available_on, "Available On"
+          = form.date_select :available_on
+        %p.buttons
+          = form.submit "save", :name => 'save'
+          or
+          = link_to "cancel", "#", :id => 'rollup', :rel => 'new_capacity_form'
 #right
 

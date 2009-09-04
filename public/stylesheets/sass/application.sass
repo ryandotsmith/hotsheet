@@ -1,0 +1,84 @@
+@import color.sass
+
+body
+  background-color = !light_gray
+  margin: 0
+  padding: 0
+  font-family: Lucida Grande
+a img 
+  border: none
+h1
+  font-family: Arial
+  font-size: 24pt
+  font-weight: normal
+form label 
+  display: block
+#header
+  #flash
+    width: 100%
+    position: absolute
+    #message
+      position: absolute
+      width: 100% 
+      background-color = !dark_gray
+      p.notice
+        margin: 0
+        padding: 0
+        color = !blue
+      p.error
+        margin: 0
+        padding: 0
+        color = !red
+#navigation
+  height: 50px
+  background-color = !med_gray
+  a
+    color = !purple
+    float: left
+    padding: 10px 0 0 0
+    text-align: center
+    width: 100px
+    height: 38px
+    border-right = "1px" "solid" !dark_gray
+#content
+  margin: 100px 0 0 0
+#center
+  background: #FFFFFF url(/images/right-bg.gif) repeat-y scroll right center
+  width: 600px
+  margin: 0 0 0 50px
+  padding: 5px 10px 0 10px
+  #capacity_today
+    #capacity_today_table
+      margin: 0 auto
+      width: 510px
+      border-collapse: collapse
+    thead
+      tr
+        color = !white
+        background-color = !med_gray
+      th
+        font-size: 9pt 
+    tbody
+      tr
+        background-color = !blue
+        border = "1px" "solid" !white
+      td
+        font-size: 14pt
+  #new_capacity
+    width: 500px
+    margin: 40px auto
+    padding: 0 0 15px 0
+    overflow: hidden
+
+    .form_box
+      margin: 0 10px 0 0
+      float: left
+    .form_box_right
+      float: right
+    .buttons
+      clear: both
+      float: right
+      margin: 10px 0 0 0
+#right
+  background-color = !white
+  width: 300px
