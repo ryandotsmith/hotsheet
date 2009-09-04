@@ -5,10 +5,10 @@ Feature: Add more capacity
 
   Scenario: Adding new capicity for today
     Given I am looking at today's capacity
-    When I click "Add More Capacity"
-    And I fill in "location" with "Kansas City"
-    And I fill in "driver" with "Leroy"
-    And I fill in "available on" with Todays Date
-    And I fill in "notes" with "need a hot load"
+    When I click the link "AddMoreCapacity"
+    And I fill in "Location" with "Kansas City"
+    And I fill in "Driver" with "Leroy"
+    And I fill in "Available On" with Todays Date
+    And I fill in "Notes" with "need a hot load"
     When I press "save"
-    Then I should see more capicity for today
+    Then I should see more capicity in "Kansas City" for today

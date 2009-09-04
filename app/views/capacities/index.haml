@@ -1,0 +1,20 @@
+#center
+  #capacity_today
+    %table{ :id => "capacity_today_table" }
+      %thead
+        %tr
+          %th Covered
+          %th Location
+          %th Driver
+          %th Notes
+      %tbody
+        = render @capacities
+  #new_capacity
+    = link_to image_tag('buttons/add_more_capacity.png'), new_capacity_url, :id=> "AddMoreCapacity"
+    #new_capacity_form{ :style => "display:none;" }
+      - form_for @new_capacity do |form|
+        = render :partial => 'form', :locals => {:form => form}
+        = form.date_select :available_on
+        = form.submit "save", :name => 'save'
+#right
+

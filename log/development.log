@@ -46,3 +46,625 @@ Migrating to CreateCapacities (20090904161903)
 [0m
   [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
   [4;36;1mSQL (1.8ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090904161903')[0m
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-04 12:41:58) [GET]
+  [4;36;1mCapacity Load (1.1ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_form (4.1ms)
+Completed in 194ms (View: 187, DB: 1) | 200 OK [http://localhost/capacities]
+
+
+Processing CapacitiesController#new (for 127.0.0.1 at 2009-09-04 12:42:05) [GET]
+
+ActionView::MissingTemplate (Missing template capacities/new.erb in view path app/views):
+  haml (2.2.3) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-04 12:42:07) [GET]
+  [4;35;1mCapacity Load (0.3ms)[0m   [0mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_form (1.8ms)
+Completed in 13ms (View: 8, DB: 0) | 200 OK [http://localhost/capacities]
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-04 12:43:01) [GET]
+  [4;36;1mCapacity Load (0.4ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_form (2.5ms)
+Completed in 24ms (View: 15, DB: 0) | 200 OK [http://localhost/capacities]
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-04 12:43:02) [GET]
+  [4;35;1mCapacity Load (0.3ms)[0m   [0mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_form (1.8ms)
+Completed in 12ms (View: 8, DB: 0) | 200 OK [http://localhost/capacities]
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-04 12:43:02) [GET]
+  [4;36;1mCapacity Load (0.4ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_form (1.8ms)
+Completed in 16ms (View: 9, DB: 0) | 200 OK [http://localhost/capacities]
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-04 12:48:29) [GET]
+  [4;35;1mCapacity Load (0.3ms)[0m   [0mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_form (2.1ms)
+Completed in 18ms (View: 12, DB: 0) | 200 OK [http://localhost/capacities]
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-04 12:49:02) [GET]
+  [4;36;1mCapacity Load (0.4ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_form (1.8ms)
+Completed in 16ms (View: 11, DB: 0) | 200 OK [http://localhost/capacities]
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-04 12:49:03) [GET]
+  [4;35;1mCapacity Load (0.3ms)[0m   [0mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_form (1.8ms)
+Completed in 12ms (View: 8, DB: 0) | 200 OK [http://localhost/capacities]
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-04 12:49:03) [GET]
+  [4;36;1mCapacity Load (0.3ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_form (1.9ms)
+Completed in 74ms (View: 69, DB: 0) | 200 OK [http://localhost/capacities]
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-04 12:49:07) [GET]
+  [4;35;1mCapacity Load (0.3ms)[0m   [0mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_form (1.8ms)
+Completed in 12ms (View: 8, DB: 0) | 200 OK [http://localhost/capacities]
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-04 12:49:23) [GET]
+  [4;36;1mCapacity Load (0.4ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_form (2.4ms)
+Completed in 14ms (View: 8, DB: 0) | 200 OK [http://localhost/capacities]
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-04 12:49:35) [GET]
+  [4;35;1mCapacity Load (0.3ms)[0m   [0mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_form (1.8ms)
+Completed in 13ms (View: 8, DB: 0) | 200 OK [http://localhost/capacities]
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-04 12:50:31) [GET]
+  [4;36;1mCapacity Load (0.4ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_form (2.4ms)
+Completed in 21ms (View: 15, DB: 0) | 200 OK [http://localhost/capacities]
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-04 12:55:14) [GET]
+  [4;35;1mCapacity Load (0.4ms)[0m   [0mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_form (1.9ms)
+Completed in 16ms (View: 11, DB: 0) | 200 OK [http://localhost/capacities]
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-04 12:56:03) [GET]
+  [4;36;1mCapacity Load (0.4ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_form (2.1ms)
+Completed in 14ms (View: 8, DB: 0) | 200 OK [http://localhost/capacities]
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-04 12:56:22) [GET]
+  [4;35;1mCapacity Load (0.4ms)[0m   [0mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_form (2.2ms)
+Completed in 14ms (View: 9, DB: 0) | 200 OK [http://localhost/capacities]
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-04 12:57:36) [GET]
+  [4;36;1mCapacity Load (0.3ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_form (2.3ms)
+Completed in 12ms (View: 8, DB: 0) | 200 OK [http://localhost/capacities]
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-04 12:58:34) [GET]
+  [4;35;1mCapacity Load (0.3ms)[0m   [0mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_form (2.1ms)
+Completed in 20ms (View: 15, DB: 0) | 200 OK [http://localhost/capacities]
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-04 12:58:50) [GET]
+  [4;36;1mCapacity Load (0.3ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_form (1.7ms)
+Completed in 82ms (View: 77, DB: 0) | 200 OK [http://localhost/capacities]
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-04 12:59:23) [GET]
+  [4;35;1mCapacity Load (0.9ms)[0m   [0mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_form (2.1ms)
+Completed in 18ms (View: 12, DB: 1) | 200 OK [http://localhost/capacities]
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-04 13:00:10) [GET]
+  [4;36;1mCapacity Load (0.4ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_form (1.9ms)
+Completed in 18ms (View: 12, DB: 0) | 200 OK [http://localhost/capacities]
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-04 13:03:43) [GET]
+  [4;35;1mCapacity Load (1.6ms)[0m   [0mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_form (3.3ms)
+Completed in 23ms (View: 13, DB: 2) | 200 OK [http://localhost/capacities]
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-04 13:05:59) [GET]
+  [4;36;1mCapacity Load (0.4ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_form (1.8ms)
+Completed in 16ms (View: 8, DB: 0) | 200 OK [http://localhost/capacities]
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-04 13:07:10) [GET]
+  [4;35;1mCapacity Load (0.3ms)[0m   [0mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_form (2.2ms)
+Completed in 13ms (View: 8, DB: 0) | 200 OK [http://localhost/capacities]
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-04 13:07:31) [GET]
+  [4;36;1mCapacity Load (0.3ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_form (1.7ms)
+Completed in 12ms (View: 7, DB: 0) | 200 OK [http://localhost/capacities]
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-04 13:08:16) [GET]
+  [4;35;1mCapacity Load (0.3ms)[0m   [0mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_form (2.3ms)
+Completed in 13ms (View: 9, DB: 0) | 200 OK [http://localhost/capacities]
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-04 13:10:01) [GET]
+  [4;36;1mCapacity Load (0.5ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_form (1.7ms)
+Completed in 12ms (View: 7, DB: 0) | 200 OK [http://localhost/capacities]
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-04 13:11:08) [GET]
+  [4;35;1mCapacity Load (32.2ms)[0m   [0mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_form (1.9ms)
+Completed in 54ms (View: 10, DB: 32) | 200 OK [http://localhost/capacities]
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-04 13:11:58) [GET]
+  [4;36;1mCapacity Load (0.4ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_form (1.7ms)
+Completed in 13ms (View: 9, DB: 0) | 200 OK [http://localhost/capacities]
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-04 13:13:18) [GET]
+  [4;35;1mCapacity Load (16.5ms)[0m   [0mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_form (1.8ms)
+Completed in 94ms (View: 8, DB: 16) | 200 OK [http://localhost/capacities]
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-04 13:15:00) [GET]
+  [4;36;1mCapacity Load (0.3ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_form (3.9ms)
+Completed in 22ms (View: 16, DB: 0) | 200 OK [http://localhost/capacities]
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-04 13:17:13) [GET]
+  [4;35;1mCapacity Load (27.4ms)[0m   [0mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_form (1.8ms)
+Completed in 41ms (View: 8, DB: 27) | 200 OK [http://localhost/capacities]
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-04 13:17:49) [GET]
+  [4;36;1mCapacity Load (0.4ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_form (2.7ms)
+Completed in 14ms (View: 9, DB: 0) | 200 OK [http://localhost/capacities]
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-04 13:19:24) [GET]
+  [4;35;1mCapacity Load (0.3ms)[0m   [0mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_form (3.9ms)
+Completed in 16ms (View: 12, DB: 0) | 200 OK [http://localhost/capacities]
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-04 13:19:40) [GET]
+  [4;36;1mCapacity Load (0.4ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_form (1.9ms)
+Completed in 75ms (View: 69, DB: 0) | 200 OK [http://localhost/capacities]
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-04 13:20:14) [GET]
+  [4;35;1mCapacity Load (0.4ms)[0m   [0mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_form (2.0ms)
+Completed in 19ms (View: 12, DB: 0) | 200 OK [http://localhost/capacities]
+
+
+Processing CapacitiesController#create (for 127.0.0.1 at 2009-09-04 13:20:17) [POST]
+  Parameters: {"authenticity_token"=>"LUOayg4N88gduYhMXduHxh7JmMOVJE2H1wwzGXyWNl8=", "save"=>"save", "capacity"=>{"driver_id"=>"Leroy", "location"=>"Kansas City", "available_on(1i)"=>"2009", "notes"=>"need a hot load", "available_on(2i)"=>"9", "priority"=>"0", "available_on(3i)"=>"4"}}
+  [4;36;1mCapacity Create (9.4ms)[0m   [0;1mINSERT INTO "capacities" ("driver_id", "location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES(0, 'Kansas City', '2009-09-04 00:00:00', '2009-09-04 18:20:17', NULL, 'need a hot load', '2009-09-04 18:20:17', 0)[0m
+Redirected to http://localhost:3000/capacities/1
+Completed in 56ms (DB: 9) | 302 Found [http://localhost/capacities]
+
+
+Processing CapacitiesController#show (for 127.0.0.1 at 2009-09-04 13:20:17) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCapacity Load (0.2ms)[0m   [0mSELECT * FROM "capacities" WHERE ("capacities"."id" = 1) [0m
+
+ActionView::MissingTemplate (Missing template capacities/show.erb in view path app/views):
+  haml (2.2.3) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-04 13:21:33) [GET]
+  [4;36;1mCapacity Load (0.5ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_form (2.0ms)
+Completed in 13ms (View: 8, DB: 0) | 200 OK [http://localhost/capacities]
+
+
+Processing CapacitiesController#create (for 127.0.0.1 at 2009-09-04 13:21:36) [POST]
+  Parameters: {"authenticity_token"=>"LUOayg4N88gduYhMXduHxh7JmMOVJE2H1wwzGXyWNl8=", "save"=>"save", "capacity"=>{"driver_id"=>"Leroy", "location"=>"Kansas City", "available_on(1i)"=>"2009", "notes"=>"need a hot load", "available_on(2i)"=>"9", "priority"=>"0", "available_on(3i)"=>"4"}}
+  [4;35;1mCapacity Create (0.3ms)[0m   [0mINSERT INTO "capacities" ("driver_id", "location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES(0, 'Kansas City', '2009-09-04 00:00:00', '2009-09-04 18:21:36', NULL, 'need a hot load', '2009-09-04 18:21:36', 0)[0m
+Redirected to http://localhost:3000/capacities/2
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/capacities]
+
+
+Processing CapacitiesController#show (for 127.0.0.1 at 2009-09-04 13:21:36) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mCapacity Load (0.2ms)[0m   [0;1mSELECT * FROM "capacities" WHERE ("capacities"."id" = 2) [0m
+
+ActionView::MissingTemplate (Missing template capacities/show.erb in view path app/views):
+  haml (2.2.3) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-04 13:21:59) [GET]
+  [4;35;1mCapacity Load (0.7ms)[0m   [0mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_form (2.2ms)
+Completed in 17ms (View: 9, DB: 1) | 200 OK [http://localhost/capacities]
+
+
+Processing CapacitiesController#create (for 127.0.0.1 at 2009-09-04 13:22:02) [POST]
+  Parameters: {"authenticity_token"=>"LUOayg4N88gduYhMXduHxh7JmMOVJE2H1wwzGXyWNl8=", "save"=>"save", "capacity"=>{"driver_id"=>"Leroy", "location"=>"Kansas City", "available_on(1i)"=>"2009", "notes"=>"need a hot load", "available_on(2i)"=>"9", "priority"=>"0", "available_on(3i)"=>"4"}}
+  [4;36;1mCapacity Create (0.3ms)[0m   [0;1mINSERT INTO "capacities" ("driver_id", "location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES(0, 'Kansas City', '2009-09-04 00:00:00', '2009-09-04 18:22:02', NULL, 'need a hot load', '2009-09-04 18:22:02', 0)[0m
+Redirected to http://localhost:3000/capacities/3
+Completed in 11ms (DB: 0) | 302 Found [http://localhost/capacities]
+
+
+Processing CapacitiesController#show (for 127.0.0.1 at 2009-09-04 13:22:02) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mCapacity Load (0.2ms)[0m   [0mSELECT * FROM "capacities" WHERE ("capacities"."id" = 3) [0m
+
+ActionView::MissingTemplate (Missing template capacities/show.erb in view path app/views):
+  haml (2.2.3) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-04 13:22:52) [GET]
+  [4;36;1mCapacity Load (0.6ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_form (1.8ms)
+Completed in 15ms (View: 11, DB: 1) | 200 OK [http://localhost/capacities]
+
+
+Processing CapacitiesController#create (for 127.0.0.1 at 2009-09-04 13:22:55) [POST]
+  Parameters: {"authenticity_token"=>"LUOayg4N88gduYhMXduHxh7JmMOVJE2H1wwzGXyWNl8=", "save"=>"save", "capacity"=>{"driver_id"=>"Leroy", "location"=>"Kansas City", "available_on(1i)"=>"2009", "notes"=>"need a hot load", "available_on(2i)"=>"9", "priority"=>"0", "available_on(3i)"=>"4"}}
+  [4;35;1mCapacity Create (0.3ms)[0m   [0mINSERT INTO "capacities" ("driver_id", "location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES(0, 'Kansas City', '2009-09-04 00:00:00', '2009-09-04 18:22:55', NULL, 'need a hot load', '2009-09-04 18:22:55', 0)[0m
+Redirected to http://localhost:3000/capacities/4
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/capacities]
+
+
+Processing CapacitiesController#show (for 127.0.0.1 at 2009-09-04 13:22:55) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mCapacity Load (0.2ms)[0m   [0;1mSELECT * FROM "capacities" WHERE ("capacities"."id" = 4) [0m
+
+ActionView::MissingTemplate (Missing template capacities/show.erb in view path app/views):
+  haml (2.2.3) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-04 13:23:11) [GET]
+  [4;35;1mCapacity Load (0.8ms)[0m   [0mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_form (2.0ms)
+Completed in 19ms (View: 14, DB: 1) | 200 OK [http://localhost/capacities]
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-04 13:23:21) [GET]
+  [4;36;1mCapacity Load (0.8ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_form (1.9ms)
+Completed in 13ms (View: 8, DB: 1) | 200 OK [http://localhost/capacities]
+
+
+Processing CapacitiesController#create (for 127.0.0.1 at 2009-09-04 13:23:24) [POST]
+  Parameters: {"authenticity_token"=>"LUOayg4N88gduYhMXduHxh7JmMOVJE2H1wwzGXyWNl8=", "save"=>"save", "capacity"=>{"driver_id"=>"Leroy", "location"=>"Kansas City", "available_on(1i)"=>"2009", "notes"=>"need a hot load", "available_on(2i)"=>"9", "priority"=>"0", "available_on(3i)"=>"4"}}
+  [4;35;1mCapacity Create (0.3ms)[0m   [0mINSERT INTO "capacities" ("driver_id", "location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES(0, 'Kansas City', '2009-09-04 00:00:00', '2009-09-04 18:23:24', NULL, 'need a hot load', '2009-09-04 18:23:24', 0)[0m
+Redirected to http://localhost:3000/capacities/5
+Completed in 11ms (DB: 0) | 302 Found [http://localhost/capacities]
+
+
+Processing CapacitiesController#show (for 127.0.0.1 at 2009-09-04 13:23:24) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mCapacity Load (0.2ms)[0m   [0;1mSELECT * FROM "capacities" WHERE ("capacities"."id" = 5) [0m
+
+ActionView::MissingTemplate (Missing template capacities/show.erb in view path app/views):
+  haml (2.2.3) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-04 13:52:52) [GET]
+  [4;36;1mCapacity Load (1.5ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_form (4.7ms)
+Completed in 334ms (View: 328, DB: 1) | 200 OK [http://localhost/capacities]
+
+
+Processing CapacitiesController#create (for 127.0.0.1 at 2009-09-04 13:52:55) [POST]
+  Parameters: {"authenticity_token"=>"LhSclt87J4WtruoNWpJ9Yj+UN+TZjh7n/Fdq3sFj5O4=", "save"=>"save", "capacity"=>{"driver_id"=>"Leroy", "location"=>"Kansas City", "available_on(1i)"=>"2009", "notes"=>"need a hot load", "available_on(2i)"=>"9", "priority"=>"0", "available_on(3i)"=>"4"}}
+  [4;35;1mCapacity Create (8.8ms)[0m   [0mINSERT INTO "capacities" ("driver_id", "location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES(0, 'Kansas City', '2009-09-04 00:00:00', '2009-09-04 18:52:55', NULL, 'need a hot load', '2009-09-04 18:52:55', 0)[0m
+Redirected to http://localhost:3000/capacities/6
+Completed in 39ms (DB: 9) | 302 Found [http://localhost/capacities]
+
+
+Processing CapacitiesController#show (for 127.0.0.1 at 2009-09-04 13:52:55) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mCapacity Load (0.2ms)[0m   [0;1mSELECT * FROM "capacities" WHERE ("capacities"."id" = 6) [0m
+
+ActionView::MissingTemplate (Missing template capacities/show.erb in view path app/views):
+  haml (2.2.3) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-04 13:54:01) [GET]
+  [4;35;1mCapacity Load (8.7ms)[0m   [0mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_form (1.9ms)
+Completed in 73ms (View: 59, DB: 9) | 200 OK [http://localhost/capacities]
+
+
+Processing CapacitiesController#create (for 127.0.0.1 at 2009-09-04 13:54:03) [POST]
+  Parameters: {"authenticity_token"=>"LhSclt87J4WtruoNWpJ9Yj+UN+TZjh7n/Fdq3sFj5O4=", "save"=>"save", "capacity"=>{"driver_id"=>"Leroy", "location"=>"Kansas City", "available_on(1i)"=>"2009", "notes"=>"need a hot load", "available_on(2i)"=>"9", "priority"=>"0", "available_on(3i)"=>"4"}}
+  [4;36;1mCapacity Create (9.9ms)[0m   [0;1mINSERT INTO "capacities" ("driver_id", "location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES(0, 'Kansas City', '2009-09-04 00:00:00', '2009-09-04 18:54:03', NULL, 'need a hot load', '2009-09-04 18:54:03', 0)[0m
+Redirected to http://localhost:3000/capacities/7
+Completed in 39ms (DB: 10) | 302 Found [http://localhost/capacities]
+
+
+Processing CapacitiesController#show (for 127.0.0.1 at 2009-09-04 13:54:03) [GET]
+  Parameters: {"id"=>"7"}
+  [4;35;1mCapacity Load (0.2ms)[0m   [0mSELECT * FROM "capacities" WHERE ("capacities"."id" = 7) [0m
+
+ActionView::MissingTemplate (Missing template capacities/show.erb in view path app/views):
+  haml (2.2.3) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-04 13:54:23) [GET]
+  [4;36;1mCapacity Load (18.1ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_form (1.9ms)
+Completed in 71ms (View: 48, DB: 18) | 200 OK [http://localhost/capacities]
+
+
+Processing CapacitiesController#create (for 127.0.0.1 at 2009-09-04 13:54:26) [POST]
+  Parameters: {"authenticity_token"=>"LhSclt87J4WtruoNWpJ9Yj+UN+TZjh7n/Fdq3sFj5O4=", "save"=>"save", "capacity"=>{"driver_id"=>"Leroy", "location"=>"Kansas City", "available_on(1i)"=>"2009", "notes"=>"need a hot load", "available_on(2i)"=>"9", "priority"=>"0", "available_on(3i)"=>"4"}}
+  [4;35;1mCapacity Create (0.3ms)[0m   [0mINSERT INTO "capacities" ("driver_id", "location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES(0, 'Kansas City', '2009-09-04 00:00:00', '2009-09-04 18:54:26', NULL, 'need a hot load', '2009-09-04 18:54:26', 0)[0m
+Redirected to http://localhost:3000/capacities/8
+Completed in 11ms (DB: 0) | 302 Found [http://localhost/capacities]
+
+
+Processing CapacitiesController#show (for 127.0.0.1 at 2009-09-04 13:54:26) [GET]
+  Parameters: {"id"=>"8"}
+  [4;36;1mCapacity Load (0.2ms)[0m   [0;1mSELECT * FROM "capacities" WHERE ("capacities"."id" = 8) [0m
+
+ActionView::MissingTemplate (Missing template capacities/show.erb in view path app/views):
+  haml (2.2.3) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-04 13:54:44) [GET]
+  [4;35;1mCapacity Load (25.9ms)[0m   [0mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_form (2.1ms)
+Completed in 78ms (View: 47, DB: 26) | 200 OK [http://localhost/capacities]
+
+
+Processing CapacitiesController#create (for 127.0.0.1 at 2009-09-04 13:54:47) [POST]
+  Parameters: {"authenticity_token"=>"LhSclt87J4WtruoNWpJ9Yj+UN+TZjh7n/Fdq3sFj5O4=", "save"=>"save", "capacity"=>{"driver_id"=>"Leroy", "location"=>"Kansas City", "available_on(1i)"=>"2009", "notes"=>"need a hot load", "available_on(2i)"=>"9", "priority"=>"0", "available_on(3i)"=>"4"}}
+  [4;36;1mCapacity Create (0.3ms)[0m   [0;1mINSERT INTO "capacities" ("driver_id", "location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES(0, 'Kansas City', '2009-09-04 00:00:00', '2009-09-04 18:54:47', NULL, 'need a hot load', '2009-09-04 18:54:47', 0)[0m
+Redirected to http://localhost:3000/capacities/9
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/capacities]
+
+
+Processing CapacitiesController#show (for 127.0.0.1 at 2009-09-04 13:54:47) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mCapacity Load (0.2ms)[0m   [0mSELECT * FROM "capacities" WHERE ("capacities"."id" = 9) [0m
+
+ActionView::MissingTemplate (Missing template capacities/show.erb in view path app/views):
+  haml (2.2.3) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-04 13:56:54) [GET]
+  [4;36;1mCapacity Load (17.7ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_form (2.0ms)
+Completed in 70ms (View: 48, DB: 18) | 200 OK [http://localhost/capacities]
+
+
+Processing CapacitiesController#create (for 127.0.0.1 at 2009-09-04 13:56:56) [POST]
+  Parameters: {"authenticity_token"=>"LhSclt87J4WtruoNWpJ9Yj+UN+TZjh7n/Fdq3sFj5O4=", "save"=>"save", "capacity"=>{"driver_id"=>"Leroy", "location"=>"Kansas City", "available_on(1i)"=>"2009", "notes"=>"need a hot load", "available_on(2i)"=>"9", "priority"=>"0", "available_on(3i)"=>"4"}}
+  [4;35;1mCapacity Create (0.3ms)[0m   [0mINSERT INTO "capacities" ("driver_id", "location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES(0, 'Kansas City', '2009-09-04 00:00:00', '2009-09-04 18:56:56', NULL, 'need a hot load', '2009-09-04 18:56:56', 0)[0m
+Redirected to http://localhost:3000/capacities/10
+Completed in 12ms (DB: 0) | 302 Found [http://localhost/capacities]
+
+
+Processing CapacitiesController#show (for 127.0.0.1 at 2009-09-04 13:56:56) [GET]
+  Parameters: {"id"=>"10"}
+  [4;36;1mCapacity Load (0.2ms)[0m   [0;1mSELECT * FROM "capacities" WHERE ("capacities"."id" = 10) [0m
+
+ActionView::MissingTemplate (Missing template capacities/show.erb in view path app/views):
+  haml (2.2.3) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-04 13:58:51) [GET]
+  [4;35;1mCapacity Load (17.6ms)[0m   [0mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_form (2.0ms)
+Completed in 115ms (View: 92, DB: 18) | 200 OK [http://localhost/capacities]
+
+
+Processing CapacitiesController#create (for 127.0.0.1 at 2009-09-04 13:58:54) [POST]
+  Parameters: {"authenticity_token"=>"LhSclt87J4WtruoNWpJ9Yj+UN+TZjh7n/Fdq3sFj5O4=", "save"=>"save", "capacity"=>{"driver_id"=>"Leroy", "location"=>"Kansas City", "available_on(1i)"=>"2009", "notes"=>"need a hot load", "available_on(2i)"=>"9", "priority"=>"0", "available_on(3i)"=>"4"}}
+  [4;36;1mCapacity Create (0.3ms)[0m   [0;1mINSERT INTO "capacities" ("driver_id", "location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES(0, 'Kansas City', '2009-09-04 00:00:00', '2009-09-04 18:58:54', NULL, 'need a hot load', '2009-09-04 18:58:54', 0)[0m
+Redirected to http://localhost:3000/capacities/11
+Completed in 13ms (DB: 0) | 302 Found [http://localhost/capacities]
+
+
+Processing CapacitiesController#show (for 127.0.0.1 at 2009-09-04 13:58:54) [GET]
+  Parameters: {"id"=>"11"}
+  [4;35;1mCapacity Load (0.2ms)[0m   [0mSELECT * FROM "capacities" WHERE ("capacities"."id" = 11) [0m
+
+ActionView::MissingTemplate (Missing template capacities/show.erb in view path app/views):
+  haml (2.2.3) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-04 13:59:24) [GET]
+  [4;36;1mCapacity Load (1.1ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_form (71.1ms)
+Completed in 83ms (View: 77, DB: 1) | 200 OK [http://localhost/capacities]
+
+
+Processing CapacitiesController#create (for 127.0.0.1 at 2009-09-04 13:59:27) [POST]
+  Parameters: {"authenticity_token"=>"LhSclt87J4WtruoNWpJ9Yj+UN+TZjh7n/Fdq3sFj5O4=", "save"=>"save", "capacity"=>{"driver_id"=>"Leroy", "location"=>"Kansas City", "available_on(1i)"=>"2009", "notes"=>"need a hot load", "available_on(2i)"=>"9", "priority"=>"0", "available_on(3i)"=>"4"}}
+  [4;35;1mCapacity Create (0.3ms)[0m   [0mINSERT INTO "capacities" ("driver_id", "location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES(0, 'Kansas City', '2009-09-04 00:00:00', '2009-09-04 18:59:27', NULL, 'need a hot load', '2009-09-04 18:59:27', 0)[0m
+Redirected to http://localhost:3000/capacities/12
+Completed in 24ms (DB: 0) | 302 Found [http://localhost/capacities]
+
+
+Processing CapacitiesController#show (for 127.0.0.1 at 2009-09-04 13:59:27) [GET]
+  Parameters: {"id"=>"12"}
+  [4;36;1mCapacity Load (0.2ms)[0m   [0;1mSELECT * FROM "capacities" WHERE ("capacities"."id" = 12) [0m
+
+ActionView::MissingTemplate (Missing template capacities/show.erb in view path app/views):
+  haml (2.2.3) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-04 14:15:48) [GET]
+  [4;35;1mCapacity Load (13.0ms)[0m   [0mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+
+ActionView::TemplateError (undefined method `covered?' for #<ActionView::Base:0x10343e0a0>) on line #2 of app/views/capacities/_capacity.haml:
+1: %tr
+2:   %td= covered?( capacity )
+3:   %td= capacity.location
+4:   %td= capacity.driver
+5:   %td= capacity.notes
+
+    app/views/capacities/_capacity.haml:2:in `_run_haml_app47views47capacities47_capacity46haml_locals_capacity_capacity_counter_object'
+    haml (2.2.3) lib/haml/helpers/action_view_mods.rb:11:in `render'
+    haml (2.2.3) lib/haml/helpers.rb:96:in `non_haml'
+    haml (2.2.3) lib/haml/helpers/action_view_mods.rb:11:in `render'
+    app/views/capacities/index.haml:13:in `_run_haml_app47views47capacities47index46haml'
+    haml (2.2.3) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.3) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.3) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (115.9ms)
+Rendered rescues/_request_and_response (18.1ms)
+Rendering rescues/layout (internal_server_error)

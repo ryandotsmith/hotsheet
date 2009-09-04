@@ -1,0 +1,11 @@
+= form.label :location, "Location"
+= form.text_field :location
+
+= form.label :driver_id, "Driver"
+= form.text_field :driver_id
+
+= form.label :priority, "Priority"
+= form.select :priority, {:normal => 0, :high => 1, :top => 2}
+
+= form.label :notes, "Notes"
+= form.text_field :notes

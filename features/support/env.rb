@@ -2,6 +2,7 @@
 ENV["RAILS_ENV"] ||= "cucumber"
 require File.expand_path(File.dirname(__FILE__) + '/../../config/environment')
 require 'cucumber/rails/world'
+require 'firewatir'
 
 # Comment out the next line if you don't want Cucumber Unicode support
 require 'cucumber/formatter/unicode'
@@ -23,3 +24,9 @@ end
 
 require 'cucumber/rails/rspec'
 require 'webrat/core/matchers'
+Before do
+  @browser = Watir::Safari.new
+  @browser.set_fast_speed
+  @base_url = 'http://localhost:3000'
+end
+

@@ -11,7 +11,7 @@ module NavigationHelpers
     when /the homepage/
       '/'
     when /the capacity index page/
-      capacity_index_url
+      capacities_url
     # Add more mappings here.
     # Here is a more fancy example:
     #
