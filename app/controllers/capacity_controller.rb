@@ -1,0 +1,3 @@
+class CapacityController < ApplicationController
+
+end

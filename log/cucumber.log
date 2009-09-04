@@ -1,0 +1,15 @@
+# Logfile created on Fri Sep 04 11:01:45 -0500 2009REQUESTING PAGE: GET http://www.example.com/capacity with {} and HTTP headers {}
+
+
+Processing ApplicationController#show (for 127.0.0.1 at 2009-09-04 11:10:47) [GET]
+REQUESTING PAGE: GET http://www.example.com/capacities with {} and HTTP headers {}
+
+
+Processing ApplicationController#show (for 127.0.0.1 at 2009-09-04 11:11:21) [GET]
+REQUESTING PAGE: GET http://www.example.com/capacity with {} and HTTP headers {}
+
+
+Processing CapacityController#index (for 127.0.0.1 at 2009-09-04 11:12:29) [GET]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-04 11:12:29) [GET]
