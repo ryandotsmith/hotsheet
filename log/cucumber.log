@@ -13,3 +13,34 @@ Processing CapacityController#index (for 127.0.0.1 at 2009-09-04 11:12:29) [GET]
 
 
 Processing ApplicationController#index (for 127.0.0.1 at 2009-09-04 11:12:29) [GET]
+REQUESTING PAGE: GET http://www.example.com/capacity with {} and HTTP headers {}
+
+
+Processing CapacityController#index (for 127.0.0.1 at 2009-09-04 11:17:01) [GET]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-04 11:17:01) [GET]
+REQUESTING PAGE: GET http://www.example.com/capacity with {} and HTTP headers {}
+
+
+Processing CapacityController#index (for 127.0.0.1 at 2009-09-04 11:19:11) [GET]
+  [4;36;1mCapacity Load (0.0ms)[0m   [0;1mSQLite3::SQLException: no such table: capacities: SELECT * FROM "capacities" [0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-04 11:19:11) [GET]
+REQUESTING PAGE: GET http://www.example.com/capacity with {} and HTTP headers {}
+
+
+Processing CapacityController#index (for 127.0.0.1 at 2009-09-04 11:20:10) [GET]
+  [4;36;1mCapacity Load (0.3ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-04 11:20:10) [GET]
+REQUESTING PAGE: GET http://www.example.com/capacity with {} and HTTP headers {}
+
+
+Processing CapacityController#index (for 127.0.0.1 at 2009-09-04 11:22:30) [GET]
+  [4;36;1mCapacity Load (0.3ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-04 11:22:30) [GET]

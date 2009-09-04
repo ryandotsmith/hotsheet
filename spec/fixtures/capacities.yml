@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  location: MyString
+  available_on: 2009-09-04 11:19:03
+  fulfilled_on: 2009-09-04 11:19:03
+  notes: MyString
+  priority: 1
+  driver_id: 1
+
+two:
+  location: MyString
+  available_on: 2009-09-04 11:19:03
+  fulfilled_on: 2009-09-04 11:19:03
+  notes: MyString
+  priority: 1
+  driver_id: 1
