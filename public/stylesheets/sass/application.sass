@@ -17,6 +17,8 @@ form label
   #flash
     width: 100%
     position: absolute
+    h1
+      margin-left: 20px
     #message
       position: absolute
       width: 100% 
@@ -43,14 +45,15 @@ form label
 #content
   margin: 100px 0 0 0
 #center
+  float: left
   background: #FFFFFF url(/images/right-bg.gif) repeat-y scroll right center
-  width: 600px
-  margin: 0 0 0 50px
+  width: 60% 
+  margin: 30px 0 0 50px
   padding: 5px 10px 0 10px
   #capacity_today
     #capacity_today_table
       margin: 0 auto
-      width: 510px
+      width: 90% 
       border-collapse: collapse
     thead
       tr
@@ -64,21 +67,53 @@ form label
         border = "1px" "solid" !white
       td
         font-size: 14pt
+  #AddMoreCapacity
+    margin: 20px 0 0 30px
   #new_capacity
     width: 500px
-    margin: 40px auto
+    margin: 40px auto 0 auto
     padding: 0 0 15px 0
     overflow: hidden
-
     .form_box
-      margin: 0 10px 0 0
+      margin: 0 10px 0 10px
       float: left
     .form_box_right
+      margin: 0 7px 0 0
       float: right
     .buttons
       clear: both
       float: right
-      margin: 10px 0 0 0
+      margin: 10px
+    form
+      background-color= !light_gray
+
 #right
+  float: right
   background-color = !white
-  width: 300px
+  width: 25% 
+  height: 510px
+  background: #FFFFFF url(/images/left-bg.gif) repeat-y scroll left center
+  margin: 0 0 0 40px
+  padding: 0 0 0 10px
+
+#capacities
+  .capacity
+    h3
+      margin: 5px 0 0 5px
+      font-weight: normal
+      font-family: Arial
+      font-size: 14pt
+    min-height: 130px
+    border: 1px solid black
+    margin: 15px 5px 0 0
+  margin: 10px 0 0 20px
+  table 
+    margin: 0 0 0 10px
+    width: 90%
+    td
+      font-size: 10pt
+
+
+
+
+

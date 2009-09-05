@@ -10,8 +10,8 @@
           %th Notes
       %tbody
         = render @capacities
+  = link_to image_tag('buttons/add_more_capacity.png'), new_capacity_url, :id=> "AddMoreCapacity"
   #new_capacity
-    = link_to image_tag('buttons/add_more_capacity.png'), new_capacity_url, :id=> "AddMoreCapacity"
     #new_capacity_form{ :style => "display:none" }
       - form_for @new_capacity do |form|
         .form_box
@@ -33,4 +33,32 @@
           or
           = link_to "cancel", "#", :id => 'rollup', :rel => 'new_capacity_form'
 #right
+  #capacities
+    .capacity{ :id => '1' }
+      %h3 Saturday 09/05
+      %table
+        %tr
+          %td -
+          %td Tim Jones
+          %td Florida
+    .capacity{ :id => '2' }
+      %h3 Saturday 09/05
+      %table
+        %tr
+          %td -
+          %td Tim Jones
+          %td Florida
+    .capacity{ :id => '3' }
+      %h3 Saturday 09/05
+      %table
+        %tr
+          %td -
+          %td Tim Jones
+          %td Florida
+
+
+
+
+
+
 
