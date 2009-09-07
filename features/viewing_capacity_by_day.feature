@@ -13,3 +13,9 @@ Feature: Viewing capaicities by day
     Then I should see capacity in "Kansas City" for "today"
     And I should see capacity in "Tuscan" "1" day from now
     And I should see capacity in "Oklahoma" "2" days from now
+
+  Scenario: Focusing on new capacities
+    Given I am looking at today's capacity
+    And I have future capacity
+    When I click on a capacity in the future
+    Then the future capacity should come into focus

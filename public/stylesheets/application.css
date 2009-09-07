@@ -54,19 +54,19 @@ form label {
   width: 60%;
   margin: 30px 0 0 50px;
   padding: 5px 10px 0 10px; }
-  #center #capacity_today #capacity_today_table {
+  #center #focus_capacities #capacity_today_table {
     margin: 0 auto;
     width: 90%;
     border-collapse: collapse; }
-  #center #capacity_today thead tr {
+  #center #focus_capacities thead tr {
     color: white;
     background-color: #666666; }
-  #center #capacity_today thead th {
+  #center #focus_capacities thead th {
     font-size: 9pt; }
-  #center #capacity_today tbody tr {
+  #center #focus_capacities tbody tr {
     background-color: #99ccff;
     border: 1px solid white; }
-  #center #capacity_today tbody td {
+  #center #focus_capacities tbody td {
     font-size: 14pt; }
   #center #AddMoreCapacity {
     margin: 20px 0 0 30px; }

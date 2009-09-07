@@ -1,15 +1,5 @@
 #center
-  %h1= @focus_date 
-  #capacity_today
-    %table{ :id => "capacity_today_table" }
-      %thead
-        %tr
-          %th Covered
-          %th Location
-          %th Driver
-          %th Notes
-      %tbody
-        = render @focus_capacities.values.flatten
+  = render :partial => 'capacities/focus', :locals => { :focus_capacities => @focus_capacities }
   = link_to image_tag('buttons/add_more_capacity.png'), new_capacity_url, :id=> "AddMoreCapacity"
   #new_capacity
     #new_capacity_form{ :style => "display:none" }
@@ -35,8 +25,8 @@
 #right
   #capacities
     - @capacities.each do |date, capacities| 
-      .capacity{ :id => date }
-        %h3= date
+      .capacity{ :id => date.strftime('%m_%d_%y') }
+        %h3= link_to date, capacities_url(:focus_date => date), :title => date.strftime('%m_%d_%y')
         %table
           - capacities.each do |capacity|
             %tr

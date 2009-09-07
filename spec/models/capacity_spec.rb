@@ -34,9 +34,9 @@ describe "finding capacities by date" do
     return_hash = Capacity.all_by_availability
     return_hash.length.should eql( 3 )
     3.times do |i|
-      return_hash[(Date.today + i.days).strftime('%m_%d_%y')].should_not be_nil
+      return_hash[(Date.today + i.days)].should_not be_nil
     end
-    return_hash[(Date.today + 4.days).strftime('%m_%d_%y')].should be_nil
+    return_hash[(Date.today + 4.days)].should be_nil
   end
 
   it "should return a hash that has all of the capacities included" do

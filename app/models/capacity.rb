@@ -12,9 +12,9 @@ class Capacity < ActiveRecord::Base
     subsets = set.divide { |c| c.available_on }
     subsets.each do |subset|
       date = subset.first.available_on
-      hash[date.strftime('%m_%d_%y')] = []
+      hash[date] = []
       subset.each do |capacity|
-        hash[date.strftime('%m_%d_%y')] << capacity
+        hash[date] << capacity
       end
     end
     return hash
