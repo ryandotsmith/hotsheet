@@ -1,5 +1,5 @@
 #center
-  %h1 Friday 09/04
+  %h1= @focus_date 
   #capacity_today
     %table{ :id => "capacity_today_table" }
       %thead
@@ -9,7 +9,7 @@
           %th Driver
           %th Notes
       %tbody
-        = render @capacities
+        = render @focus_capacities.values.flatten
   = link_to image_tag('buttons/add_more_capacity.png'), new_capacity_url, :id=> "AddMoreCapacity"
   #new_capacity
     #new_capacity_form{ :style => "display:none" }
@@ -34,31 +34,12 @@
           = link_to "cancel", "#", :id => 'rollup', :rel => 'new_capacity_form'
 #right
   #capacities
-    .capacity{ :id => '1' }
-      %h3 Saturday 09/05
-      %table
-        %tr
-          %td -
-          %td Tim Jones
-          %td Florida
-    .capacity{ :id => '2' }
-      %h3 Saturday 09/05
-      %table
-        %tr
-          %td -
-          %td Tim Jones
-          %td Florida
-    .capacity{ :id => '3' }
-      %h3 Saturday 09/05
-      %table
-        %tr
-          %td -
-          %td Tim Jones
-          %td Florida
-
-
-
-
-
-
-
+    - @capacities.each do |date, capacities| 
+      .capacity{ :id => date }
+        %h3= date
+        %table
+          - capacities.each do |capacity|
+            %tr
+              %td -
+              %td.driver= capacity.driver 
+              %td.location= capacity.location 

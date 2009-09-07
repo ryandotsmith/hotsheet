@@ -16825,3 +16825,2335 @@ Migrating to CreateDrivers (20090904193840)
   [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
   [4;36;1mSQL (1.8ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090904193840')[0m
   [4;35;1mSQL (1.6ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090904161903')[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:15:49) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/prototype.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:15:49) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:15:49) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 00:15:53) [GET]
+  [4;36;1mCapacity Load (7.9ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered shared/_navigation (3.7ms)
+Completed in 75ms (View: 59, DB: 8) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:15:53) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:15:53) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:15:53) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:15:53) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:15:53) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#create (for 127.0.0.1 at 2009-09-07 00:17:19) [POST]
+  Parameters: {"authenticity_token"=>"PyvmvNkUtRUUEfUlZ59n0hwu1TrbcW2KGFV+W9IT6DI=", "save"=>"save", "capacity"=>{"driver_id"=>"", "location"=>"Denver", "available_on(1i)"=>"2009", "notes"=>"hot load coming thru ", "available_on(2i)"=>"9", "priority"=>"0", "available_on(3i)"=>"8"}}
+  [4;35;1mCapacity Create (14.3ms)[0m   [0mINSERT INTO "capacities" ("driver_id", "location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES(NULL, 'Denver', '2009-09-08', '2009-09-07 05:17:19', NULL, 'hot load coming thru ', '2009-09-07 05:17:19', 0)[0m
+Redirected to http://localhost:3000/capacities
+Completed in 34ms (DB: 14) | 302 Found [http://localhost/capacities]
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 00:17:19) [GET]
+  [4;36;1mCapacity Load (0.5ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+  [4;35;1mCapacity Load (0.1ms)[0m   [0mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered shared/_navigation (0.1ms)
+Completed in 17ms (View: 8, DB: 1) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:17:19) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:17:19) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:17:19) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:17:19) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:17:19) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#create (for 127.0.0.1 at 2009-09-07 00:17:40) [POST]
+  Parameters: {"authenticity_token"=>"PyvmvNkUtRUUEfUlZ59n0hwu1TrbcW2KGFV+W9IT6DI=", "save"=>"save", "capacity"=>{"driver_id"=>"", "location"=>"Kansas City", "available_on(1i)"=>"2009", "notes"=>"notes about nothing ", "available_on(2i)"=>"9", "priority"=>"1", "available_on(3i)"=>"7"}}
+  [4;36;1mCapacity Create (0.5ms)[0m   [0;1mINSERT INTO "capacities" ("driver_id", "location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES(NULL, 'Kansas City', '2009-09-07', '2009-09-07 05:17:40', NULL, 'notes about nothing ', '2009-09-07 05:17:40', 1)[0m
+Redirected to http://localhost:3000/capacities
+Completed in 32ms (DB: 0) | 302 Found [http://localhost/capacities]
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 00:17:40) [GET]
+  [4;35;1mCapacity Load (0.6ms)[0m   [0mSELECT * FROM "capacities" [0m
+  [4;36;1mCapacity Load (0.2ms)[0m   [0;1mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered shared/_navigation (0.2ms)
+Completed in 95ms (View: 85, DB: 1) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:17:40) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:17:40) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:17:40) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:17:40) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:17:40) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 00:17:42) [GET]
+  [4;35;1mCapacity Load (0.5ms)[0m   [0mSELECT * FROM "capacities" [0m
+  [4;36;1mCapacity Load (0.3ms)[0m   [0;1mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered shared/_navigation (0.1ms)
+Completed in 50ms (View: 14, DB: 1) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:17:42) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:17:42) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:17:42) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:17:42) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:17:42) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 00:17:43) [GET]
+  [4;35;1mCapacity Load (0.5ms)[0m   [0mSELECT * FROM "capacities" [0m
+  [4;36;1mCapacity Load (0.2ms)[0m   [0;1mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered shared/_navigation (0.1ms)
+Completed in 16ms (View: 7, DB: 1) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:17:43) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:17:43) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:17:43) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:17:43) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:17:43) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#create (for 127.0.0.1 at 2009-09-07 00:17:57) [POST]
+  Parameters: {"authenticity_token"=>"PyvmvNkUtRUUEfUlZ59n0hwu1TrbcW2KGFV+W9IT6DI=", "save"=>"save", "capacity"=>{"driver_id"=>"", "location"=>"Denver", "available_on(1i)"=>"2009", "notes"=>"hot load coming thru ", "available_on(2i)"=>"9", "priority"=>"0", "available_on(3i)"=>"7"}}
+  [4;35;1mCapacity Create (0.4ms)[0m   [0mINSERT INTO "capacities" ("driver_id", "location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES(NULL, 'Denver', '2009-09-07', '2009-09-07 05:17:57', NULL, 'hot load coming thru ', '2009-09-07 05:17:57', 0)[0m
+Redirected to http://localhost:3000/capacities
+Completed in 13ms (DB: 0) | 302 Found [http://localhost/capacities]
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 00:17:57) [GET]
+  [4;36;1mCapacity Load (0.6ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+  [4;35;1mCapacity Load (0.3ms)[0m   [0mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered shared/_navigation (0.1ms)
+Completed in 17ms (View: 7, DB: 1) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:17:57) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:17:57) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:17:57) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:17:57) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:17:57) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 00:18:02) [GET]
+  [4;36;1mCapacity Load (0.6ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+  [4;35;1mCapacity Load (0.3ms)[0m   [0mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered shared/_navigation (0.1ms)
+Completed in 19ms (View: 7, DB: 1) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:18:02) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:18:02) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:18:02) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:18:02) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:18:02) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 00:18:51) [GET]
+  [4;36;1mCapacity Load (0.6ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+  [4;35;1mCapacity Load (0.3ms)[0m   [0mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_capacity (1.8ms)
+Rendered capacities/_capacity (0.1ms)
+Rendered shared/_navigation (0.2ms)
+Completed in 30ms (View: 21, DB: 1) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:18:51) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:18:51) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:18:51) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:18:51) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:18:51) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 00:18:53) [GET]
+  [4;36;1mCapacity Load (0.7ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+  [4;35;1mCapacity Load (0.3ms)[0m   [0mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_capacity (0.2ms)
+Rendered capacities/_capacity (0.1ms)
+Rendered shared/_navigation (0.1ms)
+Completed in 18ms (View: 8, DB: 1) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:18:53) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:18:53) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:18:53) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:18:53) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:18:53) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#create (for 127.0.0.1 at 2009-09-07 00:19:13) [POST]
+  Parameters: {"authenticity_token"=>"PyvmvNkUtRUUEfUlZ59n0hwu1TrbcW2KGFV+W9IT6DI=", "save"=>"save", "capacity"=>{"driver_id"=>"", "location"=>"Tampa", "available_on(1i)"=>"2009", "notes"=>"later on ", "available_on(2i)"=>"9", "priority"=>"0", "available_on(3i)"=>"7"}}
+  [4;36;1mCapacity Create (0.4ms)[0m   [0;1mINSERT INTO "capacities" ("driver_id", "location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES(NULL, 'Tampa', '2009-09-07', '2009-09-07 05:19:13', NULL, 'later on ', '2009-09-07 05:19:13', 0)[0m
+Redirected to http://localhost:3000/capacities
+Completed in 12ms (DB: 0) | 302 Found [http://localhost/capacities]
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 00:19:13) [GET]
+  [4;35;1mCapacity Load (0.7ms)[0m   [0mSELECT * FROM "capacities" [0m
+  [4;36;1mCapacity Load (0.4ms)[0m   [0;1mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_capacity (0.2ms)
+Rendered capacities/_capacity (0.1ms)
+Rendered capacities/_capacity (0.1ms)
+Rendered shared/_navigation (0.1ms)
+Completed in 18ms (View: 8, DB: 1) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:19:13) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:19:14) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:19:14) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:19:14) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:19:14) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 00:19:15) [GET]
+  [4;35;1mCapacity Load (0.7ms)[0m   [0mSELECT * FROM "capacities" [0m
+  [4;36;1mCapacity Load (0.3ms)[0m   [0;1mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_capacity (0.2ms)
+Rendered capacities/_capacity (0.1ms)
+Rendered capacities/_capacity (0.1ms)
+Rendered shared/_navigation (0.2ms)
+Completed in 19ms (View: 8, DB: 1) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:19:15) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:19:15) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:19:15) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:19:15) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:19:15) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#create (for 127.0.0.1 at 2009-09-07 00:19:25) [POST]
+  Parameters: {"authenticity_token"=>"PyvmvNkUtRUUEfUlZ59n0hwu1TrbcW2KGFV+W9IT6DI=", "save"=>"save", "capacity"=>{"driver_id"=>"", "location"=>"somewhere ", "available_on(1i)"=>"2009", "notes"=>"", "available_on(2i)"=>"9", "priority"=>"0", "available_on(3i)"=>"11"}}
+  [4;35;1mCapacity Create (0.3ms)[0m   [0mINSERT INTO "capacities" ("driver_id", "location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES(NULL, 'somewhere ', '2009-09-11', '2009-09-07 05:19:25', NULL, '', '2009-09-07 05:19:25', 0)[0m
+Redirected to http://localhost:3000/capacities
+Completed in 16ms (DB: 0) | 302 Found [http://localhost/capacities]
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 00:19:25) [GET]
+  [4;36;1mCapacity Load (0.7ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+  [4;35;1mCapacity Load (0.3ms)[0m   [0mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_capacity (0.2ms)
+Rendered capacities/_capacity (0.1ms)
+Rendered capacities/_capacity (0.1ms)
+Rendered shared/_navigation (0.1ms)
+Completed in 81ms (View: 71, DB: 1) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:19:25) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:19:25) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:19:25) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:19:25) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:19:25) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 00:19:26) [GET]
+  [4;36;1mCapacity Load (0.8ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+  [4;35;1mCapacity Load (0.4ms)[0m   [0mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_capacity (0.2ms)
+Rendered capacities/_capacity (0.1ms)
+Rendered capacities/_capacity (0.1ms)
+Rendered shared/_navigation (0.1ms)
+Completed in 21ms (View: 9, DB: 1) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:19:26) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:19:26) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:19:26) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:19:26) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:19:26) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 00:19:46) [GET]
+  [4;36;1mCapacity Load (0.7ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+  [4;35;1mCapacity Load (0.4ms)[0m   [0mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_capacity (0.2ms)
+Rendered capacities/_capacity (0.1ms)
+Rendered capacities/_capacity (0.1ms)
+Rendered shared/_navigation (0.1ms)
+Completed in 26ms (View: 15, DB: 1) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:19:46) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:19:46) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:19:46) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:19:46) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:19:46) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 00:20:09) [GET]
+  [4;36;1mCapacity Load (0.7ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+  [4;35;1mCapacity Load (0.3ms)[0m   [0mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_capacity (0.2ms)
+Rendered capacities/_capacity (0.1ms)
+Rendered capacities/_capacity (0.1ms)
+Rendered shared/_navigation (0.1ms)
+Completed in 18ms (View: 8, DB: 1) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:20:09) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:20:09) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:20:09) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:20:09) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:20:09) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 00:20:10) [GET]
+  [4;36;1mCapacity Load (0.8ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+  [4;35;1mCapacity Load (0.4ms)[0m   [0mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_capacity (0.2ms)
+Rendered capacities/_capacity (0.1ms)
+Rendered capacities/_capacity (0.1ms)
+Rendered shared/_navigation (0.2ms)
+Completed in 20ms (View: 9, DB: 1) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:20:10) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:20:10) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:20:10) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:20:10) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:20:10) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 00:20:11) [GET]
+  [4;36;1mCapacity Load (0.8ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+  [4;35;1mCapacity Load (0.3ms)[0m   [0mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_capacity (0.2ms)
+Rendered capacities/_capacity (0.1ms)
+Rendered capacities/_capacity (0.1ms)
+Rendered shared/_navigation (0.1ms)
+Completed in 19ms (View: 9, DB: 1) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:20:11) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 00:20:11) [GET]
+  [4;36;1mCapacity Load (1.0ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+  [4;35;1mCapacity Load (0.4ms)[0m   [0mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_capacity (0.3ms)
+Rendered capacities/_capacity (0.1ms)
+Rendered capacities/_capacity (0.2ms)
+Rendered shared/_navigation (0.2ms)
+Completed in 24ms (View: 11, DB: 1) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:20:11) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:20:11) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:20:11) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:20:11) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:20:11) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 00:20:11) [GET]
+  [4;36;1mCapacity Load (0.8ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.include?):
+  app/models/capacity.rb:11:in `all_by_availability'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/set.rb:352:in `classify'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/set.rb:195:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/set.rb:195:in `each_key'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/set.rb:195:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/set.rb:351:in `classify'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/set.rb:399:in `divide'
+  app/models/capacity.rb:11:in `all_by_availability'
+  app/controllers/capacities_controller.rb:14:in `index'
+  haml (2.2.3) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (35.8ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 00:20:12) [GET]
+  [4;35;1mCapacity Load (0.7ms)[0m   [0mSELECT * FROM "capacities" [0m
+  [4;36;1mCapacity Load (0.3ms)[0m   [0;1mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_capacity (0.2ms)
+Rendered capacities/_capacity (0.1ms)
+Rendered capacities/_capacity (0.1ms)
+Rendered shared/_navigation (0.1ms)
+Completed in 20ms (View: 9, DB: 1) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:20:12) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:20:13) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:20:13) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:20:13) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:20:13) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 00:20:14) [GET]
+  [4;35;1mCapacity Load (0.8ms)[0m   [0mSELECT * FROM "capacities" [0m
+  [4;36;1mCapacity Load (0.4ms)[0m   [0;1mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_capacity (0.2ms)
+Rendered capacities/_capacity (0.1ms)
+Rendered capacities/_capacity (0.1ms)
+Rendered shared/_navigation (0.2ms)
+Completed in 21ms (View: 10, DB: 1) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:20:14) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:20:14) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:20:14) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:20:14) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:20:14) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 00:20:14) [GET]
+  [4;35;1mCapacity Load (0.7ms)[0m   [0mSELECT * FROM "capacities" [0m
+  [4;36;1mCapacity Load (0.4ms)[0m   [0;1mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_capacity (0.2ms)
+Rendered capacities/_capacity (0.1ms)
+Rendered capacities/_capacity (0.1ms)
+Rendered shared/_navigation (0.1ms)
+Completed in 20ms (View: 9, DB: 1) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:20:14) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 00:20:15) [GET]
+
+ArgumentError (A copy of CapacitiesController has been removed from the module tree but is still active!):
+  app/controllers/capacities_controller.rb:10:in `index'
+  haml (2.2.3) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (31.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 00:20:15) [GET]
+  [4;35;1mCapacity Load (2.0ms)[0m   [0mSELECT * FROM "capacities" [0m
+  [4;36;1mCapacity Load (0.4ms)[0m   [0;1mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_capacity (0.2ms)
+Rendered capacities/_capacity (0.1ms)
+Rendered capacities/_capacity (0.1ms)
+Rendered shared/_navigation (0.6ms)
+Completed in 25ms (View: 13, DB: 2) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:20:15) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 00:20:15) [GET]
+  [4;35;1mCapacity Load (0.8ms)[0m   [0mSELECT * FROM "capacities" [0m
+  [4;36;1mCapacity Load (0.5ms)[0m   [0;1mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_capacity (0.3ms)
+Rendered capacities/_capacity (0.1ms)
+Rendered capacities/_capacity (0.1ms)
+Rendered shared/_navigation (0.2ms)
+Completed in 36ms (View: 21, DB: 1) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:20:15) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:20:15) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:20:15) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:20:15) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:20:15) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 00:20:16) [GET]
+  [4;35;1mCapacity Load (0.7ms)[0m   [0mSELECT * FROM "capacities" [0m
+  [4;36;1mCapacity Load (0.4ms)[0m   [0;1mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_capacity (0.2ms)
+Rendered capacities/_capacity (0.1ms)
+Rendered capacities/_capacity (0.1ms)
+Rendered shared/_navigation (0.1ms)
+Completed in 22ms (View: 9, DB: 1) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:20:16) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:20:16) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:20:16) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:20:16) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:20:16) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 00:21:07) [GET]
+  [4;35;1mCapacity Load (0.7ms)[0m   [0mSELECT * FROM "capacities" [0m
+  [4;36;1mCapacity Load (0.3ms)[0m   [0;1mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_capacity (0.2ms)
+Rendered capacities/_capacity (0.1ms)
+Rendered capacities/_capacity (0.1ms)
+Rendered shared/_navigation (0.1ms)
+Completed in 24ms (View: 15, DB: 1) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:21:07) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:21:07) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:21:07) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:21:07) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:21:07) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 00:37:44) [GET]
+  [4;35;1mCapacity Load (0.7ms)[0m   [0mSELECT * FROM "capacities" [0m
+  [4;36;1mCapacity Load (0.4ms)[0m   [0;1mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_capacity (0.2ms)
+Rendered capacities/_capacity (0.1ms)
+Rendered capacities/_capacity (0.1ms)
+Rendered shared/_navigation (0.1ms)
+Completed in 25ms (View: 15, DB: 1) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:37:44) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:37:44) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:37:44) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:37:44) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:37:44) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 00:41:51) [GET]
+  [4;35;1mCapacity Load (0.7ms)[0m   [0mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+  [4;36;1mCapacity Load (0.4ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.include?) on line #14 of app/views/capacities/index.haml:
+11:       %tbody
+12:         = render @focus_capacity
+13:   = link_to image_tag('buttons/add_more_capacity.png'), new_capacity_url, :id=> "AddMoreCapacity"
+14:   #new_capacity
+15:     #new_capacity_form{ :style => "display:none" }
+16:       - form_for @new_capacity do |form|
+17:         .form_box
+
+    haml (2.2.3) lib/haml/helpers/action_view_mods.rb:11:in `render'
+    haml (2.2.3) lib/haml/helpers.rb:96:in `non_haml'
+    haml (2.2.3) lib/haml/helpers/action_view_mods.rb:11:in `render'
+    app/views/capacities/index.haml:14:in `_run_haml_app47views47capacities47index46haml'
+    haml (2.2.3) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.3) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.3) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (38.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 00:41:56) [GET]
+  [4;35;1mCapacity Load (0.6ms)[0m   [0mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+  [4;36;1mCapacity Load (0.4ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.include?) on line #14 of app/views/capacities/index.haml:
+11:       %tbody
+12:         = render @focus_capacity
+13:   = link_to image_tag('buttons/add_more_capacity.png'), new_capacity_url, :id=> "AddMoreCapacity"
+14:   #new_capacity
+15:     #new_capacity_form{ :style => "display:none" }
+16:       - form_for @new_capacity do |form|
+17:         .form_box
+
+    haml (2.2.3) lib/haml/helpers/action_view_mods.rb:11:in `render'
+    haml (2.2.3) lib/haml/helpers.rb:96:in `non_haml'
+    haml (2.2.3) lib/haml/helpers/action_view_mods.rb:11:in `render'
+    app/views/capacities/index.haml:14:in `_run_haml_app47views47capacities47index46haml'
+    haml (2.2.3) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.3) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.3) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (38.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 00:42:17) [GET]
+  [4;35;1mCapacity Load (0.6ms)[0m   [0mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+  [4;36;1mCapacity Load (0.5ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_capacity (0.2ms)
+Rendered capacities/_capacity (0.1ms)
+Rendered capacities/_capacity (0.1ms)
+Rendered shared/_navigation (0.1ms)
+Completed in 25ms (View: 14, DB: 1) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:42:17) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:42:17) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:42:17) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:42:17) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:42:17) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 00:42:19) [GET]
+  [4;35;1mCapacity Load (0.6ms)[0m   [0mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+  [4;36;1mCapacity Load (0.4ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_capacity (0.2ms)
+Rendered capacities/_capacity (0.1ms)
+Rendered capacities/_capacity (0.1ms)
+Rendered shared/_navigation (0.1ms)
+Completed in 19ms (View: 9, DB: 1) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:42:19) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:42:19) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:42:19) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:42:19) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:42:19) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 00:42:36) [GET]
+  [4;35;1mCapacity Load (0.6ms)[0m   [0mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+  [4;36;1mCapacity Load (0.4ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_capacity (0.2ms)
+Rendered capacities/_capacity (0.1ms)
+Rendered capacities/_capacity (0.1ms)
+Rendered shared/_navigation (0.1ms)
+Completed in 18ms (View: 8, DB: 1) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:42:36) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:42:36) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:42:36) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:42:36) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:42:36) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 00:42:37) [GET]
+  [4;35;1mCapacity Load (0.6ms)[0m   [0mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+  [4;36;1mCapacity Load (0.5ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_capacity (0.2ms)
+Rendered capacities/_capacity (0.1ms)
+Rendered capacities/_capacity (0.1ms)
+Rendered shared/_navigation (0.1ms)
+Completed in 19ms (View: 9, DB: 1) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:42:37) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:42:37) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:42:37) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:42:37) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:42:37) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 00:43:07) [GET]
+  [4;35;1mCapacity Load (0.6ms)[0m   [0mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+  [4;36;1mCapacity Load (0.5ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_capacity (0.2ms)
+Rendered capacities/_capacity (0.1ms)
+Rendered capacities/_capacity (0.1ms)
+Rendered shared/_navigation (0.1ms)
+Completed in 20ms (View: 9, DB: 1) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:43:07) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:43:07) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:43:07) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:43:07) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:43:07) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 00:44:16) [GET]
+  [4;35;1mCapacity Load (0.6ms)[0m   [0mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+  [4;36;1mCapacity Load (62.1ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_capacity (0.3ms)
+Rendered capacities/_capacity (0.2ms)
+Rendered capacities/_capacity (0.1ms)
+Rendered shared/_navigation (0.2ms)
+Completed in 80677ms (View: 12, DB: 63) | 200 OK [http://localhost/capacities]
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 00:45:36) [GET]
+  [4;35;1mCapacity Load (0.6ms)[0m   [0mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+  [4;36;1mCapacity Load (0.6ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+
+ArgumentError (A copy of CapacitiesController has been removed from the module tree but is still active!):
+  app/controllers/capacities_controller.rb:19:in `index'
+  haml (2.2.3) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (95.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 00:45:43) [GET]
+  [4;35;1mCapacity Load (0.7ms)[0m   [0mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+  [4;36;1mCapacity Load (0.6ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_capacity (0.2ms)
+Rendered capacities/_capacity (0.1ms)
+Rendered capacities/_capacity (0.1ms)
+Rendered shared/_navigation (0.2ms)
+Completed in 24ms (View: 10, DB: 1) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:45:43) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:45:43) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:45:43) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:45:43) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:45:43) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 00:45:44) [GET]
+  [4;35;1mCapacity Load (0.8ms)[0m   [0mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+  [4;36;1mCapacity Load (0.7ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_capacity (0.3ms)
+Rendered capacities/_capacity (0.2ms)
+Rendered capacities/_capacity (0.1ms)
+Rendered shared/_navigation (0.2ms)
+Completed in 100ms (View: 14, DB: 1) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:45:44) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:45:45) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:45:45) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:45:45) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:45:45) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 00:45:45) [GET]
+  [4;35;1mCapacity Load (0.7ms)[0m   [0mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+  [4;36;1mCapacity Load (0.8ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_capacity (0.2ms)
+Rendered capacities/_capacity (0.1ms)
+Rendered capacities/_capacity (0.1ms)
+Rendered shared/_navigation (0.2ms)
+Completed in 24ms (View: 10, DB: 1) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:45:45) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:45:45) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:45:46) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:45:46) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:45:46) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#create (for 127.0.0.1 at 2009-09-07 00:47:31) [POST]
+  Parameters: {"authenticity_token"=>"PyvmvNkUtRUUEfUlZ59n0hwu1TrbcW2KGFV+W9IT6DI=", "save"=>"save", "capacity"=>{"driver_id"=>"", "location"=>"Denver", "available_on(1i)"=>"2009", "notes"=>"", "available_on(2i)"=>"9", "priority"=>"0", "available_on(3i)"=>"9"}}
+  [4;35;1mCapacity Create (0.3ms)[0m   [0mINSERT INTO "capacities" ("driver_id", "location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES(NULL, 'Denver', '2009-09-09', '2009-09-07 05:47:31', NULL, '', '2009-09-07 05:47:31', 0)[0m
+Redirected to http://localhost:3000/capacities
+Completed in 18ms (DB: 0) | 302 Found [http://localhost/capacities]
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 00:47:32) [GET]
+  [4;36;1mCapacity Load (0.7ms)[0m   [0;1mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+  [4;35;1mCapacity Load (0.7ms)[0m   [0mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_capacity (0.2ms)
+Rendered capacities/_capacity (0.1ms)
+Rendered capacities/_capacity (0.1ms)
+Rendered shared/_navigation (0.2ms)
+Completed in 25ms (View: 11, DB: 1) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:47:32) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:47:32) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:47:32) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:47:32) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:47:32) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 00:48:13) [GET]
+  [4;36;1mCapacity Load (0.8ms)[0m   [0;1mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+  [4;35;1mCapacity Load (0.7ms)[0m   [0mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_capacity (0.2ms)
+Rendered capacities/_capacity (0.1ms)
+Rendered capacities/_capacity (0.1ms)
+Rendered shared/_navigation (0.2ms)
+Completed in 270514ms (View: 13, DB: 1) | 200 OK [http://localhost/capacities]
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 00:52:44) [GET]
+  [4;36;1mCapacity Load (0.6ms)[0m   [0;1mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+  [4;35;1mCapacity Load (0.7ms)[0m   [0mSELECT * FROM "capacities" [0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.include?):
+  app/models/capacity.rb:14:in `all_by_availability'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/set.rb:195:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/set.rb:195:in `each_key'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/set.rb:195:in `each'
+  app/models/capacity.rb:13:in `all_by_availability'
+  app/controllers/capacities_controller.rb:14:in `index'
+  haml (2.2.3) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (42.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 00:52:45) [GET]
+  [4;36;1mCapacity Load (0.7ms)[0m   [0;1mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+  [4;35;1mCapacity Load (0.7ms)[0m   [0mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_capacity (0.2ms)
+Rendered capacities/_capacity (0.2ms)
+Rendered capacities/_capacity (0.2ms)
+Rendered shared/_navigation (0.2ms)
+Completed in 3170ms (View: 11, DB: 1) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:52:48) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:52:49) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:52:49) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:52:49) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:52:49) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 00:52:59) [GET]
+  [4;36;1mCapacity Load (0.7ms)[0m   [0;1mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+  [4;35;1mCapacity Load (0.7ms)[0m   [0mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_capacity (0.2ms)
+Rendered capacities/_capacity (0.1ms)
+Rendered capacities/_capacity (0.1ms)
+Rendered shared/_navigation (0.2ms)
+Completed in 25ms (View: 10, DB: 1) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:52:59) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:52:59) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:52:59) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:52:59) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:52:59) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 00:53:26) [GET]
+  [4;36;1mCapacity Load (0.8ms)[0m   [0;1mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+  [4;35;1mCapacity Load (0.7ms)[0m   [0mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_capacity (0.3ms)
+Rendered capacities/_capacity (0.2ms)
+Rendered capacities/_capacity (0.1ms)
+Rendered shared/_navigation (0.2ms)
+Completed in 20236ms (View: 11, DB: 1) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:53:46) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:53:46) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:53:46) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:53:47) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:53:47) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 00:53:53) [GET]
+  [4;36;1mCapacity Load (0.8ms)[0m   [0;1mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+  [4;35;1mCapacity Load (0.8ms)[0m   [0mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_capacity (0.2ms)
+Rendered capacities/_capacity (0.1ms)
+Rendered capacities/_capacity (0.1ms)
+Rendered shared/_navigation (0.2ms)
+Completed in 30679ms (View: 11, DB: 2) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:54:23) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:54:23) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:54:23) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:54:23) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:54:23) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 00:54:32) [GET]
+  [4;36;1mCapacity Load (0.7ms)[0m   [0;1mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+  [4;35;1mCapacity Load (0.5ms)[0m   [0mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_capacity (1.9ms)
+Rendered capacities/_capacity (0.2ms)
+Rendered capacities/_capacity (0.2ms)
+Rendered shared/_navigation (4.6ms)
+Completed in 29300ms (View: 133, DB: 1) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:55:01) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:55:01) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:55:01) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:55:01) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 00:55:01) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 00:55:04) [GET]
+  [4;36;1mCapacity Load (0.7ms)[0m   [0;1mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+  [4;35;1mCapacity Load (0.8ms)[0m   [0mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_capacity (0.3ms)
+Rendered capacities/_capacity (0.2ms)
+Rendered capacities/_capacity (0.2ms)
+Rendered shared/_navigation (0.3ms)
+Completed in 31041935ms (View: 61, DB: 1) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 09:32:26) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 09:32:26) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 09:32:26) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 09:32:26) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 09:32:26) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 09:37:55) [GET]
+  [4;36;1mCapacity Load (17.6ms)[0m   [0;1mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+  [4;35;1mCapacity Load (0.7ms)[0m   [0mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_capacity (0.3ms)
+Rendered capacities/_capacity (0.1ms)
+Rendered capacities/_capacity (0.2ms)
+Rendered shared/_navigation (0.2ms)
+Completed in 251ms (View: 68, DB: 18) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 09:37:55) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 09:37:55) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 09:37:55) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 09:37:56) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 09:37:56) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 09:39:01) [GET]
+  [4;36;1mCapacity Load (14.6ms)[0m   [0;1mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+  [4;35;1mCapacity Load (0.8ms)[0m   [0mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_capacity (0.2ms)
+Rendered capacities/_capacity (0.1ms)
+Rendered capacities/_capacity (0.1ms)
+Rendered shared/_navigation (0.2ms)
+Completed in 47ms (View: 19, DB: 15) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 09:39:01) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 09:39:01) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 09:39:01) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 09:39:01) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 09:39:01) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)

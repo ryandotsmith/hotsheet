@@ -5,16 +5,18 @@ class CapacitiesController < ApplicationController
 
   def index
     if params[:focus_date]
-      @focus_capacity = Capacity.available_on( params[:focus_date] ) 
+      @focus_capacities = Capacity.all_by_availability( params[:focus_date] ) 
     else
-      @focus_capacity = Capacity.available_on(Date.today) 
+      @focus_capacities = Capacity.all_by_availability( Date.today ) 
     end
+    @focus_date = @focus_capacities.keys.pop
     # load all capacities excluding the one in focus
     # these capacitires will be loaded into the sidebar
-    @capacities   = Capacity.all.delete( @focus_capacity )
+    @capacities   = Capacity.all_by_availability
+    # pick the Focus capacities out of the hash
+    @capacities.delete( @focus_date )
     # build a new capacity for the form object
     @new_capacity = Capacity.new 
-
   end
 
 end

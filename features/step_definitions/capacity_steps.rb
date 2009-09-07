@@ -11,12 +11,20 @@ Given /^I have capacity "([^\"]*)" days? from now in "([^\"]*)"$/ do |n, locatio
 end
 
 Then /^I should see capacity in "([^\"]*)" for "([^\"]*)"$/ do |location, day|
-  date = DateTime.now.strftime('%d_%m_%y')
-  response.should have_tag( "div##{date}",  :text => location )
+  date = DateTime.now.strftime('%m_%d_%y')
+  response.should have_selector( 'div', :id => date ) do |div|
+    div.should have_selector('td', :class => 'location') do |td|
+      td.text.should eql( location ) 
+    end
+  end
 end
 
 Then /^I should see capacity in "([^\"]*)" "([^\"]*)" days? from now$/ do |location , n|
-  date = (DateTime.now + n.to_i.days).strftime('%d_%m_%y')
-  response.should have_selector( 'div', :id => date )
+  date = (DateTime.now + n.to_i.days).strftime('%m_%d_%y')
+   response.should have_selector( 'div', :id => date ) do |div|
+    div.should have_selector('td', :class => 'location') do |td|
+      td.text.should eql( location ) 
+    end
+  end
 end
 

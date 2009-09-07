@@ -45,4 +45,10 @@ describe "finding capacities by date" do
     capacities = return_hash.values
     (capacities.flatten - Capacity.all).should eql( [] )
   end
+  it "should return data such that removal of elements is easy" do
+    return_hash = Capacity.all_by_availability
+    capacities = return_hash.values.flatten
+    capacities.delete( Capacity.first )
+    capacities.count.should eql( Capacity.count - 1 )
+  end
 end
