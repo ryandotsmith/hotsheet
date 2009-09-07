@@ -1,0 +1,11 @@
+#focus_capacities
+  %h1= @focus_date.strftime('%m_%d_%y')
+  %table{ :id => "capacity_today_table" }
+    %thead
+      %tr
+        %th Covered
+        %th Location
+        %th Driver
+        %th Notes
+    %tbody
+      = render focus_capacities.values.flatten
