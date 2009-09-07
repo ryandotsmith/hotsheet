@@ -13,7 +13,7 @@ ActiveRecord::Schema.define(:version => 20090904193840) do
 
   create_table "capacities", :force => true do |t|
     t.string   "location"
-    t.datetime "available_on"
+    t.date     "available_on"
     t.datetime "fulfilled_on"
     t.string   "notes"
     t.integer  "priority",     :default => 0

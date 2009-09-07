@@ -1226,3 +1226,652 @@ Rendering capacities/index
 Rendered capacities/_capacity (4.2ms)
 Rendered capacities/_form (1.2ms)
 Completed in 12ms (View: 11, DB: 0) | 200 OK [http://www.example.com/capacities]
+REQUESTING PAGE: GET http://www.example.com/capacities with {} and HTTP headers {}
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-06 10:52:10) [GET]
+  [4;36;1mCapacity Load (1.4ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered shared/_navigation (4.4ms)
+Completed in 159ms (View: 152, DB: 1) | 200 OK [http://www.example.com/capacities]
+REQUESTING PAGE: POST /capacities with {"save"=>"save", "capacity"=>{"driver_id"=>"Leroy", "location"=>"Kansas City", "available_on(1i)"=>"2009", "notes"=>"need a hot load", "available_on(2i)"=>"9", "priority"=>"0", "available_on(3i)"=>"5"}} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/capacities"}
+
+
+Processing CapacitiesController#create (for 127.0.0.1 at 2009-09-06 10:52:10) [POST]
+  Parameters: {"save"=>"save", "capacity"=>{"driver_id"=>"Leroy", "location"=>"Kansas City", "notes"=>"need a hot load", "available_on(1i)"=>"2009", "priority"=>"0", "available_on(2i)"=>"9", "available_on(3i)"=>"5"}}
+  [4;35;1mCapacity Create (12.4ms)[0m   [0mINSERT INTO "capacities" ("driver_id", "location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES(0, 'Kansas City', '2009-09-05 00:00:00', '2009-09-06 15:52:10', NULL, 'need a hot load', '2009-09-06 15:52:10', 0)[0m
+Redirected to http://www.example.com/capacities
+Completed in 26ms (DB: 12) | 302 Found [http://www.example.com/capacities]
+REQUESTING PAGE: GET http://www.example.com/capacities with {} and HTTP headers {"HTTP_REFERER"=>"/capacities"}
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-06 10:52:10) [GET]
+  [4;36;1mCapacity Load (0.3ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" WHERE ("drivers"."id" = 0) [0m
+Rendered capacities/_capacity (3.1ms)
+Rendered shared/_navigation (0.2ms)
+Completed in 11ms (View: 9, DB: 1) | 200 OK [http://www.example.com/capacities]
+REQUESTING PAGE: GET http://www.example.com/capacities with {} and HTTP headers {}
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-06 10:52:48) [GET]
+  [4;36;1mCapacity Load (0.3ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered shared/_navigation (4.3ms)
+Completed in 134ms (View: 130, DB: 0) | 200 OK [http://www.example.com/capacities]
+REQUESTING PAGE: POST /capacities with {"save"=>"save", "capacity"=>{"driver_id"=>"Leroy", "location"=>"Kansas City", "available_on(1i)"=>"2009", "notes"=>"need a hot load", "available_on(2i)"=>"9", "priority"=>"0", "available_on(3i)"=>"5"}} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/capacities"}
+
+
+Processing CapacitiesController#create (for 127.0.0.1 at 2009-09-06 10:52:48) [POST]
+  Parameters: {"save"=>"save", "capacity"=>{"driver_id"=>"Leroy", "location"=>"Kansas City", "notes"=>"need a hot load", "available_on(1i)"=>"2009", "priority"=>"0", "available_on(2i)"=>"9", "available_on(3i)"=>"5"}}
+  [4;35;1mCapacity Create (0.5ms)[0m   [0mINSERT INTO "capacities" ("driver_id", "location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES(0, 'Kansas City', '2009-09-05 00:00:00', '2009-09-06 15:52:48', NULL, 'need a hot load', '2009-09-06 15:52:48', 0)[0m
+Redirected to http://www.example.com/capacities
+Completed in 8ms (DB: 0) | 302 Found [http://www.example.com/capacities]
+REQUESTING PAGE: GET http://www.example.com/capacities with {} and HTTP headers {"HTTP_REFERER"=>"/capacities"}
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-06 10:52:48) [GET]
+  [4;36;1mCapacity Load (0.3ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;35;1mDriver Load (0.1ms)[0m   [0mSELECT * FROM "drivers" WHERE ("drivers"."id" = 0) [0m
+Rendered capacities/_capacity (3.3ms)
+Rendered shared/_navigation (0.2ms)
+Completed in 13ms (View: 11, DB: 0) | 200 OK [http://www.example.com/capacities]
+REQUESTING PAGE: GET http://www.example.com/capacities with {} and HTTP headers {}
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-06 10:53:26) [GET]
+  [4;36;1mCapacity Load (0.3ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered shared/_navigation (4.4ms)
+Completed in 135ms (View: 130, DB: 0) | 200 OK [http://www.example.com/capacities]
+REQUESTING PAGE: POST /capacities with {"save"=>"save", "capacity"=>{"driver_id"=>"Leroy", "location"=>"Kansas City", "available_on(1i)"=>"2009", "notes"=>"need a hot load", "available_on(2i)"=>"9", "priority"=>"0", "available_on(3i)"=>"5"}} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/capacities"}
+
+
+Processing CapacitiesController#create (for 127.0.0.1 at 2009-09-06 10:53:26) [POST]
+  Parameters: {"save"=>"save", "capacity"=>{"driver_id"=>"Leroy", "location"=>"Kansas City", "notes"=>"need a hot load", "available_on(1i)"=>"2009", "priority"=>"0", "available_on(2i)"=>"9", "available_on(3i)"=>"5"}}
+  [4;35;1mCapacity Create (0.4ms)[0m   [0mINSERT INTO "capacities" ("driver_id", "location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES(0, 'Kansas City', '2009-09-05 00:00:00', '2009-09-06 15:53:26', NULL, 'need a hot load', '2009-09-06 15:53:26', 0)[0m
+Redirected to http://www.example.com/capacities
+Completed in 8ms (DB: 0) | 302 Found [http://www.example.com/capacities]
+REQUESTING PAGE: GET http://www.example.com/capacities with {} and HTTP headers {"HTTP_REFERER"=>"/capacities"}
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-06 10:53:26) [GET]
+  [4;36;1mCapacity Load (0.3ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;35;1mDriver Load (0.1ms)[0m   [0mSELECT * FROM "drivers" WHERE ("drivers"."id" = 0) [0m
+Rendered capacities/_capacity (3.3ms)
+Rendered shared/_navigation (0.2ms)
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://www.example.com/capacities]
+REQUESTING PAGE: GET http://www.example.com/capacities with {} and HTTP headers {}
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-06 10:59:43) [GET]
+  [4;36;1mCapacity Load (0.3ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered shared/_navigation (4.3ms)
+Completed in 135ms (View: 130, DB: 0) | 200 OK [http://www.example.com/capacities]
+REQUESTING PAGE: POST /capacities with {"save"=>"save", "capacity"=>{"driver_id"=>"Leroy", "location"=>"Kansas City", "available_on(1i)"=>"2009", "notes"=>"need a hot load", "available_on(2i)"=>"9", "priority"=>"0", "available_on(3i)"=>"5"}} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/capacities"}
+
+
+Processing CapacitiesController#create (for 127.0.0.1 at 2009-09-06 10:59:43) [POST]
+  Parameters: {"save"=>"save", "capacity"=>{"driver_id"=>"Leroy", "location"=>"Kansas City", "notes"=>"need a hot load", "available_on(1i)"=>"2009", "priority"=>"0", "available_on(2i)"=>"9", "available_on(3i)"=>"5"}}
+  [4;35;1mCapacity Create (0.4ms)[0m   [0mINSERT INTO "capacities" ("driver_id", "location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES(0, 'Kansas City', '2009-09-05 00:00:00', '2009-09-06 15:59:43', NULL, 'need a hot load', '2009-09-06 15:59:43', 0)[0m
+Redirected to http://www.example.com/capacities
+Completed in 8ms (DB: 0) | 302 Found [http://www.example.com/capacities]
+REQUESTING PAGE: GET http://www.example.com/capacities with {} and HTTP headers {"HTTP_REFERER"=>"/capacities"}
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-06 10:59:43) [GET]
+  [4;36;1mCapacity Load (0.3ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;35;1mDriver Load (0.1ms)[0m   [0mSELECT * FROM "drivers" WHERE ("drivers"."id" = 0) [0m
+Rendered capacities/_capacity (3.2ms)
+Rendered shared/_navigation (0.2ms)
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://www.example.com/capacities]
+  [4;36;1mDriver Create (0.5ms)[0m   [0;1mINSERT INTO "drivers" ("name", "created_at", "updated_at") VALUES('Ryan Smith', '2009-09-06 16:15:20', '2009-09-06 16:15:20')[0m
+  [4;35;1mCapacity Create (0.2ms)[0m   [0mINSERT INTO "capacities" ("driver_id", "location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES(1, 'Kansas City', '2009-09-06 16:15:20', '2009-09-06 16:15:20', NULL, 'need a good load', '2009-09-06 16:15:20', 0)[0m
+  [4;36;1mDriver Create (0.5ms)[0m   [0;1mINSERT INTO "drivers" ("name", "created_at", "updated_at") VALUES('Ryan Smith', '2009-09-06 16:18:20', '2009-09-06 16:18:20')[0m
+  [4;35;1mCapacity Create (0.2ms)[0m   [0mINSERT INTO "capacities" ("driver_id", "location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES(1, 'Kansas City', '2009-09-06 16:18:20', '2009-09-06 16:18:20', NULL, 'need a good load', '2009-09-06 16:18:20', 0)[0m
+  [4;36;1mDriver Create (0.5ms)[0m   [0;1mINSERT INTO "drivers" ("name", "created_at", "updated_at") VALUES('Ryan Smith', '2009-09-06 16:18:47', '2009-09-06 16:18:47')[0m
+  [4;35;1mCapacity Create (0.2ms)[0m   [0mINSERT INTO "capacities" ("driver_id", "location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES(1, 'Kansas City', '2009-09-06 16:18:47', '2009-09-06 16:18:47', NULL, 'need a good load', '2009-09-06 16:18:47', 0)[0m
+  [4;36;1mDriver Create (0.1ms)[0m   [0;1mINSERT INTO "drivers" ("name", "created_at", "updated_at") VALUES('Ryan Smith', '2009-09-06 16:18:47', '2009-09-06 16:18:47')[0m
+  [4;35;1mCapacity Create (0.1ms)[0m   [0mINSERT INTO "capacities" ("driver_id", "location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES(2, 'Tuscan', '2009-09-07 16:18:47', '2009-09-06 16:18:47', NULL, 'need a good load', '2009-09-06 16:18:47', 0)[0m
+  [4;36;1mDriver Create (0.1ms)[0m   [0;1mINSERT INTO "drivers" ("name", "created_at", "updated_at") VALUES('Ryan Smith', '2009-09-06 16:18:47', '2009-09-06 16:18:47')[0m
+  [4;35;1mCapacity Create (0.1ms)[0m   [0mINSERT INTO "capacities" ("driver_id", "location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES(3, 'Oklahoma', '2009-09-08 16:18:47', '2009-09-06 16:18:47', NULL, 'need a good load', '2009-09-06 16:18:47', 0)[0m
+REQUESTING PAGE: GET http://www.example.com/capacities with {} and HTTP headers {}
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-06 11:18:47) [GET]
+  [4;36;1mCapacity Load (0.5ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" WHERE ("drivers"."id" = 1) [0m
+Rendered capacities/_capacity (2.2ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" WHERE ("drivers"."id" = 2) [0m
+Rendered capacities/_capacity (0.7ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" WHERE ("drivers"."id" = 3) [0m
+Rendered capacities/_capacity (0.8ms)
+Rendered shared/_navigation (4.2ms)
+Completed in 37ms (View: 32, DB: 2) | 200 OK [http://www.example.com/capacities]
+  [4;36;1mDriver Create (0.4ms)[0m   [0;1mINSERT INTO "drivers" ("name", "created_at", "updated_at") VALUES('Ryan Smith', '2009-09-06 16:23:40', '2009-09-06 16:23:40')[0m
+  [4;35;1mCapacity Create (0.2ms)[0m   [0mINSERT INTO "capacities" ("driver_id", "location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES(1, 'Kansas City', '2009-09-06 16:23:40', '2009-09-06 16:23:40', NULL, 'need a good load', '2009-09-06 16:23:40', 0)[0m
+  [4;36;1mDriver Create (0.1ms)[0m   [0;1mINSERT INTO "drivers" ("name", "created_at", "updated_at") VALUES('Ryan Smith', '2009-09-06 16:23:40', '2009-09-06 16:23:40')[0m
+  [4;35;1mCapacity Create (0.1ms)[0m   [0mINSERT INTO "capacities" ("driver_id", "location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES(2, 'Tuscan', '2009-09-07 16:23:40', '2009-09-06 16:23:40', NULL, 'need a good load', '2009-09-06 16:23:40', 0)[0m
+  [4;36;1mDriver Create (0.1ms)[0m   [0;1mINSERT INTO "drivers" ("name", "created_at", "updated_at") VALUES('Ryan Smith', '2009-09-06 16:23:40', '2009-09-06 16:23:40')[0m
+  [4;35;1mCapacity Create (0.1ms)[0m   [0mINSERT INTO "capacities" ("driver_id", "location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES(3, 'Oklahoma', '2009-09-08 16:23:40', '2009-09-06 16:23:40', NULL, 'need a good load', '2009-09-06 16:23:40', 0)[0m
+REQUESTING PAGE: GET http://www.example.com/capacities with {} and HTTP headers {}
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-06 11:23:40) [GET]
+  [4;36;1mCapacity Load (0.5ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" WHERE ("drivers"."id" = 1) [0m
+Rendered capacities/_capacity (2.2ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" WHERE ("drivers"."id" = 2) [0m
+Rendered capacities/_capacity (0.7ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" WHERE ("drivers"."id" = 3) [0m
+Rendered capacities/_capacity (0.7ms)
+Rendered shared/_navigation (5.3ms)
+Completed in 37ms (View: 33, DB: 2) | 200 OK [http://www.example.com/capacities]
+  [4;36;1mDriver Create (0.4ms)[0m   [0;1mINSERT INTO "drivers" ("name", "created_at", "updated_at") VALUES('Ryan Smith', '2009-09-06 16:28:20', '2009-09-06 16:28:20')[0m
+  [4;35;1mCapacity Create (0.3ms)[0m   [0mINSERT INTO "capacities" ("driver_id", "location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES(1, 'Kansas City', '2009-09-06 16:28:20', '2009-09-06 16:28:20', NULL, 'need a good load', '2009-09-06 16:28:20', 0)[0m
+  [4;36;1mDriver Create (0.1ms)[0m   [0;1mINSERT INTO "drivers" ("name", "created_at", "updated_at") VALUES('Ryan Smith', '2009-09-06 16:28:20', '2009-09-06 16:28:20')[0m
+  [4;35;1mCapacity Create (0.1ms)[0m   [0mINSERT INTO "capacities" ("driver_id", "location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES(2, 'Tuscan', '2009-09-07 16:28:20', '2009-09-06 16:28:20', NULL, 'need a good load', '2009-09-06 16:28:20', 0)[0m
+  [4;36;1mDriver Create (0.1ms)[0m   [0;1mINSERT INTO "drivers" ("name", "created_at", "updated_at") VALUES('Ryan Smith', '2009-09-06 16:28:20', '2009-09-06 16:28:20')[0m
+  [4;35;1mCapacity Create (0.1ms)[0m   [0mINSERT INTO "capacities" ("driver_id", "location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES(3, 'Oklahoma', '2009-09-08 16:28:20', '2009-09-06 16:28:20', NULL, 'need a good load', '2009-09-06 16:28:20', 0)[0m
+REQUESTING PAGE: GET http://www.example.com/capacities with {} and HTTP headers {}
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-06 11:28:20) [GET]
+  [4;36;1mCapacity Load (0.6ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" WHERE ("drivers"."id" = 1) [0m
+Rendered capacities/_capacity (2.6ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" WHERE ("drivers"."id" = 2) [0m
+Rendered capacities/_capacity (0.9ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" WHERE ("drivers"."id" = 3) [0m
+Rendered capacities/_capacity (0.8ms)
+Rendered shared/_navigation (4.5ms)
+Completed in 37ms (View: 32, DB: 2) | 200 OK [http://www.example.com/capacities]
+  [4;36;1mDriver Create (0.4ms)[0m   [0;1mINSERT INTO "drivers" ("name", "created_at", "updated_at") VALUES('Ryan Smith', '2009-09-06 16:35:19', '2009-09-06 16:35:19')[0m
+  [4;35;1mCapacity Create (0.1ms)[0m   [0mINSERT INTO "capacities" ("driver_id", "location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES(1, 'Kansas City', '2009-09-06 16:35:18', '2009-09-06 16:35:19', NULL, 'need a good load', '2009-09-06 16:35:19', 0)[0m
+  [4;36;1mDriver Create (0.1ms)[0m   [0;1mINSERT INTO "drivers" ("name", "created_at", "updated_at") VALUES('Ryan Smith', '2009-09-06 16:35:19', '2009-09-06 16:35:19')[0m
+  [4;35;1mCapacity Create (0.1ms)[0m   [0mINSERT INTO "capacities" ("driver_id", "location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES(2, 'Tuscan', '2009-09-07 16:35:19', '2009-09-06 16:35:19', NULL, 'need a good load', '2009-09-06 16:35:19', 0)[0m
+  [4;36;1mDriver Create (0.1ms)[0m   [0;1mINSERT INTO "drivers" ("name", "created_at", "updated_at") VALUES('Ryan Smith', '2009-09-06 16:35:19', '2009-09-06 16:35:19')[0m
+  [4;35;1mCapacity Create (0.1ms)[0m   [0mINSERT INTO "capacities" ("driver_id", "location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES(3, 'Oklahoma', '2009-09-08 16:35:19', '2009-09-06 16:35:19', NULL, 'need a good load', '2009-09-06 16:35:19', 0)[0m
+REQUESTING PAGE: GET http://www.example.com/capacities with {} and HTTP headers {}
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-06 11:35:19) [GET]
+  [4;36;1mCapacity Load (0.6ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" WHERE ("drivers"."id" = 1) [0m
+Rendered capacities/_capacity (2.2ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" WHERE ("drivers"."id" = 2) [0m
+Rendered capacities/_capacity (0.7ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" WHERE ("drivers"."id" = 3) [0m
+Rendered capacities/_capacity (0.7ms)
+Rendered shared/_navigation (4.2ms)
+Completed in 36ms (View: 32, DB: 2) | 200 OK [http://www.example.com/capacities]
+  [4;36;1mDriver Create (0.4ms)[0m   [0;1mINSERT INTO "drivers" ("name", "created_at", "updated_at") VALUES('Ryan Smith', '2009-09-06 16:35:54', '2009-09-06 16:35:54')[0m
+  [4;35;1mCapacity Create (0.2ms)[0m   [0mINSERT INTO "capacities" ("driver_id", "location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES(1, 'Kansas City', '2009-09-06 16:35:53', '2009-09-06 16:35:54', NULL, 'need a good load', '2009-09-06 16:35:54', 0)[0m
+  [4;36;1mDriver Create (0.1ms)[0m   [0;1mINSERT INTO "drivers" ("name", "created_at", "updated_at") VALUES('Ryan Smith', '2009-09-06 16:35:54', '2009-09-06 16:35:54')[0m
+  [4;35;1mCapacity Create (0.1ms)[0m   [0mINSERT INTO "capacities" ("driver_id", "location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES(2, 'Tuscan', '2009-09-07 16:35:54', '2009-09-06 16:35:54', NULL, 'need a good load', '2009-09-06 16:35:54', 0)[0m
+  [4;36;1mDriver Create (0.1ms)[0m   [0;1mINSERT INTO "drivers" ("name", "created_at", "updated_at") VALUES('Ryan Smith', '2009-09-06 16:35:54', '2009-09-06 16:35:54')[0m
+  [4;35;1mCapacity Create (0.1ms)[0m   [0mINSERT INTO "capacities" ("driver_id", "location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES(3, 'Oklahoma', '2009-09-08 16:35:54', '2009-09-06 16:35:54', NULL, 'need a good load', '2009-09-06 16:35:54', 0)[0m
+REQUESTING PAGE: GET http://www.example.com/capacities with {} and HTTP headers {}
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-06 11:35:54) [GET]
+  [4;36;1mCapacity Load (0.5ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" WHERE ("drivers"."id" = 1) [0m
+Rendered capacities/_capacity (2.1ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" WHERE ("drivers"."id" = 2) [0m
+Rendered capacities/_capacity (0.7ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" WHERE ("drivers"."id" = 3) [0m
+Rendered capacities/_capacity (0.7ms)
+Rendered shared/_navigation (4.4ms)
+Completed in 36ms (View: 32, DB: 2) | 200 OK [http://www.example.com/capacities]
+REQUESTING PAGE: GET http://www.example.com/capacities with {} and HTTP headers {}
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-06 18:45:47) [GET]
+  [4;36;1mCapacity Load (0.4ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered shared/_navigation (4.3ms)
+Completed in 105ms (View: 100, DB: 0) | 200 OK [http://www.example.com/capacities]
+REQUESTING PAGE: POST /capacities with {"save"=>"save", "capacity"=>{"driver_id"=>"Leroy", "location"=>"Kansas City", "available_on(1i)"=>"2009", "notes"=>"need a hot load", "available_on(2i)"=>"9", "priority"=>"0", "available_on(3i)"=>"5"}} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/capacities"}
+
+
+Processing CapacitiesController#create (for 127.0.0.1 at 2009-09-06 18:45:47) [POST]
+  Parameters: {"save"=>"save", "capacity"=>{"driver_id"=>"Leroy", "location"=>"Kansas City", "notes"=>"need a hot load", "available_on(1i)"=>"2009", "priority"=>"0", "available_on(2i)"=>"9", "available_on(3i)"=>"5"}}
+  [4;35;1mCapacity Create (0.4ms)[0m   [0mINSERT INTO "capacities" ("driver_id", "location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES(0, 'Kansas City', '2009-09-05', '2009-09-06 23:45:47', NULL, 'need a hot load', '2009-09-06 23:45:47', 0)[0m
+Redirected to http://www.example.com/capacities
+Completed in 100ms (DB: 0) | 302 Found [http://www.example.com/capacities]
+REQUESTING PAGE: GET http://www.example.com/capacities with {} and HTTP headers {"HTTP_REFERER"=>"/capacities"}
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-06 18:45:47) [GET]
+  [4;36;1mCapacity Load (0.4ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;35;1mDriver Load (0.1ms)[0m   [0mSELECT * FROM "drivers" WHERE ("drivers"."id" = 0) [0m
+Rendered capacities/_capacity (3.1ms)
+Rendered shared/_navigation (0.2ms)
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://www.example.com/capacities]
+  [4;36;1mDriver Create (0.3ms)[0m   [0;1mINSERT INTO "drivers" ("name", "created_at", "updated_at") VALUES('Ryan Smith', '2009-09-06 23:45:47', '2009-09-06 23:45:47')[0m
+  [4;35;1mCapacity Create (0.5ms)[0m   [0mINSERT INTO "capacities" ("driver_id", "location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES(1, 'Kansas City', '2009-09-06 18:45:47', '2009-09-06 23:45:47', NULL, 'need a good load', '2009-09-06 23:45:47', 0)[0m
+  [4;36;1mDriver Create (0.1ms)[0m   [0;1mINSERT INTO "drivers" ("name", "created_at", "updated_at") VALUES('Ryan Smith', '2009-09-06 23:45:47', '2009-09-06 23:45:47')[0m
+  [4;35;1mCapacity Create (0.1ms)[0m   [0mINSERT INTO "capacities" ("driver_id", "location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES(2, 'Tuscan', '2009-09-07 18:45:47', '2009-09-06 23:45:47', NULL, 'need a good load', '2009-09-06 23:45:47', 0)[0m
+  [4;36;1mDriver Create (0.1ms)[0m   [0;1mINSERT INTO "drivers" ("name", "created_at", "updated_at") VALUES('Ryan Smith', '2009-09-06 23:45:47', '2009-09-06 23:45:47')[0m
+  [4;35;1mCapacity Create (0.1ms)[0m   [0mINSERT INTO "capacities" ("driver_id", "location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES(3, 'Oklahoma', '2009-09-08 18:45:47', '2009-09-06 23:45:47', NULL, 'need a good load', '2009-09-06 23:45:47', 0)[0m
+REQUESTING PAGE: GET http://www.example.com/capacities with {} and HTTP headers {}
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-06 18:45:47) [GET]
+  [4;36;1mCapacity Load (0.5ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" WHERE ("drivers"."id" = 1) [0m
+Rendered capacities/_capacity (0.9ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" WHERE ("drivers"."id" = 2) [0m
+Rendered capacities/_capacity (0.8ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" WHERE ("drivers"."id" = 3) [0m
+Rendered capacities/_capacity (0.7ms)
+Rendered shared/_navigation (0.2ms)
+Completed in 12ms (View: 10, DB: 2) | 200 OK [http://www.example.com/capacities]
+REQUESTING PAGE: GET http://www.example.com/capacities with {} and HTTP headers {}
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-06 22:51:26) [GET]
+  [4;36;1mCapacity Load (0.6ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered shared/_navigation (5.0ms)
+Completed in 126ms (View: 119, DB: 1) | 200 OK [http://www.example.com/capacities]
+REQUESTING PAGE: POST /capacities with {"save"=>"save", "capacity"=>{"driver_id"=>"Leroy", "location"=>"Kansas City", "available_on(1i)"=>"2009", "notes"=>"need a hot load", "available_on(2i)"=>"9", "priority"=>"0", "available_on(3i)"=>"5"}} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/capacities"}
+
+
+Processing CapacitiesController#create (for 127.0.0.1 at 2009-09-06 22:51:26) [POST]
+  Parameters: {"save"=>"save", "capacity"=>{"driver_id"=>"Leroy", "location"=>"Kansas City", "notes"=>"need a hot load", "available_on(1i)"=>"2009", "priority"=>"0", "available_on(2i)"=>"9", "available_on(3i)"=>"5"}}
+  [4;35;1mCapacity Create (0.5ms)[0m   [0mINSERT INTO "capacities" ("driver_id", "location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES(0, 'Kansas City', '2009-09-05', '2009-09-07 03:51:26', NULL, 'need a hot load', '2009-09-07 03:51:26', 0)[0m
+Redirected to http://www.example.com/capacities
+Completed in 117ms (DB: 0) | 302 Found [http://www.example.com/capacities]
+REQUESTING PAGE: GET http://www.example.com/capacities with {} and HTTP headers {"HTTP_REFERER"=>"/capacities"}
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-06 22:51:26) [GET]
+  [4;36;1mCapacity Load (0.4ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;35;1mDriver Load (0.1ms)[0m   [0mSELECT * FROM "drivers" WHERE ("drivers"."id" = 0) [0m
+Rendered capacities/_capacity (5.9ms)
+Rendered shared/_navigation (0.2ms)
+Completed in 17ms (View: 15, DB: 1) | 200 OK [http://www.example.com/capacities]
+  [4;36;1mDriver Create (0.4ms)[0m   [0;1mINSERT INTO "drivers" ("name", "created_at", "updated_at") VALUES('Ryan Smith', '2009-09-07 03:51:26', '2009-09-07 03:51:26')[0m
+  [4;35;1mCapacity Create (0.2ms)[0m   [0mINSERT INTO "capacities" ("driver_id", "location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES(1, 'Kansas City', '2009-09-06 22:51:26', '2009-09-07 03:51:26', NULL, 'need a good load', '2009-09-07 03:51:26', 0)[0m
+  [4;36;1mDriver Create (0.1ms)[0m   [0;1mINSERT INTO "drivers" ("name", "created_at", "updated_at") VALUES('Ryan Smith', '2009-09-07 03:51:26', '2009-09-07 03:51:26')[0m
+  [4;35;1mCapacity Create (0.2ms)[0m   [0mINSERT INTO "capacities" ("driver_id", "location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES(2, 'Tuscan', '2009-09-07 22:51:26', '2009-09-07 03:51:26', NULL, 'need a good load', '2009-09-07 03:51:26', 0)[0m
+  [4;36;1mDriver Create (0.1ms)[0m   [0;1mINSERT INTO "drivers" ("name", "created_at", "updated_at") VALUES('Ryan Smith', '2009-09-07 03:51:26', '2009-09-07 03:51:26')[0m
+  [4;35;1mCapacity Create (0.1ms)[0m   [0mINSERT INTO "capacities" ("driver_id", "location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES(3, 'Oklahoma', '2009-09-08 22:51:26', '2009-09-07 03:51:26', NULL, 'need a good load', '2009-09-07 03:51:26', 0)[0m
+REQUESTING PAGE: GET http://www.example.com/capacities with {} and HTTP headers {}
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-06 22:51:26) [GET]
+  [4;36;1mCapacity Load (1.2ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;35;1mDriver Load (0.5ms)[0m   [0mSELECT * FROM "drivers" WHERE ("drivers"."id" = 1) [0m
+Rendered capacities/_capacity (1.6ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" WHERE ("drivers"."id" = 2) [0m
+Rendered capacities/_capacity (0.9ms)
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" WHERE ("drivers"."id" = 3) [0m
+Rendered capacities/_capacity (1.2ms)
+Rendered shared/_navigation (0.2ms)
+Completed in 24ms (View: 19, DB: 3) | 200 OK [http://www.example.com/capacities]
+REQUESTING PAGE: GET http://www.example.com/capacities with {} and HTTP headers {}
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-06 22:52:52) [GET]
+  [4;36;1mCapacity Load (0.3ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered shared/_navigation (4.1ms)
+Completed in 47ms (View: 43, DB: 0) | 200 OK [http://www.example.com/capacities]
+REQUESTING PAGE: POST /capacities with {"save"=>"save", "capacity"=>{"driver_id"=>"Leroy", "location"=>"Kansas City", "available_on(1i)"=>"2009", "notes"=>"need a hot load", "available_on(2i)"=>"9", "priority"=>"0", "available_on(3i)"=>"5"}} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/capacities"}
+
+
+Processing CapacitiesController#create (for 127.0.0.1 at 2009-09-06 22:52:52) [POST]
+  Parameters: {"save"=>"save", "capacity"=>{"driver_id"=>"Leroy", "location"=>"Kansas City", "notes"=>"need a hot load", "available_on(1i)"=>"2009", "priority"=>"0", "available_on(2i)"=>"9", "available_on(3i)"=>"5"}}
+  [4;35;1mCapacity Create (0.5ms)[0m   [0mINSERT INTO "capacities" ("driver_id", "location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES(0, 'Kansas City', '2009-09-05', '2009-09-07 03:52:52', NULL, 'need a hot load', '2009-09-07 03:52:52', 0)[0m
+Redirected to http://www.example.com/capacities
+Completed in 101ms (DB: 0) | 302 Found [http://www.example.com/capacities]
+REQUESTING PAGE: GET http://www.example.com/capacities with {} and HTTP headers {"HTTP_REFERER"=>"/capacities"}
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-06 22:52:52) [GET]
+  [4;36;1mCapacity Load (0.4ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" WHERE ("drivers"."id" = 0) [0m
+Rendered capacities/_capacity (3.3ms)
+Rendered shared/_navigation (0.2ms)
+Completed in 12ms (View: 10, DB: 1) | 200 OK [http://www.example.com/capacities]
+  [4;36;1mDriver Create (0.3ms)[0m   [0;1mINSERT INTO "drivers" ("name", "created_at", "updated_at") VALUES('Ryan Smith', '2009-09-07 03:52:52', '2009-09-07 03:52:52')[0m
+  [4;35;1mCapacity Create (0.1ms)[0m   [0mINSERT INTO "capacities" ("driver_id", "location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES(1, 'Kansas City', '2009-09-06 22:52:52', '2009-09-07 03:52:52', NULL, 'need a good load', '2009-09-07 03:52:52', 0)[0m
+  [4;36;1mDriver Create (0.1ms)[0m   [0;1mINSERT INTO "drivers" ("name", "created_at", "updated_at") VALUES('Ryan Smith', '2009-09-07 03:52:52', '2009-09-07 03:52:52')[0m
+  [4;35;1mCapacity Create (0.1ms)[0m   [0mINSERT INTO "capacities" ("driver_id", "location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES(2, 'Tuscan', '2009-09-07 22:52:52', '2009-09-07 03:52:52', NULL, 'need a good load', '2009-09-07 03:52:52', 0)[0m
+  [4;36;1mDriver Create (0.1ms)[0m   [0;1mINSERT INTO "drivers" ("name", "created_at", "updated_at") VALUES('Ryan Smith', '2009-09-07 03:52:52', '2009-09-07 03:52:52')[0m
+  [4;35;1mCapacity Create (0.1ms)[0m   [0mINSERT INTO "capacities" ("driver_id", "location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES(3, 'Oklahoma', '2009-09-08 22:52:52', '2009-09-07 03:52:52', NULL, 'need a good load', '2009-09-07 03:52:52', 0)[0m
+REQUESTING PAGE: GET http://www.example.com/capacities with {} and HTTP headers {}
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-06 22:52:52) [GET]
+  [4;36;1mCapacity Load (0.5ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" WHERE ("drivers"."id" = 1) [0m
+Rendered capacities/_capacity (1.0ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" WHERE ("drivers"."id" = 2) [0m
+Rendered capacities/_capacity (0.7ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" WHERE ("drivers"."id" = 3) [0m
+Rendered capacities/_capacity (0.8ms)
+Rendered shared/_navigation (0.2ms)
+Completed in 11ms (View: 9, DB: 2) | 200 OK [http://www.example.com/capacities]
+REQUESTING PAGE: GET http://www.example.com/capacities with {} and HTTP headers {}
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-06 22:57:25) [GET]
+  [4;36;1mCapacity Load (0.3ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered shared/_navigation (4.3ms)
+Completed in 48ms (View: 43, DB: 0) | 200 OK [http://www.example.com/capacities]
+REQUESTING PAGE: POST /capacities with {"save"=>"save", "capacity"=>{"driver_id"=>"Leroy", "location"=>"Kansas City", "available_on(1i)"=>"2009", "notes"=>"need a hot load", "available_on(2i)"=>"9", "priority"=>"0", "available_on(3i)"=>"5"}} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/capacities"}
+
+
+Processing CapacitiesController#create (for 127.0.0.1 at 2009-09-06 22:57:25) [POST]
+  Parameters: {"save"=>"save", "capacity"=>{"driver_id"=>"Leroy", "location"=>"Kansas City", "notes"=>"need a hot load", "available_on(1i)"=>"2009", "priority"=>"0", "available_on(2i)"=>"9", "available_on(3i)"=>"5"}}
+  [4;35;1mCapacity Create (0.4ms)[0m   [0mINSERT INTO "capacities" ("driver_id", "location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES(0, 'Kansas City', '2009-09-05', '2009-09-07 03:57:25', NULL, 'need a hot load', '2009-09-07 03:57:25', 0)[0m
+Redirected to http://www.example.com/capacities
+Completed in 98ms (DB: 0) | 302 Found [http://www.example.com/capacities]
+REQUESTING PAGE: GET http://www.example.com/capacities with {} and HTTP headers {"HTTP_REFERER"=>"/capacities"}
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-06 22:57:25) [GET]
+  [4;36;1mCapacity Load (0.5ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;35;1mDriver Load (0.1ms)[0m   [0mSELECT * FROM "drivers" WHERE ("drivers"."id" = 0) [0m
+Rendered capacities/_capacity (3.1ms)
+Rendered shared/_navigation (0.2ms)
+Completed in 12ms (View: 10, DB: 1) | 200 OK [http://www.example.com/capacities]
+  [4;36;1mDriver Create (0.3ms)[0m   [0;1mINSERT INTO "drivers" ("name", "created_at", "updated_at") VALUES('Ryan Smith', '2009-09-07 03:57:25', '2009-09-07 03:57:25')[0m
+  [4;35;1mCapacity Create (0.1ms)[0m   [0mINSERT INTO "capacities" ("driver_id", "location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES(1, 'Kansas City', '2009-09-06 22:57:25', '2009-09-07 03:57:25', NULL, 'need a good load', '2009-09-07 03:57:25', 0)[0m
+  [4;36;1mDriver Create (0.1ms)[0m   [0;1mINSERT INTO "drivers" ("name", "created_at", "updated_at") VALUES('Ryan Smith', '2009-09-07 03:57:25', '2009-09-07 03:57:25')[0m
+  [4;35;1mCapacity Create (0.1ms)[0m   [0mINSERT INTO "capacities" ("driver_id", "location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES(2, 'Tuscan', '2009-09-07 22:57:25', '2009-09-07 03:57:25', NULL, 'need a good load', '2009-09-07 03:57:25', 0)[0m
+  [4;36;1mDriver Create (0.1ms)[0m   [0;1mINSERT INTO "drivers" ("name", "created_at", "updated_at") VALUES('Ryan Smith', '2009-09-07 03:57:25', '2009-09-07 03:57:25')[0m
+  [4;35;1mCapacity Create (0.1ms)[0m   [0mINSERT INTO "capacities" ("driver_id", "location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES(3, 'Oklahoma', '2009-09-08 22:57:25', '2009-09-07 03:57:25', NULL, 'need a good load', '2009-09-07 03:57:25', 0)[0m
+REQUESTING PAGE: GET http://www.example.com/capacities with {} and HTTP headers {}
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-06 22:57:25) [GET]
+  [4;36;1mCapacity Load (0.5ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" WHERE ("drivers"."id" = 1) [0m
+Rendered capacities/_capacity (1.0ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" WHERE ("drivers"."id" = 2) [0m
+Rendered capacities/_capacity (0.8ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" WHERE ("drivers"."id" = 3) [0m
+Rendered capacities/_capacity (0.7ms)
+Rendered shared/_navigation (0.2ms)
+Completed in 12ms (View: 9, DB: 2) | 200 OK [http://www.example.com/capacities]
+REQUESTING PAGE: GET http://www.example.com/capacities with {} and HTTP headers {}
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-06 22:57:57) [GET]
+  [4;36;1mCapacity Load (0.3ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered shared/_navigation (4.2ms)
+Completed in 48ms (View: 43, DB: 0) | 200 OK [http://www.example.com/capacities]
+REQUESTING PAGE: POST /capacities with {"save"=>"save", "capacity"=>{"driver_id"=>"Leroy", "location"=>"Kansas City", "available_on(1i)"=>"2009", "notes"=>"need a hot load", "available_on(2i)"=>"9", "priority"=>"0", "available_on(3i)"=>"5"}} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/capacities"}
+
+
+Processing CapacitiesController#create (for 127.0.0.1 at 2009-09-06 22:57:57) [POST]
+  Parameters: {"save"=>"save", "capacity"=>{"driver_id"=>"Leroy", "location"=>"Kansas City", "notes"=>"need a hot load", "available_on(1i)"=>"2009", "priority"=>"0", "available_on(2i)"=>"9", "available_on(3i)"=>"5"}}
+  [4;35;1mCapacity Create (0.7ms)[0m   [0mINSERT INTO "capacities" ("driver_id", "location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES(0, 'Kansas City', '2009-09-05', '2009-09-07 03:57:57', NULL, 'need a hot load', '2009-09-07 03:57:57', 0)[0m
+Redirected to http://www.example.com/capacities
+Completed in 96ms (DB: 1) | 302 Found [http://www.example.com/capacities]
+REQUESTING PAGE: GET http://www.example.com/capacities with {} and HTTP headers {"HTTP_REFERER"=>"/capacities"}
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-06 22:57:58) [GET]
+  [4;36;1mCapacity Load (0.4ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;35;1mDriver Load (0.1ms)[0m   [0mSELECT * FROM "drivers" WHERE ("drivers"."id" = 0) [0m
+Rendered capacities/_capacity (3.0ms)
+Rendered shared/_navigation (0.2ms)
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://www.example.com/capacities]
+  [4;36;1mDriver Create (0.3ms)[0m   [0;1mINSERT INTO "drivers" ("name", "created_at", "updated_at") VALUES('Ryan Smith', '2009-09-07 03:57:58', '2009-09-07 03:57:58')[0m
+  [4;35;1mCapacity Create (0.2ms)[0m   [0mINSERT INTO "capacities" ("driver_id", "location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES(1, 'Kansas City', '2009-09-06 22:57:58', '2009-09-07 03:57:58', NULL, 'need a good load', '2009-09-07 03:57:58', 0)[0m
+  [4;36;1mDriver Create (0.1ms)[0m   [0;1mINSERT INTO "drivers" ("name", "created_at", "updated_at") VALUES('Ryan Smith', '2009-09-07 03:57:58', '2009-09-07 03:57:58')[0m
+  [4;35;1mCapacity Create (0.1ms)[0m   [0mINSERT INTO "capacities" ("driver_id", "location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES(2, 'Tuscan', '2009-09-07 22:57:58', '2009-09-07 03:57:58', NULL, 'need a good load', '2009-09-07 03:57:58', 0)[0m
+  [4;36;1mDriver Create (0.1ms)[0m   [0;1mINSERT INTO "drivers" ("name", "created_at", "updated_at") VALUES('Ryan Smith', '2009-09-07 03:57:58', '2009-09-07 03:57:58')[0m
+  [4;35;1mCapacity Create (0.1ms)[0m   [0mINSERT INTO "capacities" ("driver_id", "location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES(3, 'Oklahoma', '2009-09-08 22:57:58', '2009-09-07 03:57:58', NULL, 'need a good load', '2009-09-07 03:57:58', 0)[0m
+REQUESTING PAGE: GET http://www.example.com/capacities with {} and HTTP headers {}
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-06 22:57:58) [GET]
+  [4;36;1mCapacity Load (0.5ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" WHERE ("drivers"."id" = 1) [0m
+Rendered capacities/_capacity (0.9ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" WHERE ("drivers"."id" = 2) [0m
+Rendered capacities/_capacity (0.8ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" WHERE ("drivers"."id" = 3) [0m
+Rendered capacities/_capacity (0.8ms)
+Rendered shared/_navigation (0.9ms)
+Completed in 13ms (View: 11, DB: 2) | 200 OK [http://www.example.com/capacities]
+REQUESTING PAGE: GET http://www.example.com/capacities with {} and HTTP headers {}
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-06 22:58:55) [GET]
+  [4;36;1mCapacity Load (0.3ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered shared/_navigation (5.1ms)
+Completed in 51ms (View: 46, DB: 0) | 200 OK [http://www.example.com/capacities]
+REQUESTING PAGE: POST /capacities with {"save"=>"save", "capacity"=>{"driver_id"=>"Leroy", "location"=>"Kansas City", "available_on(1i)"=>"2009", "notes"=>"need a hot load", "available_on(2i)"=>"9", "priority"=>"0", "available_on(3i)"=>"5"}} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/capacities"}
+
+
+Processing CapacitiesController#create (for 127.0.0.1 at 2009-09-06 22:58:55) [POST]
+  Parameters: {"save"=>"save", "capacity"=>{"driver_id"=>"Leroy", "location"=>"Kansas City", "notes"=>"need a hot load", "available_on(1i)"=>"2009", "priority"=>"0", "available_on(2i)"=>"9", "available_on(3i)"=>"5"}}
+  [4;35;1mCapacity Create (0.4ms)[0m   [0mINSERT INTO "capacities" ("driver_id", "location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES(0, 'Kansas City', '2009-09-05', '2009-09-07 03:58:55', NULL, 'need a hot load', '2009-09-07 03:58:55', 0)[0m
+Redirected to http://www.example.com/capacities
+Completed in 105ms (DB: 0) | 302 Found [http://www.example.com/capacities]
+REQUESTING PAGE: GET http://www.example.com/capacities with {} and HTTP headers {"HTTP_REFERER"=>"/capacities"}
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-06 22:58:55) [GET]
+  [4;36;1mCapacity Load (0.4ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;35;1mDriver Load (0.1ms)[0m   [0mSELECT * FROM "drivers" WHERE ("drivers"."id" = 0) [0m
+Rendered capacities/_capacity (3.0ms)
+Rendered shared/_navigation (0.2ms)
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://www.example.com/capacities]
+  [4;36;1mDriver Create (0.3ms)[0m   [0;1mINSERT INTO "drivers" ("name", "created_at", "updated_at") VALUES('Ryan Smith', '2009-09-07 03:58:55', '2009-09-07 03:58:55')[0m
+  [4;35;1mCapacity Create (0.1ms)[0m   [0mINSERT INTO "capacities" ("driver_id", "location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES(1, 'Kansas City', '2009-09-06 22:58:55', '2009-09-07 03:58:55', NULL, 'need a good load', '2009-09-07 03:58:55', 0)[0m
+  [4;36;1mDriver Create (0.1ms)[0m   [0;1mINSERT INTO "drivers" ("name", "created_at", "updated_at") VALUES('Ryan Smith', '2009-09-07 03:58:55', '2009-09-07 03:58:55')[0m
+  [4;35;1mCapacity Create (0.1ms)[0m   [0mINSERT INTO "capacities" ("driver_id", "location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES(2, 'Tuscan', '2009-09-07 22:58:55', '2009-09-07 03:58:55', NULL, 'need a good load', '2009-09-07 03:58:55', 0)[0m
+  [4;36;1mDriver Create (0.1ms)[0m   [0;1mINSERT INTO "drivers" ("name", "created_at", "updated_at") VALUES('Ryan Smith', '2009-09-07 03:58:55', '2009-09-07 03:58:55')[0m
+  [4;35;1mCapacity Create (0.1ms)[0m   [0mINSERT INTO "capacities" ("driver_id", "location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES(3, 'Oklahoma', '2009-09-08 22:58:55', '2009-09-07 03:58:55', NULL, 'need a good load', '2009-09-07 03:58:55', 0)[0m
+REQUESTING PAGE: GET http://www.example.com/capacities with {} and HTTP headers {}
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-06 22:58:55) [GET]
+  [4;36;1mCapacity Load (0.6ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" WHERE ("drivers"."id" = 1) [0m
+Rendered capacities/_capacity (0.9ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" WHERE ("drivers"."id" = 2) [0m
+Rendered capacities/_capacity (0.7ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" WHERE ("drivers"."id" = 3) [0m
+Rendered capacities/_capacity (0.7ms)
+Rendered shared/_navigation (0.2ms)
+Completed in 12ms (View: 10, DB: 2) | 200 OK [http://www.example.com/capacities]
+REQUESTING PAGE: GET http://www.example.com/capacities with {} and HTTP headers {}
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-06 23:09:34) [GET]
+Rendering template within layouts/application
+Rendering capacities/index
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-06 23:09:34) [GET]
+  [4;36;1mDriver Create (0.4ms)[0m   [0;1mINSERT INTO "drivers" ("name", "created_at", "updated_at") VALUES('Ryan Smith', '2009-09-07 04:09:34', '2009-09-07 04:09:34')[0m
+  [4;35;1mCapacity Create (0.1ms)[0m   [0mINSERT INTO "capacities" ("driver_id", "location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES(1, 'Kansas City', '2009-09-06 23:09:34', '2009-09-07 04:09:34', NULL, 'need a good load', '2009-09-07 04:09:34', 0)[0m
+  [4;36;1mDriver Create (0.1ms)[0m   [0;1mINSERT INTO "drivers" ("name", "created_at", "updated_at") VALUES('Ryan Smith', '2009-09-07 04:09:34', '2009-09-07 04:09:34')[0m
+  [4;35;1mCapacity Create (0.1ms)[0m   [0mINSERT INTO "capacities" ("driver_id", "location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES(2, 'Tuscan', '2009-09-07 23:09:34', '2009-09-07 04:09:34', NULL, 'need a good load', '2009-09-07 04:09:34', 0)[0m
+  [4;36;1mDriver Create (0.1ms)[0m   [0;1mINSERT INTO "drivers" ("name", "created_at", "updated_at") VALUES('Ryan Smith', '2009-09-07 04:09:34', '2009-09-07 04:09:34')[0m
+  [4;35;1mCapacity Create (0.1ms)[0m   [0mINSERT INTO "capacities" ("driver_id", "location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES(3, 'Oklahoma', '2009-09-08 23:09:34', '2009-09-07 04:09:34', NULL, 'need a good load', '2009-09-07 04:09:34', 0)[0m
+REQUESTING PAGE: GET http://www.example.com/capacities with {} and HTTP headers {}
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-06 23:09:34) [GET]
+Rendering template within layouts/application
+Rendering capacities/index
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-06 23:09:34) [GET]
+REQUESTING PAGE: GET http://www.example.com/capacities with {} and HTTP headers {}
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-06 23:10:11) [GET]
+Rendering template within layouts/application
+Rendering capacities/index
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-06 23:10:11) [GET]
+  [4;36;1mDriver Create (0.4ms)[0m   [0;1mINSERT INTO "drivers" ("name", "created_at", "updated_at") VALUES('Ryan Smith', '2009-09-07 04:10:11', '2009-09-07 04:10:11')[0m
+  [4;35;1mCapacity Create (0.1ms)[0m   [0mINSERT INTO "capacities" ("driver_id", "location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES(1, 'Kansas City', '2009-09-06 23:10:11', '2009-09-07 04:10:11', NULL, 'need a good load', '2009-09-07 04:10:11', 0)[0m
+  [4;36;1mDriver Create (0.1ms)[0m   [0;1mINSERT INTO "drivers" ("name", "created_at", "updated_at") VALUES('Ryan Smith', '2009-09-07 04:10:11', '2009-09-07 04:10:11')[0m
+  [4;35;1mCapacity Create (0.1ms)[0m   [0mINSERT INTO "capacities" ("driver_id", "location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES(2, 'Tuscan', '2009-09-07 23:10:11', '2009-09-07 04:10:11', NULL, 'need a good load', '2009-09-07 04:10:11', 0)[0m
+  [4;36;1mDriver Create (0.1ms)[0m   [0;1mINSERT INTO "drivers" ("name", "created_at", "updated_at") VALUES('Ryan Smith', '2009-09-07 04:10:12', '2009-09-07 04:10:12')[0m
+  [4;35;1mCapacity Create (0.1ms)[0m   [0mINSERT INTO "capacities" ("driver_id", "location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES(3, 'Oklahoma', '2009-09-08 23:10:11', '2009-09-07 04:10:12', NULL, 'need a good load', '2009-09-07 04:10:12', 0)[0m
+REQUESTING PAGE: GET http://www.example.com/capacities with {} and HTTP headers {}
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-06 23:10:12) [GET]
+Rendering template within layouts/application
+Rendering capacities/index
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-06 23:10:12) [GET]
+REQUESTING PAGE: GET http://www.example.com/capacities with {} and HTTP headers {}
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-06 23:10:46) [GET]
+Rendering template within layouts/application
+Rendering capacities/index
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-06 23:10:46) [GET]
+REQUESTING PAGE: GET http://www.example.com/capacities with {} and HTTP headers {}
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-06 23:11:25) [GET]
+  [4;36;1mCapacity Load (0.3ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered shared/_navigation (4.3ms)
+Completed in 134ms (View: 130, DB: 0) | 200 OK [http://www.example.com/capacities]
+REQUESTING PAGE: POST /capacities with {"save"=>"save", "capacity"=>{"driver_id"=>"Leroy", "location"=>"Kansas City", "available_on(1i)"=>"2009", "notes"=>"need a hot load", "available_on(2i)"=>"9", "priority"=>"0", "available_on(3i)"=>"5"}} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/capacities"}
+
+
+Processing CapacitiesController#create (for 127.0.0.1 at 2009-09-06 23:11:25) [POST]
+  Parameters: {"save"=>"save", "capacity"=>{"driver_id"=>"Leroy", "location"=>"Kansas City", "notes"=>"need a hot load", "available_on(1i)"=>"2009", "priority"=>"0", "available_on(2i)"=>"9", "available_on(3i)"=>"5"}}
+  [4;35;1mCapacity Create (0.4ms)[0m   [0mINSERT INTO "capacities" ("driver_id", "location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES(0, 'Kansas City', '2009-09-05', '2009-09-07 04:11:25', NULL, 'need a hot load', '2009-09-07 04:11:25', 0)[0m
+Redirected to http://www.example.com/capacities
+Completed in 9ms (DB: 0) | 302 Found [http://www.example.com/capacities]
+REQUESTING PAGE: GET http://www.example.com/capacities with {} and HTTP headers {"HTTP_REFERER"=>"/capacities"}
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-06 23:11:25) [GET]
+  [4;36;1mCapacity Load (0.3ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;35;1mDriver Load (0.1ms)[0m   [0mSELECT * FROM "drivers" WHERE ("drivers"."id" = 0) [0m
+Rendered capacities/_capacity (3.9ms)
+Rendered shared/_navigation (0.2ms)
+Completed in 12ms (View: 11, DB: 0) | 200 OK [http://www.example.com/capacities]
+REQUESTING PAGE: GET http://www.example.com/capacities with {} and HTTP headers {}
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-06 23:11:32) [GET]
+  [4;36;1mCapacity Load (0.3ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered shared/_navigation (4.2ms)
+Completed in 47ms (View: 43, DB: 0) | 200 OK [http://www.example.com/capacities]
+REQUESTING PAGE: POST /capacities with {"save"=>"save", "capacity"=>{"driver_id"=>"Leroy", "location"=>"Kansas City", "available_on(1i)"=>"2009", "notes"=>"need a hot load", "available_on(2i)"=>"9", "priority"=>"0", "available_on(3i)"=>"5"}} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/capacities"}
+
+
+Processing CapacitiesController#create (for 127.0.0.1 at 2009-09-06 23:11:32) [POST]
+  Parameters: {"save"=>"save", "capacity"=>{"driver_id"=>"Leroy", "location"=>"Kansas City", "notes"=>"need a hot load", "available_on(1i)"=>"2009", "priority"=>"0", "available_on(2i)"=>"9", "available_on(3i)"=>"5"}}
+  [4;35;1mCapacity Create (0.4ms)[0m   [0mINSERT INTO "capacities" ("driver_id", "location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES(0, 'Kansas City', '2009-09-05', '2009-09-07 04:11:32', NULL, 'need a hot load', '2009-09-07 04:11:32', 0)[0m
+Redirected to http://www.example.com/capacities
+Completed in 96ms (DB: 0) | 302 Found [http://www.example.com/capacities]
+REQUESTING PAGE: GET http://www.example.com/capacities with {} and HTTP headers {"HTTP_REFERER"=>"/capacities"}
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-06 23:11:32) [GET]
+  [4;36;1mCapacity Load (0.4ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;35;1mDriver Load (0.1ms)[0m   [0mSELECT * FROM "drivers" WHERE ("drivers"."id" = 0) [0m
+Rendered capacities/_capacity (3.0ms)
+Rendered shared/_navigation (0.2ms)
+Completed in 11ms (View: 10, DB: 0) | 200 OK [http://www.example.com/capacities]
+  [4;36;1mDriver Create (0.3ms)[0m   [0;1mINSERT INTO "drivers" ("name", "created_at", "updated_at") VALUES('Ryan Smith', '2009-09-07 04:11:32', '2009-09-07 04:11:32')[0m
+  [4;35;1mCapacity Create (0.1ms)[0m   [0mINSERT INTO "capacities" ("driver_id", "location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES(1, 'Kansas City', '2009-09-06 23:11:32', '2009-09-07 04:11:32', NULL, 'need a good load', '2009-09-07 04:11:32', 0)[0m
+  [4;36;1mDriver Create (0.1ms)[0m   [0;1mINSERT INTO "drivers" ("name", "created_at", "updated_at") VALUES('Ryan Smith', '2009-09-07 04:11:32', '2009-09-07 04:11:32')[0m
+  [4;35;1mCapacity Create (0.1ms)[0m   [0mINSERT INTO "capacities" ("driver_id", "location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES(2, 'Tuscan', '2009-09-07 23:11:32', '2009-09-07 04:11:32', NULL, 'need a good load', '2009-09-07 04:11:32', 0)[0m
+  [4;36;1mDriver Create (0.1ms)[0m   [0;1mINSERT INTO "drivers" ("name", "created_at", "updated_at") VALUES('Ryan Smith', '2009-09-07 04:11:32', '2009-09-07 04:11:32')[0m
+  [4;35;1mCapacity Create (0.1ms)[0m   [0mINSERT INTO "capacities" ("driver_id", "location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES(3, 'Oklahoma', '2009-09-08 23:11:32', '2009-09-07 04:11:32', NULL, 'need a good load', '2009-09-07 04:11:32', 0)[0m
+REQUESTING PAGE: GET http://www.example.com/capacities with {} and HTTP headers {}
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-06 23:11:32) [GET]
+  [4;36;1mCapacity Load (0.5ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" WHERE ("drivers"."id" = 1) [0m
+Rendered capacities/_capacity (0.9ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" WHERE ("drivers"."id" = 2) [0m
+Rendered capacities/_capacity (0.7ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" WHERE ("drivers"."id" = 3) [0m
+Rendered capacities/_capacity (0.8ms)
+Rendered shared/_navigation (0.2ms)
+Completed in 12ms (View: 10, DB: 2) | 200 OK [http://www.example.com/capacities]
