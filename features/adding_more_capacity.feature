@@ -12,3 +12,11 @@ Feature: Add more capacity
     When I press "save"
     Then I should see "More capacity was added in Kansas City"
 
+  Scenario: Assigning drivers to capacity 
+    Given I am looking at today's capacity
+    And a driver exists with the name "leroy"
+    When I fill in "Location" with "Kansas City"
+    And I fill in "Driver" with "Leroy"
+    And I select "09/05/2009" as the date
+    And I press "save"
+    Then "leroy" should have capacity in "Kansas City"

@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090904193840) do
+ActiveRecord::Schema.define(:version => 20090907183149) do
 
   create_table "capacities", :force => true do |t|
     t.string   "location"
@@ -17,9 +17,13 @@ ActiveRecord::Schema.define(:version => 20090904193840) do
     t.datetime "fulfilled_on"
     t.string   "notes"
     t.integer  "priority",     :default => 0
-    t.integer  "driver_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "capacities_drivers", :id => false, :force => true do |t|
+    t.integer "capacity_id"
+    t.integer "driver_id"
   end
 
   create_table "drivers", :force => true do |t|

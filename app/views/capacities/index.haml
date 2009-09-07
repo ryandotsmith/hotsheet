@@ -8,8 +8,8 @@
           = form.label :location, "Location"
           = form.text_field :location
 
-          = form.label :driver_id, "Driver"
-          = form.text_field :driver_id
+          = label_tag :driver_name, "Driver"
+          = text_field_tag :driver_name, nil, :class => 'driver_autocomplete'
 
           = form.label :priority, "Priority"
           = form.select :priority, {:normal => 0, :high => 1, :top => 2}
@@ -26,10 +26,10 @@
   #capacities
     - @capacities.each do |date, capacities| 
       .capacity{ :id => date.strftime('%m_%d_%y') }
-        %h3= link_to date, capacities_url(:focus_date => date), :title => date.strftime('%m_%d_%y')
+        %h3= link_to date.strftime('%A %m/%d'), capacities_url(:focus_date => date), :title => date.strftime('%m_%d_%y')
         %table
           - capacities.each do |capacity|
             %tr
               %td -
-              %td.driver= capacity.driver 
+              %td.driver= capacity.drivers
               %td.location= capacity.location 

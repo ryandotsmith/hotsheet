@@ -1,5 +1,5 @@
-%tr
+%tr{ :class => priority(capacity)}
   %td.covered= covered?( capacity )
   %td.location= capacity.location
-  %td.driver= capacity.driver
+  %td.driver= capacity.drivers.pop.name
   %td.notes= capacity.notes

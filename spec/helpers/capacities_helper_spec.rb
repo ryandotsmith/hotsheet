@@ -13,4 +13,15 @@ describe CapacitiesHelper do
     capacity.fulfilled_on = DateTime.now
     helper.covered?( capacity ).should eql('true')
   end
+
+  it "should return the priority represented in words" do
+    capacity = Factory( :capacity, :priority => 2 )
+    helper.priority( capacity ).should eql('top')
+    capacity = Factory( :capacity, :priority => 1 )
+    helper.priority( capacity ).should eql('high')
+    capacity = Factory( :capacity, :priority => 0 )
+    helper.priority( capacity ).should eql('normal')
+
+  end
+
 end

@@ -4,11 +4,10 @@ describe Capacity do
   before(:each) do
     @valid_attributes = {
       :location => "value for location",
-      :available_on => Time.now,
-      :fulfilled_on => Time.now,
+      :available_on => Date.today,
+      :fulfilled_on => DateTime.now,
       :notes => "value for notes",
-      :priority => 1,
-      :driver_id => 1
+      :priority => 0
     }
   end
 
@@ -52,3 +51,20 @@ describe "finding capacities by date" do
     capacities.count.should eql( Capacity.count - 1 )
   end
 end
+
+describe "ensuring drivers get associated with capacity" do
+  it "should load a default driver if none is given" do
+    capacity = Capacity.new(:location => 'kansas city')
+    capacity.drivers.should eql([])
+    capacity.save
+    capacity.drivers.pop.name.should eql("TBD")
+  end
+end
+
+
+
+
+
+
+
+

@@ -41,7 +41,7 @@ end
 Then /^the future capacity should come into focus$/ do
   response.should have_selector( 'div', :id => 'focus_capacities' ) do |focus_capacities|
     focus_capacities.should have_selector('h1') do |h1|
-      h1.text.should eql( @future_date.strftime('%m_%d_%y') )
+      h1.text.should eql( @future_date.strftime('%A %m/%d') )
     end
   end
 end

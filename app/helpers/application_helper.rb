@@ -14,13 +14,14 @@ module ApplicationHelper
   end
   
   def get_css( controller )
-    [controller.controller_name, 'application',]
+    [controller.controller_name, 'application', 'jquery.autocomplete.css']
   end
   
   def get_js( controller )
     ['jquery.min.js',
-        'application.js',
-          controller.controller_name ]
+        'jquery.autocomplete.js',
+          'application.js',
+            controller.controller_name ]
   end
  
 end

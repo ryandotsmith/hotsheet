@@ -19,3 +19,4 @@ Feature: Viewing capaicities by day
     And I have future capacity
     When I click on a capacity in the future
     Then the future capacity should come into focus
+

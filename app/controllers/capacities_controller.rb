@@ -1,7 +1,7 @@
 class CapacitiesController < ApplicationController
   resource_controller
-  create.wants.html { redirect_to capacities_url }
-  create.flash { "More capacity was added in #{ object.location } " }
+  #create.wants.html { redirect_to capacities_url }
+  #create.flash { "More capacity was added in #{ object.location } " }
 
   def index
     if params[:focus_date]
@@ -21,6 +21,25 @@ class CapacitiesController < ApplicationController
     @capacities = @capacities.sort 
     # build a new capacity for the form object
     @new_capacity = Capacity.new 
+  end
+
+  def create
+    @capacity = Capacity.new( params[:capacity] )
+
+    if params[:driver_name]
+      driver = Driver.find_by_name( params[:driver_name] )
+      if driver
+        @capacity.drivers << driver
+      else
+        @capacity.drivers.build( :name => params[:driver_name])
+      end
+    end
+    if @capacity.save
+      flash[:notice] = "More capacity was added in #{ @capacity.location }"
+      respond_to do |format|
+       format.html { redirect_to capacities_url } 
+      end
+    end
   end
 
 end

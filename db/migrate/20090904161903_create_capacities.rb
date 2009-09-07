@@ -6,8 +6,6 @@ class CreateCapacities < ActiveRecord::Migration
       t.datetime :fulfilled_on
       t.string :notes
       t.integer :priority, :default => 0
-      t.integer :driver_id
-
       t.timestamps
     end
   end
