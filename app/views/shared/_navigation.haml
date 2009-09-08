@@ -1,4 +1,5 @@
-%a{ :id => 'home', :href => '/'} home 
+- board_url = 'http://board.gs-enterprises.local'
+%a{ :id => 'home', :href => board_url }home 
 %a{ :id => 'web_apps', :href => '#'} web apps
 %a{ :id => 'calendar', :href => '/calendar'} calendar 
 = link_to image_tag('hotSheetIcon.png'), root_url, :id => 'icon'
@@ -6,21 +7,21 @@
   #dock
     .dock_item 
       %a{ :href => 'http://bidstore.gs-enterprises.local' }
-        %img{ :src => '/images/bidstore.png' }
+        %img{ :src => board_url + '/images/bidstore.png' }
         %br
         Bid Store
     .dock_item  
       %a{ :href => 'http://onholiday.gs-enterprises.local' }
-        %img{ :src => '/images/onholiday.png' }
+        %img{ :src => board_url + '/images/onholiday.png' }
         %br
         OnHoliday
     .dock_item 
       %a{ :href => 'http://gsenterprises.presentlyapp.com' }
-        %img{ :src => '/images/presently.png' }
+        %img{ :src => board_url + '/images/presently.png' }
         %br
         presently
     .dock_item
       %a{ :href => 'http://mail.gsenterprises.com' }
-        %img{ :src => '/images/mail.png' }
+        %img{ :src => board_url + '/images/mail.png' }
         %br
         email
