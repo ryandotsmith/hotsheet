@@ -23,7 +23,8 @@
           or
           = link_to "cancel", "#", :id => 'rollup', :rel => 'new_capacity_form'
 #right
-  #capacities
+  #capacities.items
+    = link_to "back", "#", :class => 'prev'
     - @capacities.each do |date, capacities| 
       .capacity{ :id => date.strftime('%m_%d_%y') }
         %h3= link_to date.strftime('%A %m/%d'), capacities_url(:focus_date => date), :title => date.strftime('%m_%d_%y')
@@ -31,5 +32,6 @@
           - capacities.each do |capacity|
             %tr
               %td -
-              %td.driver= capacity.drivers
               %td.location= capacity.location 
+              %td.driver= capacity.drivers.pop.name
+    = link_to "forward", "#", :class => 'next'

@@ -20,6 +20,7 @@ module ApplicationHelper
   def get_js( controller )
     ['jquery.min.js',
         'jquery.autocomplete.js',
+        'jquery.tools.min.js',
           'application.js',
             controller.controller_name ]
   end

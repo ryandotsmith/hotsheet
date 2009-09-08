@@ -36,6 +36,10 @@ form label {
 #navigation {
   height: 50px;
   background-color: #666666; }
+  #navigation #icon {
+    margin: 0;
+    padding: 0;
+    float: right; }
   #navigation a {
     color: #333366;
     float: left;

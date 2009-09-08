@@ -26686,3 +26686,3305 @@ ActionController::RoutingError (No route matches "/images/mail.png" with {:metho
   
 
 Rendering rescues/layout (not_found)
+
+
+Processing DriversController#index to json (for 127.0.0.1 at 2009-09-07 17:08:12) [GET]
+  Parameters: {"timestamp"=>"1252361292069", "q"=>"t", "limit"=>"150"}
+  [4;35;1mDriver Load (0.4ms)[0m   [0mSELECT name FROM DRIVERS WHERE name like '%t%'[0m
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/drivers.json?q=t&limit=150&timestamp=1252361292069]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:08:12) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/indicator.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing DriversController#index to json (for 127.0.0.1 at 2009-09-07 17:08:12) [GET]
+  Parameters: {"timestamp"=>"1252361292869", "q"=>"tb", "limit"=>"150"}
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT name FROM DRIVERS WHERE name like '%tb%'[0m
+Completed in 5ms (View: 0, DB: 0) | 200 OK [http://localhost/drivers.json?q=tb&limit=150&timestamp=1252361292869]
+
+
+Processing DriversController#index to json (for 127.0.0.1 at 2009-09-07 17:08:14) [GET]
+  Parameters: {"timestamp"=>"1252361294057", "q"=>"tbd", "limit"=>"150"}
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT name FROM DRIVERS WHERE name like '%tbd%'[0m
+Completed in 6ms (View: 0, DB: 0) | 200 OK [http://localhost/drivers.json?q=tbd&limit=150&timestamp=1252361294057]
+
+
+Processing CapacitiesController#create (for 127.0.0.1 at 2009-09-07 17:08:17) [POST]
+  Parameters: {"authenticity_token"=>"PyvmvNkUtRUUEfUlZ59n0hwu1TrbcW2KGFV+W9IT6DI=", "driver_name"=>"TBD", "save"=>"save", "capacity"=>{"location"=>"Los Almos", "available_on(1i)"=>"2009", "notes"=>"", "available_on(2i)"=>"9", "priority"=>"2", "available_on(3i)"=>"7"}}
+  [4;36;1mDriver Load (0.1ms)[0m   [0;1mSELECT * FROM "drivers" WHERE ("drivers"."name" = 'TBD') LIMIT 1[0m
+  [4;35;1mCapacity Create (0.3ms)[0m   [0mINSERT INTO "capacities" ("location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES('Los Almos', '2009-09-07', '2009-09-07 22:08:17', NULL, '', '2009-09-07 22:08:17', 2)[0m
+  [4;36;1mDriver Create (0.1ms)[0m   [0;1mINSERT INTO "drivers" ("name", "created_at", "updated_at") VALUES('TBD', '2009-09-07 22:08:17', '2009-09-07 22:08:17')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO "capacities_drivers" ("driver_id", "capacity_id") VALUES (3, 5)[0m
+Redirected to http://localhost:3000/capacities
+Completed in 88ms (DB: 1) | 302 Found [http://localhost/capacities]
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 17:08:17) [GET]
+  [4;36;1mCapacity Load (1.0ms)[0m   [0;1mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+  [4;35;1mCapacity Load (0.6ms)[0m   [0mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 5 ) [0m
+Rendered capacities/_capacity (5.5ms)
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) [0m
+Rendered capacities/_capacity (1.1ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 3 ) [0m
+Rendered capacities/_capacity (0.9ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 2 ) [0m
+Rendered capacities/_capacity (0.9ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 4 ) [0m
+Rendered capacities/_capacity (0.9ms)
+Rendered capacities/_focus (11.0ms)
+Rendered shared/_navigation (0.2ms)
+Completed in 33ms (View: 19, DB: 3) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:08:17) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:08:17) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:08:17) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:08:17) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:08:17) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing DriversController#index to json (for 127.0.0.1 at 2009-09-07 17:09:51) [GET]
+  Parameters: {"timestamp"=>"1252361391400", "q"=>"t", "limit"=>"150"}
+  [4;35;1mDriver Load (0.5ms)[0m   [0mSELECT name FROM DRIVERS WHERE name like '%t%'[0m
+Completed in 70ms (View: 1, DB: 0) | 200 OK [http://localhost/drivers.json?q=t&limit=150&timestamp=1252361391400]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:09:51) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/indicator.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing DriversController#index to json (for 127.0.0.1 at 2009-09-07 17:09:52) [GET]
+  Parameters: {"timestamp"=>"1252361392401", "q"=>"tb", "limit"=>"150"}
+  [4;36;1mDriver Load (0.4ms)[0m   [0;1mSELECT name FROM DRIVERS WHERE name like '%tb%'[0m
+Completed in 7ms (View: 0, DB: 0) | 200 OK [http://localhost/drivers.json?q=tb&limit=150&timestamp=1252361392401]
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 17:10:31) [GET]
+  [4;35;1mCapacity Load (1.0ms)[0m   [0mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+  [4;36;1mCapacity Load (0.8ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 5 ) [0m
+Rendered capacities/_capacity (6.4ms)
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) [0m
+Rendered capacities/_capacity (1.2ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 3 ) [0m
+Rendered capacities/_capacity (1.0ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 2 ) [0m
+Rendered capacities/_capacity (1.0ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 4 ) [0m
+Rendered capacities/_capacity (1.0ms)
+Rendered capacities/_focus (12.1ms)
+Rendered shared/_navigation (0.2ms)
+Completed in 37ms (View: 21, DB: 3) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:10:31) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:10:31) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:10:31) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:10:31) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:10:31) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing DriversController#index to json (for 127.0.0.1 at 2009-09-07 17:10:36) [GET]
+  Parameters: {"timestamp"=>"1252361436087", "q"=>"t", "limit"=>"150"}
+  [4;36;1mDriver Load (0.5ms)[0m   [0;1mSELECT name FROM DRIVERS WHERE name like '%t%'[0m
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/drivers.json?q=t&limit=150&timestamp=1252361436087]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:10:36) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/indicator.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 17:10:41) [GET]
+  [4;35;1mCapacity Load (0.9ms)[0m   [0mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+  [4;36;1mCapacity Load (0.6ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 5 ) [0m
+Rendered capacities/_capacity (5.9ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) [0m
+Rendered capacities/_capacity (1.0ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 3 ) [0m
+Rendered capacities/_capacity (0.9ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 2 ) [0m
+Rendered capacities/_capacity (0.9ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 4 ) [0m
+Rendered capacities/_capacity (1.0ms)
+Rendered capacities/_focus (11.2ms)
+Rendered shared/_navigation (0.2ms)
+Completed in 32ms (View: 19, DB: 3) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:10:41) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:10:41) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:10:41) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:10:41) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:10:42) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing DriversController#index to json (for 127.0.0.1 at 2009-09-07 17:10:45) [GET]
+  Parameters: {"timestamp"=>"1252361445111", "q"=>"t", "limit"=>"150"}
+  [4;36;1mDriver Load (0.5ms)[0m   [0;1mSELECT name FROM DRIVERS WHERE name like '%t%'[0m
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/drivers.json?q=t&limit=150&timestamp=1252361445111]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:10:45) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/indicator.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 17:10:53) [GET]
+  [4;35;1mCapacity Load (0.8ms)[0m   [0mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+  [4;36;1mCapacity Load (0.6ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 5 ) [0m
+Rendered capacities/_capacity (5.4ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) [0m
+Rendered capacities/_capacity (1.0ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 3 ) [0m
+Rendered capacities/_capacity (0.9ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 2 ) [0m
+Rendered capacities/_capacity (0.9ms)
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 4 ) [0m
+Rendered capacities/_capacity (1.2ms)
+Rendered capacities/_focus (10.8ms)
+Rendered shared/_navigation (0.2ms)
+Completed in 32ms (View: 19, DB: 3) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:10:53) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:10:53) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:10:53) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:10:53) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:10:53) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing DriversController#index to json (for 127.0.0.1 at 2009-09-07 17:10:56) [GET]
+  Parameters: {"timestamp"=>"1252361456488", "q"=>"t", "limit"=>"150"}
+  [4;36;1mDriver Load (0.5ms)[0m   [0;1mSELECT name FROM DRIVERS WHERE name like '%t%'[0m
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/drivers.json?q=t&limit=150&timestamp=1252361456488]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:10:56) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/indicator.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 17:11:00) [GET]
+  [4;35;1mCapacity Load (0.9ms)[0m   [0mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+  [4;36;1mCapacity Load (0.6ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 5 ) [0m
+Rendered capacities/_capacity (6.1ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) [0m
+Rendered capacities/_capacity (1.0ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 3 ) [0m
+Rendered capacities/_capacity (0.9ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 2 ) [0m
+Rendered capacities/_capacity (1.1ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 4 ) [0m
+Rendered capacities/_capacity (0.9ms)
+Rendered capacities/_focus (11.4ms)
+Rendered shared/_navigation (0.2ms)
+Completed in 33ms (View: 19, DB: 3) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:11:00) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:11:01) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:11:01) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:11:01) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:11:01) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing DriversController#index to json (for 127.0.0.1 at 2009-09-07 17:11:03) [GET]
+  Parameters: {"timestamp"=>"1252361463861", "q"=>"t", "limit"=>"150"}
+  [4;36;1mDriver Load (0.5ms)[0m   [0;1mSELECT name FROM DRIVERS WHERE name like '%t%'[0m
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/drivers.json?q=t&limit=150&timestamp=1252361463861]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:11:03) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/indicator.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#create (for 127.0.0.1 at 2009-09-07 17:11:19) [POST]
+  Parameters: {"authenticity_token"=>"PyvmvNkUtRUUEfUlZ59n0hwu1TrbcW2KGFV+W9IT6DI=", "driver_name"=>"TBD", "save"=>"save", "capacity"=>{"location"=>"Denver", "available_on(1i)"=>"2009", "notes"=>"", "available_on(2i)"=>"9", "priority"=>"0", "available_on(3i)"=>"6"}}
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" WHERE ("drivers"."name" = 'TBD') LIMIT 1[0m
+  [4;36;1mCapacity Create (0.3ms)[0m   [0;1mINSERT INTO "capacities" ("location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES('Denver', '2009-09-06', '2009-09-07 22:11:19', NULL, '', '2009-09-07 22:11:19', 0)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO "capacities_drivers" ("driver_id", "capacity_id") VALUES (3, 6)[0m
+Redirected to http://localhost:3000/capacities
+Completed in 26ms (DB: 1) | 302 Found [http://localhost/capacities]
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 17:11:20) [GET]
+  [4;36;1mCapacity Load (0.9ms)[0m   [0;1mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+  [4;35;1mCapacity Load (0.7ms)[0m   [0mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 5 ) [0m
+Rendered capacities/_capacity (5.5ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) [0m
+Rendered capacities/_capacity (1.3ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 3 ) [0m
+Rendered capacities/_capacity (0.9ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 2 ) [0m
+Rendered capacities/_capacity (0.9ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 4 ) [0m
+Rendered capacities/_capacity (0.9ms)
+Rendered capacities/_focus (11.0ms)
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 6 ) [0m
+Rendered shared/_navigation (0.2ms)
+Completed in 34ms (View: 20, DB: 3) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:11:20) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:11:20) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:11:20) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:11:20) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:11:20) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 17:11:57) [GET]
+  [4;36;1mCapacity Load (2.5ms)[0m   [0;1mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+  [4;35;1mCapacity Load (0.7ms)[0m   [0mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 5 ) [0m
+Rendered capacities/_capacity (5.9ms)
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) [0m
+Rendered capacities/_capacity (1.3ms)
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 3 ) [0m
+Rendered capacities/_capacity (1.2ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 2 ) [0m
+Rendered capacities/_capacity (1.0ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 4 ) [0m
+Rendered capacities/_capacity (0.9ms)
+Rendered capacities/_focus (11.9ms)
+  [4;35;1mDriver Load (0.4ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 6 ) [0m
+Rendered shared/_navigation (0.2ms)
+Completed in 46ms (View: 29, DB: 5) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:11:57) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:11:57) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:11:57) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:11:57) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:11:57) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 17:12:07) [GET]
+  Parameters: {"focus_date"=>"2009-09-06"}
+  [4;36;1mCapacity Load (0.5ms)[0m   [0;1mSELECT * FROM "capacities" WHERE (available_on = '2009-09-06') [0m
+  [4;35;1mCapacity Load (0.7ms)[0m   [0mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 6 ) [0m
+Rendered capacities/_capacity (5.5ms)
+Rendered capacities/_focus (6.4ms)
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 5 ) [0m
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) [0m
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 3 ) [0m
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 2 ) [0m
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 4 ) [0m
+Rendered shared/_navigation (0.2ms)
+Completed in 32ms (View: 19, DB: 3) | 200 OK [http://localhost/capacities?focus_date=2009-09-06]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:12:07) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:12:07) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:12:07) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:12:07) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:12:07) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 17:18:30) [GET]
+  Parameters: {"focus_date"=>"2009-09-06"}
+  [4;36;1mCapacity Load (0.5ms)[0m   [0;1mSELECT * FROM "capacities" WHERE (available_on = '2009-09-06') [0m
+  [4;35;1mCapacity Load (0.7ms)[0m   [0mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 6 ) [0m
+Rendered capacities/_capacity (5.7ms)
+Rendered capacities/_focus (6.6ms)
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 5 ) [0m
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) [0m
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 3 ) [0m
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 2 ) [0m
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 4 ) [0m
+Rendered shared/_navigation (0.2ms)
+Completed in 33ms (View: 19, DB: 3) | 200 OK [http://localhost/capacities?focus_date=2009-09-06]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:18:30) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:18:30) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:18:30) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:18:30) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:18:30) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 17:21:14) [GET]
+  Parameters: {"focus_date"=>"2009-09-06"}
+  [4;36;1mCapacity Load (0.5ms)[0m   [0;1mSELECT * FROM "capacities" WHERE (available_on = '2009-09-06') [0m
+  [4;35;1mCapacity Load (0.8ms)[0m   [0mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 6 ) [0m
+Rendered capacities/_capacity (6.0ms)
+Rendered capacities/_focus (6.9ms)
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 5 ) [0m
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) [0m
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 3 ) [0m
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 2 ) [0m
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 4 ) [0m
+Rendered shared/_navigation (0.2ms)
+Completed in 94ms (View: 20, DB: 3) | 200 OK [http://localhost/capacities?focus_date=2009-09-06]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:21:14) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:21:14) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:21:14) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:21:14) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:21:14) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 17:21:19) [GET]
+  Parameters: {"focus_date"=>"2009-09-06"}
+  [4;36;1mCapacity Load (0.7ms)[0m   [0;1mSELECT * FROM "capacities" WHERE (available_on = '2009-09-06') [0m
+  [4;35;1mCapacity Load (0.8ms)[0m   [0mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;36;1mDriver Load (0.4ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 6 ) [0m
+Rendered capacities/_capacity (8.8ms)
+Rendered capacities/_focus (10.0ms)
+  [4;35;1mDriver Load (0.4ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 5 ) [0m
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) [0m
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 3 ) [0m
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 2 ) [0m
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 4 ) [0m
+Rendered shared/_navigation (0.2ms)
+Completed in 50ms (View: 34, DB: 3) | 200 OK [http://localhost/capacities?focus_date=2009-09-06]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:21:19) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:21:19) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:21:19) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:21:19) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:21:19) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing DriversController#index to json (for 127.0.0.1 at 2009-09-07 17:21:29) [GET]
+  Parameters: {"timestamp"=>"1252362089290", "q"=>"r", "limit"=>"150"}
+  [4;36;1mDriver Load (0.4ms)[0m   [0;1mSELECT name FROM DRIVERS WHERE name like '%r%'[0m
+Completed in 5ms (View: 0, DB: 0) | 200 OK [http://localhost/drivers.json?q=r&limit=150&timestamp=1252362089290]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:21:29) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/indicator.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing DriversController#index to json (for 127.0.0.1 at 2009-09-07 17:21:30) [GET]
+  Parameters: {"timestamp"=>"1252362090211", "q"=>"ron", "limit"=>"150"}
+  [4;35;1mDriver Load (0.4ms)[0m   [0mSELECT name FROM DRIVERS WHERE name like '%ron%'[0m
+Completed in 5ms (View: 0, DB: 0) | 200 OK [http://localhost/drivers.json?q=ron&limit=150&timestamp=1252362090211]
+
+
+Processing CapacitiesController#create (for 127.0.0.1 at 2009-09-07 17:21:37) [POST]
+  Parameters: {"authenticity_token"=>"PyvmvNkUtRUUEfUlZ59n0hwu1TrbcW2KGFV+W9IT6DI=", "driver_name"=>"Ron", "save"=>"save", "capacity"=>{"location"=>"Florida", "available_on(1i)"=>"2009", "notes"=>"", "available_on(2i)"=>"9", "priority"=>"0", "available_on(3i)"=>"8"}}
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" WHERE ("drivers"."name" = 'Ron') LIMIT 1[0m
+  [4;35;1mCapacity Create (0.5ms)[0m   [0mINSERT INTO "capacities" ("location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES('Florida', '2009-09-08', '2009-09-07 22:21:37', NULL, '', '2009-09-07 22:21:37', 0)[0m
+  [4;36;1mDriver Create (0.1ms)[0m   [0;1mINSERT INTO "drivers" ("name", "created_at", "updated_at") VALUES('Ron', '2009-09-07 22:21:37', '2009-09-07 22:21:37')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO "capacities_drivers" ("driver_id", "capacity_id") VALUES (4, 7)[0m
+Redirected to http://localhost:3000/capacities
+Completed in 89ms (DB: 1) | 302 Found [http://localhost/capacities]
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 17:21:37) [GET]
+  [4;36;1mCapacity Load (0.9ms)[0m   [0;1mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+  [4;35;1mCapacity Load (0.7ms)[0m   [0mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 5 ) [0m
+Rendered capacities/_capacity (5.5ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) [0m
+Rendered capacities/_capacity (1.0ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 3 ) [0m
+Rendered capacities/_capacity (0.9ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 2 ) [0m
+Rendered capacities/_capacity (0.9ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 4 ) [0m
+Rendered capacities/_capacity (1.0ms)
+Rendered capacities/_focus (10.9ms)
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 6 ) [0m
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 7 ) [0m
+Rendered shared/_navigation (0.2ms)
+Completed in 36ms (View: 22, DB: 3) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:21:37) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:21:37) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:21:37) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:21:37) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:21:37) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing DriversController#index to json (for 127.0.0.1 at 2009-09-07 17:21:50) [GET]
+  Parameters: {"timestamp"=>"1252362110371", "q"=>"r", "limit"=>"150"}
+  [4;35;1mDriver Load (0.4ms)[0m   [0mSELECT name FROM DRIVERS WHERE name like '%r%'[0m
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/drivers.json?q=r&limit=150&timestamp=1252362110371]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:21:50) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/indicator.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#create (for 127.0.0.1 at 2009-09-07 17:21:58) [POST]
+  Parameters: {"authenticity_token"=>"PyvmvNkUtRUUEfUlZ59n0hwu1TrbcW2KGFV+W9IT6DI=", "driver_name"=>"Ron", "save"=>"save", "capacity"=>{"location"=>"Kansas", "available_on(1i)"=>"2009", "notes"=>"", "available_on(2i)"=>"9", "priority"=>"1", "available_on(3i)"=>"9"}}
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" WHERE ("drivers"."name" = 'Ron') LIMIT 1[0m
+  [4;35;1mCapacity Create (0.3ms)[0m   [0mINSERT INTO "capacities" ("location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES('Kansas', '2009-09-09', '2009-09-07 22:21:58', NULL, '', '2009-09-07 22:21:58', 1)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO "capacities_drivers" ("driver_id", "capacity_id") VALUES (4, 8)[0m
+Redirected to http://localhost:3000/capacities
+Completed in 24ms (DB: 1) | 302 Found [http://localhost/capacities]
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 17:21:58) [GET]
+  [4;35;1mCapacity Load (0.9ms)[0m   [0mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+  [4;36;1mCapacity Load (0.9ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 5 ) [0m
+Rendered capacities/_capacity (5.6ms)
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) [0m
+Rendered capacities/_capacity (1.1ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 3 ) [0m
+Rendered capacities/_capacity (1.0ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 2 ) [0m
+Rendered capacities/_capacity (1.0ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 4 ) [0m
+Rendered capacities/_capacity (1.0ms)
+Rendered capacities/_focus (11.2ms)
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 6 ) [0m
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 7 ) [0m
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 8 ) [0m
+Rendered shared/_navigation (0.2ms)
+Completed in 39ms (View: 24, DB: 4) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:21:58) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:21:58) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:21:58) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:21:58) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:21:59) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 17:22:19) [GET]
+  [4;35;1mCapacity Load (0.9ms)[0m   [0mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+  [4;36;1mCapacity Load (0.9ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 5 ) [0m
+Rendered capacities/_capacity (5.9ms)
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) [0m
+Rendered capacities/_capacity (1.0ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 3 ) [0m
+Rendered capacities/_capacity (1.0ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 2 ) [0m
+Rendered capacities/_capacity (0.9ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 4 ) [0m
+Rendered capacities/_capacity (0.9ms)
+Rendered capacities/_focus (11.4ms)
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 6 ) [0m
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 7 ) [0m
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 8 ) [0m
+Rendered shared/_navigation (0.2ms)
+Completed in 39ms (View: 23, DB: 4) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:22:19) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:22:20) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:22:20) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:22:20) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:22:20) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#create (for 127.0.0.1 at 2009-09-07 17:22:33) [POST]
+  Parameters: {"authenticity_token"=>"PyvmvNkUtRUUEfUlZ59n0hwu1TrbcW2KGFV+W9IT6DI=", "driver_name"=>"James", "save"=>"save", "capacity"=>{"location"=>"Oklahoma", "available_on(1i)"=>"2009", "notes"=>"", "available_on(2i)"=>"9", "priority"=>"0", "available_on(3i)"=>"10"}}
+  [4;35;1mDriver Load (0.1ms)[0m   [0mSELECT * FROM "drivers" WHERE ("drivers"."name" = 'James') LIMIT 1[0m
+  [4;36;1mCapacity Create (0.3ms)[0m   [0;1mINSERT INTO "capacities" ("location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES('Oklahoma', '2009-09-10', '2009-09-07 22:22:33', NULL, '', '2009-09-07 22:22:33', 0)[0m
+  [4;35;1mDriver Create (0.1ms)[0m   [0mINSERT INTO "drivers" ("name", "created_at", "updated_at") VALUES('James', '2009-09-07 22:22:33', '2009-09-07 22:22:33')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO "capacities_drivers" ("driver_id", "capacity_id") VALUES (5, 9)[0m
+Redirected to http://localhost:3000/capacities
+Completed in 23ms (DB: 1) | 302 Found [http://localhost/capacities]
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 17:22:33) [GET]
+  [4;35;1mCapacity Load (0.9ms)[0m   [0mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+  [4;36;1mCapacity Load (0.9ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 5 ) [0m
+Rendered capacities/_capacity (6.1ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) [0m
+Rendered capacities/_capacity (1.0ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 3 ) [0m
+Rendered capacities/_capacity (0.9ms)
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 2 ) [0m
+Rendered capacities/_capacity (1.0ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 4 ) [0m
+Rendered capacities/_capacity (1.0ms)
+Rendered capacities/_focus (11.5ms)
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 6 ) [0m
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 7 ) [0m
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 8 ) [0m
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 9 ) [0m
+Rendered shared/_navigation (0.2ms)
+Completed in 40ms (View: 24, DB: 4) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:22:33) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:22:33) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:22:33) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:22:33) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:22:33) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 17:22:54) [GET]
+  [4;36;1mCapacity Load (0.8ms)[0m   [0;1mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+  [4;35;1mCapacity Load (1.1ms)[0m   [0mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;36;1mDriver Load (0.4ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 5 ) [0m
+Rendered capacities/_capacity (5.9ms)
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) [0m
+Rendered capacities/_capacity (1.2ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 3 ) [0m
+Rendered capacities/_capacity (1.0ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 2 ) [0m
+Rendered capacities/_capacity (1.1ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 4 ) [0m
+Rendered capacities/_capacity (0.9ms)
+Rendered capacities/_focus (11.6ms)
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 6 ) [0m
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 7 ) [0m
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 8 ) [0m
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 9 ) [0m
+Rendered shared/_navigation (0.2ms)
+Completed in 41ms (View: 25, DB: 4) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:22:54) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:22:54) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:22:54) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:22:54) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:22:54) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 17:25:45) [GET]
+  [4;35;1mCapacity Load (0.9ms)[0m   [0mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+  [4;36;1mCapacity Load (0.9ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 5 ) [0m
+Rendered capacities/_capacity (6.3ms)
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) [0m
+Rendered capacities/_capacity (1.3ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 3 ) [0m
+Rendered capacities/_capacity (1.0ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 2 ) [0m
+Rendered capacities/_capacity (1.0ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 4 ) [0m
+Rendered capacities/_capacity (1.0ms)
+Rendered capacities/_focus (12.0ms)
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 6 ) [0m
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 7 ) [0m
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 8 ) [0m
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 9 ) [0m
+Rendered shared/_navigation (0.2ms)
+Completed in 102ms (View: 25, DB: 4) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:25:45) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:25:45) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:25:45) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:25:45) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:25:45) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 17:26:29) [GET]
+  [4;36;1mCapacity Load (0.9ms)[0m   [0;1mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+  [4;35;1mCapacity Load (1.2ms)[0m   [0mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;36;1mDriver Load (0.4ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 5 ) [0m
+Rendered capacities/_capacity (110.8ms)
+  [4;35;1mDriver Load (5.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) [0m
+Rendered capacities/_capacity (6.4ms)
+  [4;36;1mDriver Load (0.4ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 3 ) [0m
+Rendered capacities/_capacity (2.5ms)
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 2 ) [0m
+Rendered capacities/_capacity (1.4ms)
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 4 ) [0m
+Rendered capacities/_capacity (1.0ms)
+Rendered capacities/_focus (124.2ms)
+  [4;35;1mDriver Load (0.4ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 6 ) [0m
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 7 ) [0m
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 8 ) [0m
+  [4;36;1mDriver Load (1.4ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 9 ) [0m
+Rendered shared/_navigation (0.2ms)
+Completed in 170ms (View: 145, DB: 11) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:26:29) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:26:29) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:26:29) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:26:29) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:26:29) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 17:27:32) [GET]
+  [4;35;1mCapacity Load (0.9ms)[0m   [0mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+  [4;36;1mCapacity Load (0.9ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 5 ) [0m
+Rendered capacities/_capacity (6.5ms)
+  [4;36;1mDriver Load (0.4ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) [0m
+Rendered capacities/_capacity (1.2ms)
+  [4;35;1mDriver Load (0.4ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 3 ) [0m
+Rendered capacities/_capacity (1.5ms)
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 2 ) [0m
+Rendered capacities/_capacity (1.0ms)
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 4 ) [0m
+Rendered capacities/_capacity (1.0ms)
+Rendered capacities/_focus (80.4ms)
+  [4;36;1mDriver Load (0.4ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 6 ) [0m
+  [4;35;1mDriver Load (0.4ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 7 ) [0m
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 8 ) [0m
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 9 ) [0m
+Rendered shared/_navigation (0.2ms)
+Completed in 119ms (View: 102, DB: 5) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:27:32) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:27:32) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:27:32) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:27:32) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:27:32) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 17:28:04) [GET]
+  [4;36;1mCapacity Load (0.9ms)[0m   [0;1mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+  [4;35;1mCapacity Load (1.0ms)[0m   [0mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 5 ) [0m
+Rendered capacities/_capacity (6.0ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) [0m
+Rendered capacities/_capacity (1.0ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 3 ) [0m
+Rendered capacities/_capacity (0.9ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 2 ) [0m
+Rendered capacities/_capacity (1.0ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 4 ) [0m
+Rendered capacities/_capacity (0.9ms)
+Rendered capacities/_focus (11.3ms)
+  [4;35;1mDriver Load (0.4ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 6 ) [0m
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 7 ) [0m
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 8 ) [0m
+  [4;36;1mDriver Load (0.4ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 9 ) [0m
+Rendered shared/_navigation (0.2ms)
+Completed in 105ms (View: 89, DB: 4) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:28:04) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:28:04) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:28:04) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:28:04) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:28:04) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 17:28:07) [GET]
+  [4;35;1mCapacity Load (1.0ms)[0m   [0mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+  [4;36;1mCapacity Load (1.0ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 5 ) [0m
+Rendered capacities/_capacity (5.7ms)
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) [0m
+Rendered capacities/_capacity (1.0ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 3 ) [0m
+Rendered capacities/_capacity (1.0ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 2 ) [0m
+Rendered capacities/_capacity (0.9ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 4 ) [0m
+Rendered capacities/_capacity (0.9ms)
+Rendered capacities/_focus (11.1ms)
+  [4;36;1mDriver Load (0.4ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 6 ) [0m
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 7 ) [0m
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 8 ) [0m
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 9 ) [0m
+Rendered shared/_navigation (0.3ms)
+Completed in 45ms (View: 27, DB: 4) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:28:07) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:28:07) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:28:07) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:28:07) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:28:07) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 17:28:23) [GET]
+  [4;36;1mCapacity Load (1.0ms)[0m   [0;1mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+  [4;35;1mCapacity Load (0.9ms)[0m   [0mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 5 ) [0m
+Rendered capacities/_capacity (9.2ms)
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) [0m
+Rendered capacities/_capacity (1.2ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 3 ) [0m
+Rendered capacities/_capacity (1.0ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 2 ) [0m
+Rendered capacities/_capacity (1.2ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 4 ) [0m
+Rendered capacities/_capacity (1.0ms)
+Rendered capacities/_focus (15.1ms)
+  [4;35;1mDriver Load (0.4ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 6 ) [0m
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 7 ) [0m
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 8 ) [0m
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 9 ) [0m
+Rendered shared/_navigation (0.2ms)
+Completed in 55ms (View: 37, DB: 5) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:28:23) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:28:23) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:28:23) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:28:23) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:28:23) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 17:28:42) [GET]
+  [4;35;1mCapacity Load (0.9ms)[0m   [0mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+  [4;36;1mCapacity Load (1.0ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 5 ) [0m
+Rendered capacities/_capacity (6.0ms)
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) [0m
+Rendered capacities/_capacity (1.3ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 3 ) [0m
+Rendered capacities/_capacity (0.9ms)
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 2 ) [0m
+Rendered capacities/_capacity (1.0ms)
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 4 ) [0m
+Rendered capacities/_capacity (1.0ms)
+Rendered capacities/_focus (11.7ms)
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 6 ) [0m
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 7 ) [0m
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 8 ) [0m
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 9 ) [0m
+Rendered shared/_navigation (0.2ms)
+Completed in 48ms (View: 31, DB: 4) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:28:42) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:28:43) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:28:43) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:28:43) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:28:43) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 17:29:31) [GET]
+  [4;36;1mCapacity Load (1.0ms)[0m   [0;1mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+  [4;35;1mCapacity Load (1.1ms)[0m   [0mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;36;1mDriver Load (0.4ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 5 ) [0m
+Rendered capacities/_capacity (10.4ms)
+  [4;35;1mDriver Load (0.4ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) [0m
+Rendered capacities/_capacity (1.3ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 3 ) [0m
+Rendered capacities/_capacity (1.0ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 2 ) [0m
+Rendered capacities/_capacity (0.9ms)
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 4 ) [0m
+Rendered capacities/_capacity (1.0ms)
+Rendered capacities/_focus (17.0ms)
+  [4;35;1mDriver Load (0.4ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 6 ) [0m
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 7 ) [0m
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 8 ) [0m
+  [4;36;1mDriver Load (8.5ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 9 ) [0m
+Rendered shared/_navigation (0.3ms)
+Completed in 68ms (View: 41, DB: 13) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:29:31) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:29:32) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:29:32) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:29:32) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:29:32) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 17:30:11) [GET]
+  [4;35;1mCapacity Load (0.8ms)[0m   [0mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+  [4;36;1mCapacity Load (0.9ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 5 ) [0m
+Rendered capacities/_capacity (5.8ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) [0m
+Rendered capacities/_capacity (1.0ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 3 ) [0m
+Rendered capacities/_capacity (0.9ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 2 ) [0m
+Rendered capacities/_capacity (0.9ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 4 ) [0m
+Rendered capacities/_capacity (0.9ms)
+Rendered capacities/_focus (11.0ms)
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 6 ) [0m
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 7 ) [0m
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 8 ) [0m
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 9 ) [0m
+Rendered shared/_navigation (0.2ms)
+Completed in 39ms (View: 24, DB: 4) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:30:11) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:30:11) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:30:11) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:30:11) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:30:11) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 17:31:36) [GET]
+  [4;36;1mCapacity Load (0.9ms)[0m   [0;1mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+  [4;35;1mCapacity Load (1.1ms)[0m   [0mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 5 ) [0m
+Rendered capacities/_capacity (5.8ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) [0m
+Rendered capacities/_capacity (1.0ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 3 ) [0m
+Rendered capacities/_capacity (0.9ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 2 ) [0m
+Rendered capacities/_capacity (1.0ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 4 ) [0m
+Rendered capacities/_capacity (1.0ms)
+Rendered capacities/_focus (11.5ms)
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 6 ) [0m
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 7 ) [0m
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 8 ) [0m
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 9 ) [0m
+Rendered shared/_navigation (0.2ms)
+Completed in 55ms (View: 32, DB: 4) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:31:36) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:31:36) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:31:36) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:31:36) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:31:37) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 17:31:41) [GET]
+  [4;35;1mCapacity Load (0.8ms)[0m   [0mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+  [4;36;1mCapacity Load (0.9ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 5 ) [0m
+Rendered capacities/_capacity (5.8ms)
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) [0m
+Rendered capacities/_capacity (1.1ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 3 ) [0m
+Rendered capacities/_capacity (1.0ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 2 ) [0m
+Rendered capacities/_capacity (1.1ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 4 ) [0m
+Rendered capacities/_capacity (1.0ms)
+Rendered capacities/_focus (11.4ms)
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 6 ) [0m
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 7 ) [0m
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 8 ) [0m
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 9 ) [0m
+Rendered shared/_navigation (0.2ms)
+Completed in 46ms (View: 31, DB: 4) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:31:42) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:31:42) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:31:42) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:31:42) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:31:42) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 17:31:50) [GET]
+  [4;36;1mCapacity Load (0.9ms)[0m   [0;1mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+  [4;35;1mCapacity Load (0.9ms)[0m   [0mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 5 ) [0m
+Rendered capacities/_capacity (6.0ms)
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) [0m
+Rendered capacities/_capacity (1.3ms)
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 3 ) [0m
+Rendered capacities/_capacity (1.0ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 2 ) [0m
+Rendered capacities/_capacity (1.0ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 4 ) [0m
+Rendered capacities/_capacity (1.0ms)
+Rendered capacities/_focus (11.8ms)
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 6 ) [0m
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 7 ) [0m
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 8 ) [0m
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 9 ) [0m
+Rendered shared/_navigation (0.2ms)
+Completed in 48ms (View: 32, DB: 4) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:31:50) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:31:50) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:31:50) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:31:50) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:31:50) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 17:32:20) [GET]
+  [4;35;1mCapacity Load (0.9ms)[0m   [0mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+  [4;36;1mCapacity Load (0.9ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 5 ) [0m
+Rendered capacities/_capacity (6.0ms)
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) [0m
+Rendered capacities/_capacity (1.1ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 3 ) [0m
+Rendered capacities/_capacity (1.0ms)
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 2 ) [0m
+Rendered capacities/_capacity (1.0ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 4 ) [0m
+Rendered capacities/_capacity (0.9ms)
+Rendered capacities/_focus (11.7ms)
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 6 ) [0m
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 7 ) [0m
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 8 ) [0m
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 9 ) [0m
+Rendered shared/_navigation (0.2ms)
+Completed in 41ms (View: 25, DB: 4) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:32:20) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:32:20) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:32:20) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:32:20) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:32:20) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 17:32:21) [GET]
+  [4;36;1mCapacity Load (0.9ms)[0m   [0;1mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+  [4;35;1mCapacity Load (1.1ms)[0m   [0mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 5 ) [0m
+Rendered capacities/_capacity (6.6ms)
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) [0m
+Rendered capacities/_capacity (1.1ms)
+  [4;36;1mDriver Load (0.7ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 3 ) [0m
+Rendered capacities/_capacity (1.5ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 2 ) [0m
+Rendered capacities/_capacity (1.0ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 4 ) [0m
+Rendered capacities/_capacity (1.0ms)
+Rendered capacities/_focus (12.9ms)
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 6 ) [0m
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 7 ) [0m
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 8 ) [0m
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 9 ) [0m
+Rendered shared/_navigation (0.2ms)
+Completed in 111ms (View: 28, DB: 5) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:32:21) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:32:22) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:32:22) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:32:22) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:32:22) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 17:33:06) [GET]
+  [4;35;1mCapacity Load (0.9ms)[0m   [0mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+  [4;36;1mCapacity Load (1.0ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 5 ) [0m
+Rendered capacities/_capacity (75.0ms)
+  [4;36;1mDriver Load (0.4ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) [0m
+Rendered capacities/_capacity (1.3ms)
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 3 ) [0m
+Rendered capacities/_capacity (1.0ms)
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 2 ) [0m
+Rendered capacities/_capacity (1.0ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 4 ) [0m
+Rendered capacities/_capacity (1.0ms)
+Rendered capacities/_focus (81.0ms)
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 6 ) [0m
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 7 ) [0m
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 8 ) [0m
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 9 ) [0m
+Rendered shared/_navigation (0.2ms)
+Completed in 118ms (View: 102, DB: 4) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:33:06) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:33:06) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:33:06) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:33:06) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:33:06) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 17:34:30) [GET]
+  [4;36;1mCapacity Load (0.9ms)[0m   [0;1mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+  [4;35;1mCapacity Load (0.9ms)[0m   [0mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 5 ) [0m
+Rendered capacities/_capacity (5.8ms)
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) [0m
+Rendered capacities/_capacity (1.0ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 3 ) [0m
+Rendered capacities/_capacity (0.9ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 2 ) [0m
+Rendered capacities/_capacity (0.9ms)
+  [4;36;1mDriver Load (0.5ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 4 ) [0m
+Rendered capacities/_capacity (64.2ms)
+Rendered capacities/_focus (74.4ms)
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 6 ) [0m
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 7 ) [0m
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 8 ) [0m
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 9 ) [0m
+Rendered shared/_navigation (0.2ms)
+Completed in 111ms (View: 95, DB: 4) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:34:30) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:34:30) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:34:30) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:34:30) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:34:30) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 17:35:05) [GET]
+  [4;35;1mCapacity Load (0.9ms)[0m   [0mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+  [4;36;1mCapacity Load (0.9ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 5 ) [0m
+Rendered capacities/_capacity (5.8ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) [0m
+Rendered capacities/_capacity (1.0ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 3 ) [0m
+Rendered capacities/_capacity (0.9ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 2 ) [0m
+Rendered capacities/_capacity (0.9ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 4 ) [0m
+Rendered capacities/_capacity (0.9ms)
+Rendered capacities/_focus (11.0ms)
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 6 ) [0m
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 7 ) [0m
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 8 ) [0m
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 9 ) [0m
+Rendered shared/_navigation (0.2ms)
+Completed in 40ms (View: 24, DB: 4) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:35:05) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:35:05) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:35:05) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:35:05) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:35:05) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 17:35:06) [GET]
+  [4;36;1mCapacity Load (0.8ms)[0m   [0;1mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+  [4;35;1mCapacity Load (0.9ms)[0m   [0mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 5 ) [0m
+Rendered capacities/_capacity (5.7ms)
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) [0m
+Rendered capacities/_capacity (1.0ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 3 ) [0m
+Rendered capacities/_capacity (0.9ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 2 ) [0m
+Rendered capacities/_capacity (0.9ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 4 ) [0m
+Rendered capacities/_capacity (0.9ms)
+Rendered capacities/_focus (11.0ms)
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 6 ) [0m
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 7 ) [0m
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 8 ) [0m
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 9 ) [0m
+Rendered shared/_navigation (0.2ms)
+Completed in 39ms (View: 24, DB: 4) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:35:06) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:35:06) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:35:06) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:35:06) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:35:06) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 17:36:46) [GET]
+  [4;35;1mCapacity Load (0.9ms)[0m   [0mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+  [4;36;1mCapacity Load (1.0ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 5 ) [0m
+Rendered capacities/_capacity (6.0ms)
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) [0m
+Rendered capacities/_capacity (1.3ms)
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 3 ) [0m
+Rendered capacities/_capacity (1.1ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 2 ) [0m
+Rendered capacities/_capacity (1.0ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 4 ) [0m
+Rendered capacities/_capacity (1.0ms)
+Rendered capacities/_focus (12.2ms)
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 6 ) [0m
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 7 ) [0m
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 8 ) [0m
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 9 ) [0m
+Rendered shared/_navigation (0.2ms)
+Completed in 51ms (View: 33, DB: 4) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:36:46) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:36:46) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:36:46) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:36:46) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:36:46) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 17:36:47) [GET]
+  [4;36;1mCapacity Load (0.9ms)[0m   [0;1mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+  [4;35;1mCapacity Load (1.0ms)[0m   [0mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 5 ) [0m
+Rendered capacities/_capacity (6.0ms)
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) [0m
+Rendered capacities/_capacity (1.4ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 3 ) [0m
+Rendered capacities/_capacity (0.9ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 2 ) [0m
+Rendered capacities/_capacity (1.0ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 4 ) [0m
+Rendered capacities/_capacity (0.9ms)
+Rendered capacities/_focus (11.8ms)
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 6 ) [0m
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 7 ) [0m
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 8 ) [0m
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 9 ) [0m
+Rendered shared/_navigation (0.2ms)
+Completed in 43ms (View: 25, DB: 4) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:36:47) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:36:47) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:36:47) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:36:47) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:36:47) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 17:37:57) [GET]
+  [4;35;1mCapacity Load (0.9ms)[0m   [0mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+  [4;36;1mCapacity Load (1.0ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 5 ) [0m
+Rendered capacities/_capacity (6.0ms)
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) [0m
+Rendered capacities/_capacity (1.3ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 3 ) [0m
+Rendered capacities/_capacity (1.1ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 2 ) [0m
+Rendered capacities/_capacity (1.0ms)
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 4 ) [0m
+Rendered capacities/_capacity (1.0ms)
+Rendered capacities/_focus (12.0ms)
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 6 ) [0m
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 7 ) [0m
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 8 ) [0m
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 9 ) [0m
+Rendered shared/_navigation (0.2ms)
+Completed in 51ms (View: 33, DB: 4) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:37:57) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:37:57) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:37:57) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:37:58) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 17:37:58) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 18:21:37) [GET]
+  [4;36;1mCapacity Load (0.9ms)[0m   [0;1mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+  [4;35;1mCapacity Load (1.0ms)[0m   [0mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 5 ) [0m
+Rendered capacities/_capacity (5.7ms)
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) [0m
+Rendered capacities/_capacity (1.2ms)
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 3 ) [0m
+Rendered capacities/_capacity (1.1ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 2 ) [0m
+Rendered capacities/_capacity (0.9ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 4 ) [0m
+Rendered capacities/_capacity (0.9ms)
+Rendered capacities/_focus (11.3ms)
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 6 ) [0m
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 7 ) [0m
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 8 ) [0m
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 9 ) [0m
+
+ActionView::TemplateError (undefined local variable or method `application_root' for #<ActionView::Base:0x10338f168>) on line #25 of app/views/shared/_navigation.haml:
+22:     .dock_item
+23:       %a{ :href => 'http://mail.gsenterprises.com' }
+24:         %img{ :src => '/images/mail.png' }
+25:         %br
+26:         email
+
+    app/views/shared/_navigation.haml:25:in `_run_haml_app47views47shared47_navigation46haml_locals_navigation_object'
+    haml (2.2.3) lib/haml/helpers/action_view_mods.rb:11:in `render'
+    haml (2.2.3) lib/haml/helpers.rb:96:in `non_haml'
+    haml (2.2.3) lib/haml/helpers/action_view_mods.rb:11:in `render'
+    app/views/layouts/application.haml:13:in `_run_haml_app47views47layouts47application46haml'
+    haml (2.2.3) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.3) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.3) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (135.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 18:21:56) [GET]
+  [4;35;1mCapacity Load (0.9ms)[0m   [0mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+  [4;36;1mCapacity Load (0.9ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 5 ) [0m
+Rendered capacities/_capacity (5.4ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) [0m
+Rendered capacities/_capacity (1.0ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 3 ) [0m
+Rendered capacities/_capacity (0.9ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 2 ) [0m
+Rendered capacities/_capacity (0.9ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 4 ) [0m
+Rendered capacities/_capacity (0.9ms)
+Rendered capacities/_focus (10.8ms)
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 6 ) [0m
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 7 ) [0m
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 8 ) [0m
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 9 ) [0m
+
+ActionView::TemplateError (undefined local variable or method `root_url' for #<ActionView::Base:0x1033894c0>) on line #25 of app/views/shared/_navigation.haml:
+22:     .dock_item
+23:       %a{ :href => 'http://mail.gsenterprises.com' }
+24:         %img{ :src => '/images/mail.png' }
+25:         %br
+26:         email
+
+    app/views/shared/_navigation.haml:25:in `_run_haml_app47views47shared47_navigation46haml_locals_navigation_object'
+    haml (2.2.3) lib/haml/helpers/action_view_mods.rb:11:in `render'
+    haml (2.2.3) lib/haml/helpers.rb:96:in `non_haml'
+    haml (2.2.3) lib/haml/helpers/action_view_mods.rb:11:in `render'
+    app/views/layouts/application.haml:13:in `_run_haml_app47views47layouts47application46haml'
+    haml (2.2.3) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.3) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.3) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (125.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 18:22:00) [GET]
+  [4;36;1mCapacity Load (0.9ms)[0m   [0;1mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+  [4;35;1mCapacity Load (0.9ms)[0m   [0mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 5 ) [0m
+Rendered capacities/_capacity (5.6ms)
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) [0m
+Rendered capacities/_capacity (1.0ms)
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 3 ) [0m
+Rendered capacities/_capacity (1.0ms)
+  [4;35;1mDriver Load (0.4ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 2 ) [0m
+Rendered capacities/_capacity (1.1ms)
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 4 ) [0m
+Rendered capacities/_capacity (1.1ms)
+Rendered capacities/_focus (11.3ms)
+  [4;35;1mDriver Load (0.4ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 6 ) [0m
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 7 ) [0m
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 8 ) [0m
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 9 ) [0m
+
+ActionView::TemplateError (undefined local variable or method `root' for #<ActionView::Base:0x1032d90c0>) on line #25 of app/views/shared/_navigation.haml:
+22:     .dock_item
+23:       %a{ :href => 'http://mail.gsenterprises.com' }
+24:         %img{ :src => '/images/mail.png' }
+25:         %br
+26:         email
+
+    app/views/shared/_navigation.haml:25:in `_run_haml_app47views47shared47_navigation46haml_locals_navigation_object'
+    haml (2.2.3) lib/haml/helpers/action_view_mods.rb:11:in `render'
+    haml (2.2.3) lib/haml/helpers.rb:96:in `non_haml'
+    haml (2.2.3) lib/haml/helpers/action_view_mods.rb:11:in `render'
+    app/views/layouts/application.haml:13:in `_run_haml_app47views47layouts47application46haml'
+    haml (2.2.3) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.3) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.3) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (148.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 18:22:27) [GET]
+  [4;35;1mCapacity Load (0.9ms)[0m   [0mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+  [4;36;1mCapacity Load (0.9ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 5 ) [0m
+Rendered capacities/_capacity (6.1ms)
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) [0m
+Rendered capacities/_capacity (1.1ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 3 ) [0m
+Rendered capacities/_capacity (1.0ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 2 ) [0m
+Rendered capacities/_capacity (1.0ms)
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 4 ) [0m
+Rendered capacities/_capacity (1.2ms)
+Rendered capacities/_focus (11.9ms)
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 6 ) [0m
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 7 ) [0m
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 8 ) [0m
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 9 ) [0m
+
+ActionView::TemplateError (undefined local variable or method `root_path' for #<ActionView::Base:0x10324f618>) on line #25 of app/views/shared/_navigation.haml:
+22:     .dock_item
+23:       %a{ :href => 'http://mail.gsenterprises.com' }
+24:         %img{ :src => '/images/mail.png' }
+25:         %br
+26:         email
+
+    app/views/shared/_navigation.haml:25:in `_run_haml_app47views47shared47_navigation46haml_locals_navigation_object'
+    haml (2.2.3) lib/haml/helpers/action_view_mods.rb:11:in `render'
+    haml (2.2.3) lib/haml/helpers.rb:96:in `non_haml'
+    haml (2.2.3) lib/haml/helpers/action_view_mods.rb:11:in `render'
+    app/views/layouts/application.haml:13:in `_run_haml_app47views47layouts47application46haml'
+    haml (2.2.3) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.3) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.3) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (65.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 18:23:51) [GET]
+  [4;36;1mCapacity Load (1.0ms)[0m   [0;1mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+  [4;35;1mCapacity Load (0.9ms)[0m   [0mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 5 ) [0m
+Rendered capacities/_capacity (6.9ms)
+  [4;35;1mDriver Load (0.4ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) [0m
+Rendered capacities/_capacity (1.3ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 3 ) [0m
+Rendered capacities/_capacity (0.9ms)
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 2 ) [0m
+Rendered capacities/_capacity (1.0ms)
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 4 ) [0m
+Rendered capacities/_capacity (1.2ms)
+Rendered capacities/_focus (13.0ms)
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 6 ) [0m
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 7 ) [0m
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 8 ) [0m
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 9 ) [0m
+
+ActionView::TemplateError (undefined local variable or method `root_url' for #<ActionView::Base:0x1031e6d48>) on line #25 of app/views/shared/_navigation.haml:
+22:     .dock_item
+23:       %a{ :href => 'http://mail.gsenterprises.com' }
+24:         %img{ :src => '/images/mail.png' }
+25:         %br
+26:         email
+
+    app/views/shared/_navigation.haml:25:in `_run_haml_app47views47shared47_navigation46haml_locals_navigation_object'
+    haml (2.2.3) lib/haml/helpers/action_view_mods.rb:11:in `render'
+    haml (2.2.3) lib/haml/helpers.rb:96:in `non_haml'
+    haml (2.2.3) lib/haml/helpers/action_view_mods.rb:11:in `render'
+    app/views/layouts/application.haml:13:in `_run_haml_app47views47layouts47application46haml'
+    haml (2.2.3) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.3) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.3) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (64.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 18:23:53) [GET]
+  [4;35;1mCapacity Load (0.9ms)[0m   [0mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+  [4;36;1mCapacity Load (1.2ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 5 ) [0m
+Rendered capacities/_capacity (5.8ms)
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) [0m
+Rendered capacities/_capacity (1.1ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 3 ) [0m
+Rendered capacities/_capacity (1.0ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 2 ) [0m
+Rendered capacities/_capacity (1.2ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 4 ) [0m
+Rendered capacities/_capacity (0.9ms)
+Rendered capacities/_focus (11.5ms)
+  [4;36;1mDriver Load (0.4ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 6 ) [0m
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 7 ) [0m
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 8 ) [0m
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 9 ) [0m
+
+ActionView::TemplateError (undefined local variable or method `root_url' for #<ActionView::Base:0x10318b1c8>) on line #25 of app/views/shared/_navigation.haml:
+22:     .dock_item
+23:       %a{ :href => 'http://mail.gsenterprises.com' }
+24:         %img{ :src => '/images/mail.png' }
+25:         %br
+26:         email
+
+    app/views/shared/_navigation.haml:25:in `_run_haml_app47views47shared47_navigation46haml_locals_navigation_object'
+    haml (2.2.3) lib/haml/helpers/action_view_mods.rb:11:in `render'
+    haml (2.2.3) lib/haml/helpers.rb:96:in `non_haml'
+    haml (2.2.3) lib/haml/helpers/action_view_mods.rb:11:in `render'
+    app/views/layouts/application.haml:13:in `_run_haml_app47views47layouts47application46haml'
+    haml (2.2.3) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.3) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.3) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (62.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 18:24:25) [GET]
+  [4;36;1mCapacity Load (0.8ms)[0m   [0;1mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+  [4;35;1mCapacity Load (0.9ms)[0m   [0mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 5 ) [0m
+Rendered capacities/_capacity (5.6ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) [0m
+Rendered capacities/_capacity (1.0ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 3 ) [0m
+Rendered capacities/_capacity (1.2ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 2 ) [0m
+Rendered capacities/_capacity (0.9ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 4 ) [0m
+Rendered capacities/_capacity (1.0ms)
+Rendered capacities/_focus (11.1ms)
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 6 ) [0m
+  [4;36;1mDriver Load (0.4ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 7 ) [0m
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 8 ) [0m
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 9 ) [0m
+Rendered shared/_navigation (0.4ms)
+Completed in 110ms (View: 95, DB: 4) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 18:24:25) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 18:24:25) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 18:24:25) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 18:24:25) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 18:24:25) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 18:25:13) [GET]
+  [4;35;1mCapacity Load (0.9ms)[0m   [0mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+  [4;36;1mCapacity Load (0.9ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 5 ) [0m
+Rendered capacities/_capacity (5.5ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) [0m
+Rendered capacities/_capacity (1.0ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 3 ) [0m
+Rendered capacities/_capacity (1.0ms)
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 2 ) [0m
+Rendered capacities/_capacity (1.0ms)
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 4 ) [0m
+Rendered capacities/_capacity (1.2ms)
+Rendered capacities/_focus (11.1ms)
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 6 ) [0m
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 7 ) [0m
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 8 ) [0m
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 9 ) [0m
+Rendered shared/_navigation (0.4ms)
+Completed in 105ms (View: 90, DB: 4) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 18:25:14) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 18:25:14) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 18:25:14) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 18:25:14) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 18:25:14) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 18:25:15) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/prototype.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 18:25:15) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 18:25:15) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 18:25:27) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/prototype.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 18:25:27) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 18:25:28) [GET]
+  [4;36;1mCapacity Load (1.0ms)[0m   [0;1mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+  [4;35;1mCapacity Load (1.0ms)[0m   [0mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 5 ) [0m
+Rendered capacities/_capacity (6.5ms)
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) [0m
+Rendered capacities/_capacity (1.2ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 3 ) [0m
+Rendered capacities/_capacity (1.0ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 2 ) [0m
+Rendered capacities/_capacity (1.0ms)
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 4 ) [0m
+Rendered capacities/_capacity (1.0ms)
+Rendered capacities/_focus (12.1ms)
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 6 ) [0m
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 7 ) [0m
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 8 ) [0m
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 9 ) [0m
+Rendered shared/_navigation (0.4ms)
+Completed in 42ms (View: 26, DB: 4) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 18:25:28) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 18:25:28) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 18:25:28) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 18:25:28) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 18:25:28) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 18:25:29) [GET]
+  [4;35;1mCapacity Load (0.9ms)[0m   [0mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+  [4;36;1mCapacity Load (1.0ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 5 ) [0m
+Rendered capacities/_capacity (6.6ms)
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) [0m
+Rendered capacities/_capacity (1.2ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 3 ) [0m
+Rendered capacities/_capacity (1.0ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 2 ) [0m
+Rendered capacities/_capacity (1.0ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 4 ) [0m
+Rendered capacities/_capacity (1.0ms)
+Rendered capacities/_focus (12.3ms)
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 6 ) [0m
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 7 ) [0m
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 8 ) [0m
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 9 ) [0m
+Rendered shared/_navigation (0.4ms)
+Completed in 106ms (View: 26, DB: 4) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 18:25:29) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 18:25:30) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 18:25:30) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 18:25:30) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 18:25:30) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 18:25:31) [GET]
+  [4;36;1mCapacity Load (0.9ms)[0m   [0;1mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+  [4;35;1mCapacity Load (0.9ms)[0m   [0mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 5 ) [0m
+Rendered capacities/_capacity (5.6ms)
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) [0m
+Rendered capacities/_capacity (1.0ms)
+  [4;36;1mDriver Load (0.4ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 3 ) [0m
+Rendered capacities/_capacity (1.6ms)
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 2 ) [0m
+Rendered capacities/_capacity (1.1ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 4 ) [0m
+Rendered capacities/_capacity (1.0ms)
+Rendered capacities/_focus (73.9ms)
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 6 ) [0m
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 7 ) [0m
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 8 ) [0m
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 9 ) [0m
+Rendered shared/_navigation (0.4ms)
+Completed in 103ms (View: 87, DB: 4) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 18:25:31) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 18:25:31) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 18:25:31) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 18:25:31) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 18:25:31) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 18:25:51) [GET]
+  [4;35;1mCapacity Load (0.9ms)[0m   [0mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+  [4;36;1mCapacity Load (1.1ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;35;1mDriver Load (0.4ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 5 ) [0m
+Rendered capacities/_capacity (6.4ms)
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) [0m
+Rendered capacities/_capacity (1.3ms)
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 3 ) [0m
+Rendered capacities/_capacity (1.2ms)
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 2 ) [0m
+Rendered capacities/_capacity (1.0ms)
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 4 ) [0m
+Rendered capacities/_capacity (1.2ms)
+Rendered capacities/_focus (13.2ms)
+  [4;36;1mDriver Load (0.4ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 6 ) [0m
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 7 ) [0m
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 8 ) [0m
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 9 ) [0m
+Rendered shared/_navigation (0.4ms)
+Completed in 63ms (View: 41, DB: 5) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 18:25:51) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 18:25:51) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 18:25:51) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 18:25:51) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 18:25:51) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 19:54:26) [GET]
+  [4;36;1mCapacity Load (1.0ms)[0m   [0;1mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+  [4;35;1mCapacity Load (1.2ms)[0m   [0mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 5 ) [0m
+Rendered capacities/_capacity (94.7ms)
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) [0m
+Rendered capacities/_capacity (1.2ms)
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 3 ) [0m
+Rendered capacities/_capacity (1.8ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 2 ) [0m
+Rendered capacities/_capacity (1.1ms)
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 4 ) [0m
+Rendered capacities/_capacity (1.2ms)
+Rendered capacities/_focus (101.7ms)
+  [4;35;1mDriver Load (0.4ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 6 ) [0m
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 7 ) [0m
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 8 ) [0m
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 9 ) [0m
+Rendered shared/_navigation (0.4ms)
+Completed in 608ms (View: 395, DB: 5) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 19:54:27) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 19:54:27) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 19:54:27) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 19:54:27) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 19:54:27) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-07 20:35:27) [GET]
+  [4;35;1mCapacity Load (0.9ms)[0m   [0mSELECT * FROM "capacities" WHERE (available_on = '2009-09-07') [0m
+  [4;36;1mCapacity Load (0.9ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 5 ) [0m
+Rendered capacities/_capacity (5.5ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) [0m
+Rendered capacities/_capacity (1.1ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 3 ) [0m
+Rendered capacities/_capacity (0.9ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 2 ) [0m
+Rendered capacities/_capacity (0.9ms)
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 4 ) [0m
+Rendered capacities/_capacity (1.1ms)
+Rendered capacities/_focus (11.0ms)
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 6 ) [0m
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 7 ) [0m
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 8 ) [0m
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 9 ) [0m
+Rendered shared/_navigation (0.4ms)
+Completed in 40ms (View: 25, DB: 4) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 20:35:27) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 20:35:27) [GET]
+
+ActionController::RoutingError (No route matches "/images/bidstore.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 20:35:27) [GET]
+
+ActionController::RoutingError (No route matches "/images/onholiday.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 20:35:27) [GET]
+
+ActionController::RoutingError (No route matches "/images/presently.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 20:35:27) [GET]
+
+ActionController::RoutingError (No route matches "/images/mail.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)

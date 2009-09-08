@@ -6,5 +6,6 @@ $(document).ready(function() {
   
   $(".driver_autocomplete").autocomplete('/drivers.json');
 
+ 
 });
 
