@@ -44,10 +44,19 @@ class CapacitiesController < ApplicationController
 
   end# create
 
-  update.after do
-    object.fulfilled_on = DateTime.now if params[:fulfilled] == "true"
-    object.save!
+  def update
+    @capacity = Capacity.find( params[:id] )
+    @capacity.fulfilled_on = DateTime.now if params[:fulfilled] == "true"
+    @capacity.fulfilled_on = nil if params[:fulfilled] == "false"
+    respond_to do |format|
+      if @capacity.update_attributes( params[:capacity] )
+       format.html
+       format.js { render :action => 'fulfilled.js', :layout => false } if params[:fulfilled] == "true" || params[:fulfilled] == "false"
+      end
+    end
   end
-  update.wants.js { render :text => 'good job' }
+
+
+
 
 end

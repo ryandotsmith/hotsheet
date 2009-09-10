@@ -21,6 +21,8 @@ describe CapacitiesHelper do
     helper.priority( capacity ).should eql('high')
     capacity = Factory( :capacity, :priority => 0 )
     helper.priority( capacity ).should eql('normal')
+    capacity = Factory( :capacity, :priority => 2, :fulfilled_on => DateTime.now )
+    helper.priority( capacity ).should eql('covered')
 
   end
 

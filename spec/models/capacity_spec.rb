@@ -60,7 +60,12 @@ describe "ensuring drivers get associated with capacity" do
     capacity.drivers.pop.name.should eql("TBD")
   end
 end
-
+describe "covering a capacity" do
+  it "should be covered if the fulfilled date is not null" do
+    capacity = Factory(:capacity, :fulfilled_on => DateTime.now)
+    capacity.covered?().should eql( true )
+  end
+end
 
 
 

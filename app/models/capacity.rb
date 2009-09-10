@@ -31,5 +31,8 @@ class Capacity < ActiveRecord::Base
       self.drivers << ( Driver.find_by_name("TBD") || Driver.create(:name => "TBD") )
     end
   end
-
+  
+  def covered?
+    !fulfilled_on.nil?
+  end
 end

@@ -1,4 +1,4 @@
-%tr{ :class => priority(capacity)}
+%tr{ :id => capacity.id, :class => priority(capacity)}
   %td.covered
     - form_for capacity, :method => :update do |f|
       = check_box_tag :covered, Date.today, capacity.fulfilled_on != nil, :class => 'covered_check_box', :id => capacity.id 

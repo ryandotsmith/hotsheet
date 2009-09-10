@@ -70,6 +70,11 @@ form label {
     font-size: 9pt; }
   #center #focus_capacities tbody tr {
     border: 1px solid white; }
+  #center #focus_capacities tbody tr.covered {
+    background-color: #e8e8e8;
+    color: #b6b6b6; }
+    #center #focus_capacities tbody tr.covered td {
+      text-decoration: line-through; }
   #center #focus_capacities tbody tr.normal {
     background-color: #99ccff; }
   #center #focus_capacities tbody tr.high {

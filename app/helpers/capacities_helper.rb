@@ -5,6 +5,7 @@ module CapacitiesHelper
   end
 
   def priority( capacity )
+    return "covered" if capacity.covered?
     case capacity.priority
     when 0
       'normal'
