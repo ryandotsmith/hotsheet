@@ -11,18 +11,22 @@
 
           = label_tag :driver_name, "Driver"
           = text_field_tag :driver_name, nil, :class => 'driver_autocomplete'
-
-          = form.label :priority, "Priority"
-          = form.select :priority, {:normal => 0, :high => 1, :top => 2}
-        .form_box_right
-          = form.label :notes, "Notes"
-          = form.text_field :notes
-          = form.label :available_on, "Available On"
-          = form.date_select :available_on
-        %p.buttons
+          
+          %p
           = form.submit "save", :name => 'save'
           or
           = link_to "cancel", "#", :id => 'rollup', :rel => 'new_capacity_form'
+        .form_box_right
+          = form.label :notes, "Notes"
+          = form.text_field :notes
+
+          = form.label :available_on, "Available On"
+          = form.date_select :available_on
+
+          = form.label :priority, "Priority"
+          = form.select :priority, {:normal => 0, :high => 1, :top => 2}
+
+        %p.buttons
 #right
   #capacities.items
     = link_to "back", "#", :class => 'prev'
