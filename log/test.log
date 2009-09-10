@@ -12107,3 +12107,15 @@ Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/capacities?focus_da
   [4;35;1mDriver Create (0.1ms)[0m   [0mINSERT INTO "drivers" ("name", "created_at", "updated_at") VALUES('Ryan Smith', '2009-09-10 21:06:12', '2009-09-10 21:06:12')[0m
   [4;36;1mCapacity Create (0.1ms)[0m   [0;1mINSERT INTO "capacities" ("location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES('Kansas City', '2009-09-10', '2009-09-10 21:06:12', '2009-09-10 21:06:12', 'need a good load', '2009-09-10 21:06:12', 2)[0m
   [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO "capacities_drivers" ("driver_id", "capacity_id") VALUES (4, 4)[0m
+  [4;36;1mDriver Create (0.4ms)[0m   [0;1mINSERT INTO "drivers" ("name", "created_at", "updated_at") VALUES('Ryan Smith', '2009-09-10 21:26:07', '2009-09-10 21:26:07')[0m
+  [4;35;1mCapacity Create (0.2ms)[0m   [0mINSERT INTO "capacities" ("location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES('Kansas City', '2009-09-10', '2009-09-10 21:26:07', NULL, 'need a good load', '2009-09-10 21:26:07', 2)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO "capacities_drivers" ("driver_id", "capacity_id") VALUES (1, 1)[0m
+  [4;35;1mDriver Create (0.1ms)[0m   [0mINSERT INTO "drivers" ("name", "created_at", "updated_at") VALUES('Ryan Smith', '2009-09-10 21:26:07', '2009-09-10 21:26:07')[0m
+  [4;36;1mCapacity Create (0.1ms)[0m   [0;1mINSERT INTO "capacities" ("location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES('Kansas City', '2009-09-10', '2009-09-10 21:26:07', NULL, 'need a good load', '2009-09-10 21:26:07', 1)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO "capacities_drivers" ("driver_id", "capacity_id") VALUES (2, 2)[0m
+  [4;36;1mDriver Create (0.1ms)[0m   [0;1mINSERT INTO "drivers" ("name", "created_at", "updated_at") VALUES('Ryan Smith', '2009-09-10 21:26:07', '2009-09-10 21:26:07')[0m
+  [4;35;1mCapacity Create (0.1ms)[0m   [0mINSERT INTO "capacities" ("location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES('Kansas City', '2009-09-10', '2009-09-10 21:26:07', NULL, 'need a good load', '2009-09-10 21:26:07', 0)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO "capacities_drivers" ("driver_id", "capacity_id") VALUES (3, 3)[0m
+  [4;35;1mDriver Create (0.1ms)[0m   [0mINSERT INTO "drivers" ("name", "created_at", "updated_at") VALUES('Ryan Smith', '2009-09-10 21:26:07', '2009-09-10 21:26:07')[0m
+  [4;36;1mCapacity Create (0.1ms)[0m   [0;1mINSERT INTO "capacities" ("location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES('Kansas City', '2009-09-10', '2009-09-10 21:26:07', '2009-09-10 21:26:07', 'need a good load', '2009-09-10 21:26:07', 2)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO "capacities_drivers" ("driver_id", "capacity_id") VALUES (4, 4)[0m
