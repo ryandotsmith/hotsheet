@@ -35418,3 +35418,87 @@ ActionController::RoutingError (No route matches "/stylesheets/indicator.gif" wi
   
 
 Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 10.0.1.106 at 2009-09-10 15:23:34) [GET]
+  [4;35;1mCapacity Load (0.6ms)[0m   [0mSELECT * FROM "capacities" WHERE (available_on = '2009-09-10') [0m
+  [4;36;1mCapacity Load (0.3ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 3 ) [0m
+Rendered capacities/_capacity (205.8ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 2 ) [0m
+Rendered capacities/_capacity (2.0ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) [0m
+Rendered capacities/_capacity (1.7ms)
+Rendered capacities/_focus (210.6ms)
+Rendered shared/_navigation (0.5ms)
+Completed in 321ms (View: 234, DB: 2) | 200 OK [http://10.0.1.106/]
+
+
+Processing ApplicationController#index (for 10.0.1.106 at 2009-09-10 15:23:35) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#update (for 10.0.1.106 at 2009-09-10 15:23:39) [PUT]
+  Parameters: {"fulfilled"=>"false", "authenticity_token"=>"ua1tkXc789Uyw4EuZltEiFbrR5MDX2birDjB0bEbee0=", "id"=>"2"}
+  [4;36;1mCapacity Load (0.2ms)[0m   [0;1mSELECT * FROM "capacities" WHERE ("capacities"."id" = 2) [0m
+  [4;35;1mDriver Load (0.7ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 2 ) [0m
+  [4;36;1mCapacity Update (0.2ms)[0m   [0;1mUPDATE "capacities" SET "updated_at" = '2009-09-10 20:23:39', "fulfilled_on" = NULL WHERE "id" = 2[0m
+Rendering capacities/fulfilled
+Completed in 349ms (View: 1, DB: 1) | 200 OK [http://10.0.1.106/capacities/2]
+
+
+Processing CapacitiesController#index (for 10.0.1.106 at 2009-09-10 15:24:07) [GET]
+  [4;35;1mCapacity Load (0.6ms)[0m   [0mSELECT * FROM "capacities" WHERE (available_on = '2009-09-10') [0m
+  [4;36;1mCapacity Load (0.3ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 3 ) [0m
+Rendered capacities/_capacity (6.2ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 2 ) [0m
+Rendered capacities/_capacity (1.9ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) [0m
+Rendered capacities/_capacity (1.7ms)
+Rendered capacities/_focus (11.5ms)
+Rendered shared/_navigation (0.5ms)
+Completed in 95ms (View: 85, DB: 2) | 200 OK [http://10.0.1.106/]
+
+
+Processing ApplicationController#index (for 10.0.1.106 at 2009-09-10 15:24:07) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#update (for 10.0.1.106 at 2009-09-10 15:24:09) [PUT]
+  Parameters: {"fulfilled"=>"false", "authenticity_token"=>"ua1tkXc789Uyw4EuZltEiFbrR5MDX2birDjB0bEbee0=", "id"=>"1"}
+  [4;36;1mCapacity Load (0.2ms)[0m   [0;1mSELECT * FROM "capacities" WHERE ("capacities"."id" = 1) [0m
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) [0m
+  [4;36;1mCapacity Update (0.2ms)[0m   [0;1mUPDATE "capacities" SET "updated_at" = '2009-09-10 20:24:09', "fulfilled_on" = NULL WHERE "id" = 1[0m
+Rendering capacities/fulfilled
+Completed in 17ms (View: 1, DB: 1) | 200 OK [http://10.0.1.106/capacities/1]
+
+
+Processing CapacitiesController#update (for 10.0.1.106 at 2009-09-10 15:24:10) [PUT]
+  Parameters: {"fulfilled"=>"true", "authenticity_token"=>"ua1tkXc789Uyw4EuZltEiFbrR5MDX2birDjB0bEbee0=", "id"=>"1"}
+  [4;35;1mCapacity Load (0.2ms)[0m   [0mSELECT * FROM "capacities" WHERE ("capacities"."id" = 1) [0m
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) [0m
+  [4;35;1mCapacity Update (146.5ms)[0m   [0mUPDATE "capacities" SET "updated_at" = '2009-09-10 20:24:10', "fulfilled_on" = '2009-09-10 20:24:10' WHERE "id" = 1[0m
+Rendering capacities/fulfilled
+Completed in 165ms (View: 1, DB: 147) | 200 OK [http://10.0.1.106/capacities/1]
+
+
+Processing CapacitiesController#update (for 10.0.1.106 at 2009-09-10 15:24:11) [PUT]
+  Parameters: {"fulfilled"=>"false", "authenticity_token"=>"ua1tkXc789Uyw4EuZltEiFbrR5MDX2birDjB0bEbee0=", "id"=>"1"}
+  [4;36;1mCapacity Load (0.2ms)[0m   [0;1mSELECT * FROM "capacities" WHERE ("capacities"."id" = 1) [0m
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) [0m
+  [4;36;1mCapacity Update (0.2ms)[0m   [0;1mUPDATE "capacities" SET "updated_at" = '2009-09-10 20:24:11', "fulfilled_on" = NULL WHERE "id" = 1[0m
+Rendering capacities/fulfilled
+Completed in 17ms (View: 1, DB: 1) | 200 OK [http://10.0.1.106/capacities/1]

@@ -20,7 +20,7 @@ $(document).ready(function() {
   $(".driver_autocomplete").autocomplete('/drivers.json');
 
 
-  $(".covered_check_box").change( function(){
+  $(".covered_check_box").click( function(){
     var url  = '/capacities/' + $(this).attr('id')
     var data = { fulfilled:$(this).is(':checked') , _method: 'put'}
       $.post( url, data, null,"script");
