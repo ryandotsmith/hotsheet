@@ -25,6 +25,11 @@ class Capacity < ActiveRecord::Base
     end
     return hash
   end
+  
   def ensure_driver
+    if self.drivers == []
+      self.drivers << ( Driver.find_by_name("TBD") || Driver.create(:name => "TBD") )
+    end
   end
+
 end

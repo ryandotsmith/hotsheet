@@ -26,7 +26,7 @@ class CapacitiesController < ApplicationController
   def create
     @capacity = Capacity.new( params[:capacity] )
 
-    if params[:driver_name]
+    if params[:driver_name] != ""
       driver = Driver.find_by_name( params[:driver_name] )
       if driver
         @capacity.drivers << driver
@@ -34,12 +34,14 @@ class CapacitiesController < ApplicationController
         @capacity.drivers.build( :name => params[:driver_name])
       end
     end
+
     if @capacity.save
       flash[:notice] = "More capacity was added in #{ @capacity.location }"
       respond_to do |format|
        format.html { redirect_to capacities_url } 
       end
     end
+
   end
 
 end

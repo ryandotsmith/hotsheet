@@ -12,6 +12,7 @@ describe CapacitiesController do
     Capacity.should_receive(:available_on).once.with( future )
     get :index, :focus_date => future
   end
+
   describe "creating capacities" do
     it "should build a new driver if one can not be found with the params" do
       capacity_params = { :location => "Kansas City" }
@@ -29,6 +30,28 @@ describe CapacitiesController do
       Driver.should_not_receive(:new)
       post :create, :capacity => capacity, :driver_name => 'miles'
     end
+
+    it "should use a default driver if an empty string is supplied for the driver name" do
+      driver = Factory( :driver, :name  => "TBD")
+      capacity = { :location => "Kansas City" }
+      Driver.should_receive(:find_by_name).once.with('TBD').and_return( driver )
+      Driver.should_not_receive(:new)
+      post :create, :capacity => capacity, :driver_name => ''
+    end
+
   end
+  
+  describe "updating a capacity with a covered date" do
+    it "should be be covered if a covered date is receieved" do
+      fulfilled_time = DateTime.now
+      capacity = Factory(:capacity)
+      Capacity.should_receive(:find).with('42').and_return(capacity)
+      capacity_params = { :fulfilled_on => fulfilled_time }
+      put :update, :id => '42', :capacity => capacity_params
+      capacity.fulfilled_on.should eql(fulfilled_time)
+    end
+  end
+
+
 end
 
