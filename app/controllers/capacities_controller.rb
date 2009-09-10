@@ -42,6 +42,12 @@ class CapacitiesController < ApplicationController
       end
     end
 
+  end# create
+
+  update.after do
+    object.fulfilled_on = DateTime.now if params[:fulfilled] == "true"
+    object.save!
   end
+  update.wants.js { render :text => 'good job' }
 
 end

@@ -1,5 +1,7 @@
 %tr{ :class => priority(capacity)}
-  %td.covered= covered?( capacity )
+  %td.covered
+    - form_for capacity, :method => :update do |f|
+      = check_box_tag :covered, Date.today, capacity.fulfilled_on != nil, :class => 'covered_check_box', :id => capacity.id 
   %td.location= capacity.location
   %td.driver= capacity.drivers.pop.name
   %td.notes= capacity.notes
