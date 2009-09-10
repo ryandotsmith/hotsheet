@@ -5,14 +5,7 @@ $(document).ready(function() {
     $('#' + what ).slideToggle();
   });
 
- $("#capacities").scrollable({
-     items: '.items',
-     size: 3
-  });
+  $("#capacities").scrollable();
 
-  $("#list").scrollable({
-    items: '.items',
-    size: 2
-  })
 });
 
