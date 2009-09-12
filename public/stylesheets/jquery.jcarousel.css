@@ -28,7 +28,7 @@
 .jcarousel-item {
     list-style: none;
     /* We set the width/height explicitly. No width/height causes infinite loops. */
-    height: 150px;
+    height: 140px;
     border: 1px solid black;
     margin: 5px 5px 0 20px;
 }

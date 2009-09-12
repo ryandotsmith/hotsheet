@@ -24,5 +24,16 @@ $(document).ready(function() {
       buttonNextHTML: null,
       buttonPrevHTML: null
   });
+
+  //$(".hoverable").hover(
+    //function(){
+      //$("#"+$(this).attr('id')+"< td.edit").toggle();
+      //$("#"+$(this).attr('id')+"< td.delete").toggle();
+    //},
+    //function(){
+      //$("#"+$(this).attr('id')+"< td.edit").toggle();
+      //$("#"+$(this).attr('id')+"< td.delete").toggle();
+    //}
+  //)
 });
 

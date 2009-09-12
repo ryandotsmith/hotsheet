@@ -21,6 +21,7 @@ module ApplicationHelper
        ['jquery.min.js',
         'jquery.autocomplete.js',
         "jquery.jcarousel.pack.js",
+        "jquery.rest_in_place.js",
         'application.js',
         controller.controller_name ]
   end

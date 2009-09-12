@@ -83,6 +83,10 @@ form label {
     background-color: #ff6666; }
   #center #focus_capacities tbody td {
     font-size: 14pt; }
+  #center #focus_capacities tbody td.edit {
+    width: 30px; }
+  #center #focus_capacities tbody td.delete {
+    width: 30px; }
   #center #AddMoreCapacity {
     margin: 20px 0 0 30px; }
   #center #new_capacity {

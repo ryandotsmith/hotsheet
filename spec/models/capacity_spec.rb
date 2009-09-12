@@ -53,6 +53,13 @@ describe "finding capacities by date" do
 end
 
 describe "ensuring drivers get associated with capacity" do
+  it "should have a driver name" do
+    driver   = Factory( :driver, :name => 'tom' )
+    capacity = Factory(:capacity)
+    capacity.drivers = [ driver ]
+    capacity.driver.should eql( driver )
+    capacity.driver.name.should eql('tom')
+  end
   it "should load a default driver if none is given" do
     capacity = Capacity.new(:location => 'kansas city')
     capacity.drivers.should eql([])

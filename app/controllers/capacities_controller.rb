@@ -1,7 +1,12 @@
 class CapacitiesController < ApplicationController
   resource_controller
-  #create.wants.html { redirect_to capacities_url }
-  #create.flash { "More capacity was added in #{ object.location } " }
+
+  def show
+    @capacity = Capacity.find( params[:id] )
+    respond_to do |format|
+      format.js { render :json => build_hash(@capacity)  } 
+    end
+  end
 
   def index
     if params[:focus_date]
@@ -25,16 +30,7 @@ class CapacitiesController < ApplicationController
 
   def create
     @capacity = Capacity.new( params[:capacity] )
-
-    if params[:driver_name] != ""
-      driver = Driver.find_by_name( params[:driver_name] )
-      if driver
-        @capacity.drivers << driver
-      else
-        @capacity.drivers.build( :name => params[:driver_name])
-      end
-    end
-
+    set_or_initialize( params[:driver_name] )
     if @capacity.save
       flash[:notice] = "More capacity was added in #{ @capacity.location }"
       respond_to do |format|
@@ -48,14 +44,32 @@ class CapacitiesController < ApplicationController
     @capacity = Capacity.find( params[:id] )
     @capacity.fulfilled_on = DateTime.now if params[:fulfilled] == "true"
     @capacity.fulfilled_on = nil if params[:fulfilled] == "false"
+    set_or_initialize( params[:driver]['name'] ) if params[:driver]
     respond_to do |format|
-      if @capacity.update_attributes( params[:capacity] )
+      if @capacity.update_attributes!( params[:capacity] )
        format.html
        format.js { render :action => 'fulfilled.js', :layout => false } if params[:fulfilled] == "true" || params[:fulfilled] == "false"
+       format.js { redirect_to @capacity, :status => :see_other }
       end
     end
   end
 
+private 
+
+  def set_or_initialize( driver_name )
+    if driver_name != ""
+      driver = Driver.find_by_name( driver_name )
+      if driver
+        @capacity.drivers = [driver]
+      else
+        @capacity.drivers.build( :name => driver_name )
+      end
+    end
+  end
+
+  def build_hash( capacity )
+    {:capacity => capacity.to_hash(:location), :driver => capacity.driver.to_hash(:name)} 
+  end
 
 
 

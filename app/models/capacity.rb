@@ -1,5 +1,6 @@
 class Capacity < ActiveRecord::Base
   require 'set'
+  include ToHash
   before_save :ensure_driver
   has_and_belongs_to_many :drivers
   accepts_nested_attributes_for :drivers
@@ -34,5 +35,9 @@ class Capacity < ActiveRecord::Base
   
   def covered?
     !fulfilled_on.nil?
+  end
+
+  def driver
+    self.drivers.first
   end
 end

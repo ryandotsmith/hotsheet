@@ -51,7 +51,19 @@ describe CapacitiesController do
       capacity.fulfilled_on.should eql(fulfilled_time)
     end
   end
-
+  describe "updating a capacity with a new driver" do
+    it "should change the driver on the capicty" do
+      old_driver = Factory( :driver, :name => 'old')
+      new_driver = Factory( :driver, :name => 'new')
+      capacity   = Factory( :capacity )
+      capacity.drivers << old_driver
+      Capacity.should_receive(:find).with('42').and_return(capacity)
+      driver_params = { :name => 'new'}
+      put :update, :id => '42', :driver => driver_params
+      capacity.drivers.include?(new_driver).should eql( true )
+      capacity.drivers.include?(old_driver).should eql( false)
+    end
+  end
 
 end
 

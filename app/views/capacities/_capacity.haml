@@ -1,7 +1,21 @@
-%tr{ :id => capacity.id, :class => priority(capacity)}
+%tr{ :id => capacity.id, :class => priority(capacity) + " hoverable"}
   %td.covered
     - form_for capacity, :method => :update do |f|
       = check_box_tag :covered, Date.today, capacity.fulfilled_on != nil, :class => 'covered_check_box', :id => capacity.id 
-  %td.location= capacity.location
-  %td.driver= capacity.drivers.pop.name
+  %td.location 
+    - unless capacity.covered?
+      %span{:class => 'rest_in_place',:url => "/capacities/#{capacity.id}", :object => 'capacity', :attribute => 'location'}
+        = capacity.location
+    -else
+      = capacity.location
+  %td.driver
+    - unless capacity.covered?
+      %span{:class => 'rest_in_place',:url => "/capacities/#{capacity.id}", :object => 'driver', :attribute => 'name'}
+        = capacity.driver.name
+    -else 
+      = capacity.driver.name
   %td.notes= capacity.notes
+  %td.edit
+    = link_to image_tag('buttons/pencil.png'), "#"
+  %td.delete
+    = link_to image_tag('buttons/delete.png'), "#"
