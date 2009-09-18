@@ -19,6 +19,7 @@ module ApplicationHelper
   
   def get_js( controller )
        ['jquery.min.js',
+        "jquery.ui.min.js",
         'jquery.autocomplete.js',
         "jquery.jcarousel.pack.js",
         "jquery.rest_in_place.js",

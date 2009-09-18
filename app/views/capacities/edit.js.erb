@@ -1,0 +1,11 @@
+// load up the edit form in the div
+$("#capacity_form").html("<%= escape_javascript(render(:partial => 'capacities/edit_form', :locals => {:capacity => @capacity})) %>");
+// lets have a look at the new form
+$("#capacity_form").slideToggle();
+// make sure the form uses JS to post
+$("#edit_capacity_form").submitWithAjax();
+// setup the cancel link and reload a new form
+$('#rollup').click( function(){
+  $("#capacity_form").slideToggle();
+  return false;
+});

@@ -1,0 +1,22 @@
+- form_for( capacity, :html => { :id => 'edit_capacity_form' }) do |form|
+  .form_box
+    = form.label :location, "Location"
+    = form.text_field :location
+
+    = label_tag :driver_name, "Driver"
+    = text_field_tag :driver_name, nil, :class => 'driver_autocomplete'
+    
+    %p
+    = form.submit "update", :name => 'update'
+    or
+    = link_to "cancel", "#", :id => 'rollup', :rel => 'capacity_form'
+  .form_box_right
+    = form.label :notes, "Notes"
+    = form.text_field :notes
+
+    = form.label :available_on, "Available On"
+    = form.date_select :available_on
+
+    = form.label :priority, "Priority"
+    = form.select :priority, {:normal => 0, :high => 1, :top => 2}
+

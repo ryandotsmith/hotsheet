@@ -12,12 +12,6 @@ function capacities_list_initCallback(carousel) {
 
 $(document).ready(function() {
 
-  $('#rollup').click( function(){
-    var what = $(this).attr('rel');
-    $('#' + what ).slideToggle();
-  });
-
-
   $("#capacities_list").jcarousel({
       vertical: true,
       initCallback: capacities_list_initCallback,

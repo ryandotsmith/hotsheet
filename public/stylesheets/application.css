@@ -89,22 +89,22 @@ form label {
     width: 30px; }
   #center #AddMoreCapacity {
     margin: 20px 0 0 30px; }
-  #center #new_capacity {
+  #center #capacity_form {
     width: 500px;
     margin: 40px auto 0 auto;
     padding: 0 0 15px 0;
     overflow: hidden; }
-    #center #new_capacity .form_box {
+    #center #capacity_form .form_box {
       margin: 0 10px 0 10px;
       float: left; }
-    #center #new_capacity .form_box_right {
+    #center #capacity_form .form_box_right {
       margin: 0 7px 0 0;
       float: right; }
-    #center #new_capacity .buttons {
+    #center #capacity_form .buttons {
       clear: both;
       float: right;
       margin: 10px; }
-    #center #new_capacity form {
+    #center #capacity_form form {
       background-color: #e8e8e8; }
 
 #right {

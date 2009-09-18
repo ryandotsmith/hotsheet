@@ -1,0 +1,6 @@
+$("#capacity_form").html("<%= escape_javascript(render(:partial => 'capacities/new_form', :locals => {:capacity => @capacity})) %>");
+$("#capacity_form").slideToggle();
+$('#rollup').click( function(){
+  $("#capacity_form").slideToggle();
+  return false;
+});

@@ -1,0 +1,30 @@
+// Update the form with the new data
+$("#capacity_form").html("<%= escape_javascript(render(:partial => 'capacities/edit_form', :locals => {:capacity => @capacity})) %>");
+// Find the tr in the focus table and then replace it with the new data
+$("#<%=@capacity.id%>").html("<%= escape_javascript(render(:partial => 'capacities/capacity', :locals => {:capacity => @capacity})) %>");
+// hide the form. perhaps this makes line #2 redundant
+$("#capacity_form").slideToggle();
+// If you update the priority in the edit form, we need to update the priority css class. 
+// this will setup the right color.
+$("tr#<%= @capacity.id%>").removeClass();
+$("tr#<%= @capacity.id%>").addClass('<%= priority(@capacity)%>');
+// oh noez! i can haz special effectzzzzz!!!
+$("#<%=@capacity.id%>").effect('pulsate');
+// activiate the new edit link
+  $(".edit_link").click( function(){
+    var url = $(this).attr('href');
+    $.ajax({
+      type: 'get',
+      url: url,
+      dataType: "script"
+    });
+    return false;
+  })
+// activate the checkbox for covering capacity
+$(".covered_check_box").click( function(){
+  var url  = '/capacities/' + $(this).attr('id')
+  var data = { fulfilled:$(this).is(':checked') , _method: 'put'}
+    $.post( url, data, null,"script");
+});
+// 
+$(".driver_autocomplete").autocomplete('/drivers.json');

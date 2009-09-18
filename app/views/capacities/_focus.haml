@@ -8,4 +8,6 @@
       %th Notes
       %th{:colspan => '2'} Edit
   %tbody
-    = render focus_capacities.values.flatten
+    - focus_capacities.values.flatten.each do |capacity|
+      %tr{ :id => capacity.id, :class => priority(capacity) + " hoverable"}
+        = render :partial => 'capacities/capacity', :locals => {:capacity => capacity}

@@ -1,3 +1,6 @@
 $("tr#<%= @capacity.id%>").removeClass();
 $("tr#<%= @capacity.id%>").addClass('<%= priority(@capacity)%>');
+// disable the edit and delete links
+$("tr#<%= @capacity.id%> > td > .edit_link").toggle();
+$("tr#<%= @capacity.id%> > td > .delete_link").toggle();
 
