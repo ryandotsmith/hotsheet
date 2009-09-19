@@ -1,0 +1,9 @@
+$("tr#<%=@capacity_id%>").fadeOut();
+$("#message").slideToggle( function(){
+  $(this).html("<p class='notice'><%= flash[:notice] %></p>")
+  setTimeout( function(){
+    $("#message").slideToggle();
+  }, 
+  2000);
+ });
+ <% flash[:notice] = "" %>

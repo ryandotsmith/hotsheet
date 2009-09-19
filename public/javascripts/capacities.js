@@ -44,7 +44,7 @@ $(document).ready(function() {
     return false;
   })
 
-  $("#AddMoreCapacity").click( function(){
+  $(".new_link").click( function(){
     $.ajax({
       type: "get",
       url: $(this).attr("href"),
@@ -52,6 +52,16 @@ $(document).ready(function() {
     });
     return false;
   })
+  
+  $(".delete_link").click( function(){
+    $.ajax({
+        type: "delete",
+        url: $(this).attr("href"),
+        data: "&authenticity_token="+encodeURIComponent(window.rails_authenticity_token),
+        dataType: "script"
+    });
+    return false;
+  });
 
   $('#rollup').click( function(){
     $("#capacity_form").slideToggle();

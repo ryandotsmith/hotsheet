@@ -87,7 +87,7 @@ form label {
     width: 30px; }
   #center #focus_capacities tbody td.delete {
     width: 30px; }
-  #center #AddMoreCapacity {
+  #center .new_link {
     margin: 20px 0 0 30px; }
   #center #capacity_form {
     width: 500px;

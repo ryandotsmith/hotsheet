@@ -1,45 +1,56 @@
 class CapacitiesController < ApplicationController
   resource_controller
+
   def new 
     @capacity = Capacity.new
     respond_to do |format|
       format.js { render :action => 'new.js.erb', :layout => false }
     end
   end
+  def destroy
+    @capacity = Capacity.find( params[:id] )
+    # remeber the id of the capacity so that we can remove it from the dom
+    @capacity_id = @capacity.id
+    @capacity.destroy
+    flash[:notice] = "capacity destroyed!"
+    respond_to do |format|
+      format.js { render :action => 'destroy.js.erb', :layout => false }
+    end
+  end
   def edit
     @capacity = Capacity.find( params[:id] )
     respond_to do |format|
       format.html
-        format.js { render :action => 'edit.js.erb', :layout => false }
-      end
+      format.js { render :action => 'edit.js.erb', :layout => false }
     end
+  end
 
-    def show
-      @capacity = Capacity.find( params[:id] )
-      respond_to do |format|
-        format.js { render :json => build_hash(@capacity)  } 
-      end
+  def show
+    @capacity = Capacity.find( params[:id] )
+    respond_to do |format|
+      format.js { render :json => build_hash(@capacity)  } 
     end
+  end
 
-    def index
-      if params[:focus_date]
-        @focus_capacities = Capacity.all_by_availability( params[:focus_date] ) 
-      else
-        @focus_capacities = Capacity.all_by_availability( Date.today ) 
-      end
-      # added the || Date.today for the case when there are no 
-      # focus_capacities and a view gets rendered. Views will often
-      # call strftime on the focus_date
-      @focus_date = @focus_capacities.keys.pop || Date.today
-      # load all capacities excluding the one in focus
-      # these capacitires will be loaded into the sidebar
-      @capacities   = Capacity.all_by_availability
-      # pick the Focus capacities out of the hash
-      @capacities.delete( @focus_date )
-      @capacities = @capacities.sort 
-      # build a new capacity for the form object
-      @new_capacity = Capacity.new 
+  def index
+    if params[:focus_date]
+      @focus_capacities = Capacity.all_by_availability( params[:focus_date] ) 
+    else
+      @focus_capacities = Capacity.all_by_availability( Date.today ) 
     end
+    # added the || Date.today for the case when there are no 
+    # focus_capacities and a view gets rendered. Views will often
+    # call strftime on the focus_date
+    @focus_date = @focus_capacities.keys.pop || Date.today
+    # load all capacities excluding the one in focus
+    # these capacitires will be loaded into the sidebar
+    @capacities   = Capacity.all_by_availability
+    # pick the Focus capacities out of the hash
+    @capacities.delete( @focus_date )
+    @capacities = @capacities.sort 
+    # build a new capacity for the form object
+    @new_capacity = Capacity.new 
+  end
 
   def create
     @capacity = Capacity.new( params[:capacity] )

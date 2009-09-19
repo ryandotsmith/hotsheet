@@ -9,7 +9,7 @@ $("#capacity_form").slideToggle();
 $("tr#<%= @capacity.id%>").removeClass();
 $("tr#<%= @capacity.id%>").addClass('<%= priority(@capacity)%>');
 // oh noez! i can haz special effectzzzzz!!!
-$("#<%=@capacity.id%>").effect('pulsate');
+$("#<%=@capacity.id%>").effect("highlight");
 // activiate the new edit link
   $(".edit_link").click( function(){
     var url = $(this).attr('href');

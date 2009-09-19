@@ -12,10 +12,8 @@
       = render :partial => 'shared/navigation'
     #flash
       #message
-        - if flash[:notice]
-          %p.notice= flash[:notice]
-        - if flash[:error]
-          %p.error= flash[:error]
+        %p.notice= flash[:notice]
+        %p.error= flash[:error]
       %h1 Capacity
   #content
     = yield

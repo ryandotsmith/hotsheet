@@ -1,7 +1,7 @@
 #center
   #focus_capacities
     = render :partial => 'capacities/focus', :locals => { :focus_capacities => @focus_capacities }
-  = link_to image_tag('buttons/add_more_capacity.png'), new_capacity_url, :id=> "AddMoreCapacity"
+  = link_to image_tag('buttons/add_more_capacity.png'), new_capacity_url, :class => "new_link"
   #capacity_form{ :style => "display:none" }
     = render :partial => 'capacities/new_form', :locals => {:capacity => @new_capacity }
 

@@ -13,8 +13,13 @@
       = capacity.driver.name
   -else 
     = capacity.driver.name
-%td.notes= capacity.notes
+%td.notes
+  - unless capacity.covered?
+    %span{:class => 'rest_in_place',:url => "/capacities/#{capacity.id}", :object => 'capacity', :attribute => 'notes'}
+      = capacity.notes
+    - else
+      = capacity.notes
 %td.edit
   = link_to image_tag('buttons/pencil.png'), edit_capacity_url(capacity), :class => 'edit_link'
 %td.delete
-  = link_to image_tag('buttons/delete.png'), "#", :class => 'delete_link'
+  = link_to image_tag('buttons/delete.png'), capacity, :confirm => "are you sure?", :class => 'delete_link'
