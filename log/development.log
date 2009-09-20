@@ -64360,3 +64360,29 @@ ActionController::RoutingError (No route matches "/stylesheets/capacities.css" w
   
 
 Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-20 16:43:19) [GET]
+  [4;36;1mCapacity Load (0.4ms)[0m   [0;1mSELECT * FROM "capacities" WHERE (available_on = '2009-09-20') [0m
+  [4;35;1mCapacity Load (0.1ms)[0m   [0mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_focus (1.9ms)
+Rendered capacities/_new_form (40.6ms)
+Rendered shared/_navigation (4.4ms)
+Completed in 166ms (View: 88, DB: 0) | 200 OK [http://localhost/capacities]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-20 16:43:19) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#new (for 127.0.0.1 at 2009-09-20 16:47:26) [GET]
+  Parameters: {"_"=>"1253483246410"}
+Rendering capacities/new
+Rendered capacities/_new_form (6.9ms)
+Completed in 93ms (View: 12, DB: 0) | 200 OK [http://localhost/capacities/new?_=1253483246410]

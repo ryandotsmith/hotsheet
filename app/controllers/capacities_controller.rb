@@ -59,6 +59,7 @@ class CapacitiesController < ApplicationController
       flash[:notice] = "More capacity was added in #{ @capacity.location }"
       respond_to do |format|
        format.html { redirect_to capacities_url } 
+       format.js   { render :action => 'create.js.erb', :layout => false }
       end
     end
   end# create

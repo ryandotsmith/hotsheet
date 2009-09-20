@@ -1,6 +1,11 @@
+// load up the form
 $("#capacity_form").html("<%= escape_javascript(render(:partial => 'capacities/new_form', :locals => {:capacity => @capacity})) %>");
+// show the form
 $("#capacity_form").slideToggle();
+// give the user a link to cancel the form
 $('#rollup').click( function(){
   $("#capacity_form").slideToggle();
   return false;
 });
+// submit the form over the JS wire
+$(".new_capacity").submitWithAjax();
