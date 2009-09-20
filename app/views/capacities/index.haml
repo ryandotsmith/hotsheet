@@ -12,13 +12,6 @@
     %ul{:id => 'capacities_list',:class => 'jcarousel jcarousel-skin-tango'}
       - @capacities.each do |date, capacities| 
         %li
-          .capacity{ :id => date.strftime('%m_%d_%y') }
-            %h3= link_to date.strftime('%A %m/%d'), capacities_url(:focus_date => date), :title => date.strftime('%m_%d_%y')
-            %table
-              - capacities.each do |capacity|
-                %tr
-                  %td -
-                  %td.location= capacity.location 
-                  %td.driver= capacity.drivers.pop.name
+          = render :partial => 'capacities/future_capacity', :locals => { :capacities  => capacities , :date => date }
   #move_forward
     = link_to image_tag('buttons/down.png'),"#"

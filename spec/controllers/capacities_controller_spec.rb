@@ -39,6 +39,20 @@ describe CapacitiesController do
       post :create, :capacity => capacity, :driver_name => ''
     end
 
+    describe "creating capacities for JS posts" do
+      it "should load focus capacities if the capacity created is in the current focus date" do
+        capacity_params = { :available_on => Date.today , :location => "KC"}
+        Capacity.should_receive(:all_by_availability).with(Date.today)
+        post :create, :capacity => capacity_params, :driver_name => "", :focus_date => Date.today
+        flash[:notice].should have_text("More capacity was added in KC")
+      end
+      it "should add a link to a focus table if the new capacity is not on the current focus date" do
+        capacity_params = { :available_on => (Date.today + 1.day), :location => "KC"}
+        post :create, :capacity => capacity_params, :driver_name => "", :focus_date => Date.today
+        text = "More capacity was added in KC for <a href='/capacities?focus_date=#{Date.today.strftime('%Y-%m-%d')}'>#{Date.today.strftime('%Y-%m-%d')}"
+        flash[:notice].should have_text(text)
+      end
+    end
   end
   
   describe "updating a capacity with a covered date" do

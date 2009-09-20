@@ -53,10 +53,19 @@ class CapacitiesController < ApplicationController
   end
 
   def create
+    # we need the focus capacities for when an ajax request comes down the wire. 
+    # we respond by updating the focus table. this should only happen wheb the focus 
+    # date is the same date of the capacity's availability. 
     @capacity = Capacity.new( params[:capacity] )
     set_or_initialize( params[:driver_name] )
     if @capacity.save
-      flash[:notice] = "More capacity was added in #{ @capacity.location }"
+      if params[:focus_date] == @capacity.available_on
+        @focus_capacities = Capacity.all_by_availability( @capacity.available_on )
+      else
+        @capacities = Capacity.all_by_availability( @capacity.available_on )
+        @capacities_date = @capacity.available_on
+      end
+      flash[:notice] = "More capacity was added in <a>#{ @capacity.location }</a> for <a href='/capacities?focus_date=#{@capacity.available_on.strftime('%Y-%m-%d')}'> #{@capacity.available_on.strftime("%Y-%m-%d")} </a>"
       respond_to do |format|
        format.html { redirect_to capacities_url } 
        format.js   { render :action => 'create.js.erb', :layout => false }

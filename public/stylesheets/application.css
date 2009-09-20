@@ -32,6 +32,8 @@ form label {
       margin: 0;
       padding: 0;
       color: #ff6666; }
+    #header #flash #message a {
+      color: white; }
 
 #navigation {
   height: 50px;

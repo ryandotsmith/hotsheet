@@ -1,1 +1,27 @@
-$("#capacity_today_table").html("<%= escape_javascript(render(:partial => 'capacities/focus', :locals => {:focus_capacities => @focus_capacities})) %>");
+<% if @focus_capacities %>
+  // new capacity was added for the date that the user is focusing on 
+  // so we need to update the focus table with the new capacity
+  $("#capacity_today_table").html("<%= escape_javascript(render(:partial => 'capacities/focus', 
+                                      :locals => {:focus_capacities => @focus_capacities})) %>");
+<% elsif @capacities %>
+  // the new capacity was added for a future date. 
+  // so we need to append the capacity if there is already capacity for that future date
+  // or we need to create a new box and add the capacity to the new box if there is not already capacity for that date.
+
+  // the case where we are appending capacity to an existing box
+  var date = "<%= @capacities_date.strftime("%m_%d_%y") %>";
+  $("#" + date + "> table").prepend("<%= escape_javascript(render(:partial => 'capacities/mini_capacity', 
+                                      :locals => {:capacity => @capacity })) %>");
+  $("#" + date ).parent().effect("shake");
+<% end %>
+
+$("#capacity_form").slideToggle();
+$("#message").slideToggle( function(){
+  $(this).html("<p class='notice'><%= flash[:notice] %></p>")
+  setTimeout( function(){
+    $("#message").slideToggle();
+  }, 
+  7000);
+});
+
+<% flash[:notice] = "" %>
