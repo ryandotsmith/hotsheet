@@ -67,6 +67,16 @@ describe "ensuring drivers get associated with capacity" do
     capacity.drivers.pop.name.should eql("TBD")
   end
 end
+
+describe "ensureing that an availability date gets set" do
+  it "should set available_on before saving" do
+    capacity = Factory.build(:capacity, :available_on => nil )
+    capacity.available_on.should be_nil
+    capacity.save
+    capacity.available_on.should_not be_nil
+  end
+end
+
 describe "covering a capacity" do
   it "should be covered if the fulfilled date is not null" do
     capacity = Factory(:capacity, :fulfilled_on => DateTime.now)

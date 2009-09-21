@@ -14,7 +14,7 @@ Then /^I should see capacity in "([^\"]*)" for "([^\"]*)"$/ do |location, day|
   date = Date.today.strftime('%m_%d_%y')
   response.should have_selector( 'div', :id => 'focus_capacities' ) do |focus_capacities|
     focus_capacities.should have_selector('td', :class => 'location') do |td|
-      td.text.should eql( location ) 
+      td.text.strip!().should eql( location ) 
     end
   end
 end

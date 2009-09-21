@@ -66895,3 +66895,1442 @@ Processing CapacitiesController#create (for 127.0.0.1 at 2009-09-20 18:36:53) [P
 Rendering capacities/create
 Rendered capacities/_mini_capacity (0.2ms)
 Completed in 90ms (View: 1, DB: 2) | 200 OK [http://localhost/capacities]
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-20 18:40:41) [GET]
+  Parameters: {"focus_date"=>"2009-09-20"}
+  [4;35;1mCapacity Load (0.6ms)[0m   [0mSELECT * FROM "capacities" WHERE (available_on = '2009-09-20') [0m
+  [4;36;1mCapacity Load (1.5ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 15 ) LIMIT 1[0m
+Rendered capacities/_capacity (9.0ms)
+Rendered capacities/_focus (9.7ms)
+Rendered capacities/_new_form (5.4ms)
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 32 ) [0m
+Rendered capacities/_mini_capacity (1.1ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 21 ) [0m
+Rendered capacities/_mini_capacity (0.7ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 26 ) [0m
+Rendered capacities/_mini_capacity (0.7ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 31 ) [0m
+Rendered capacities/_mini_capacity (0.7ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 20 ) [0m
+Rendered capacities/_mini_capacity (1.0ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 25 ) [0m
+Rendered capacities/_mini_capacity (0.7ms)
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 14 ) [0m
+Rendered capacities/_mini_capacity (0.8ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 30 ) [0m
+Rendered capacities/_mini_capacity (0.7ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 19 ) [0m
+Rendered capacities/_mini_capacity (0.7ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 35 ) [0m
+Rendered capacities/_mini_capacity (0.7ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 24 ) [0m
+Rendered capacities/_mini_capacity (0.7ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 29 ) [0m
+Rendered capacities/_mini_capacity (1.5ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 18 ) [0m
+Rendered capacities/_mini_capacity (1.2ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 34 ) [0m
+Rendered capacities/_mini_capacity (0.7ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 23 ) [0m
+Rendered capacities/_mini_capacity (0.7ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 28 ) [0m
+Rendered capacities/_mini_capacity (0.8ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 17 ) [0m
+Rendered capacities/_mini_capacity (0.7ms)
+  [4;35;1mDriver Load (0.4ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 33 ) [0m
+Rendered capacities/_mini_capacity (0.9ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 22 ) [0m
+Rendered capacities/_mini_capacity (0.7ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 27 ) [0m
+Rendered capacities/_mini_capacity (0.7ms)
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 16 ) [0m
+Rendered capacities/_mini_capacity (0.8ms)
+Rendered capacities/_future_capacity (22.3ms)
+Rendered shared/_navigation (0.5ms)
+Completed in 60ms (View: 38, DB: 7) | 200 OK [http://localhost/capacities?focus_date=2009-09-20]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-20 18:40:41) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#new (for 127.0.0.1 at 2009-09-20 18:40:44) [GET]
+  Parameters: {"_"=>"1253490044259"}
+Rendering capacities/new
+Rendered capacities/_new_form (6.6ms)
+Completed in 18ms (View: 9, DB: 0) | 200 OK [http://localhost/capacities/new?_=1253490044259]
+
+
+Processing CapacitiesController#create (for 127.0.0.1 at 2009-09-20 18:40:51) [POST]
+  Parameters: {"authenticity_token"=>"PyvmvNkUtRUUEfUlZ59n0hwu1TrbcW2KGFV+W9IT6DI=", "driver_name"=>"", "capacity"=>{"location"=>"on my way", "available_on(1i)"=>"2009", "notes"=>"", "priority"=>"0", "available_on(2i)"=>"9", "available_on(3i)"=>"21"}}
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" WHERE ("drivers"."name" = 'TBD') LIMIT 1[0m
+  [4;36;1mCapacity Create (0.3ms)[0m   [0;1mINSERT INTO "capacities" ("location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES('on my way', '2009-09-21', '2009-09-20 23:40:51', NULL, '', '2009-09-20 23:40:51', 0)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO "capacities_drivers" ("driver_id", "capacity_id") VALUES (1, 36)[0m
+  [4;36;1mCapacity Load (1.6ms)[0m   [0;1mSELECT * FROM "capacities" WHERE (available_on = '2009-09-21') [0m
+Rendering capacities/create
+Rendered capacities/_mini_capacity (0.2ms)
+Completed in 32ms (View: 4, DB: 2) | 200 OK [http://localhost/capacities]
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-20 18:44:17) [GET]
+  Parameters: {"focus_date"=>"2009-09-20"}
+  [4;35;1mCapacity Load (0.5ms)[0m   [0mSELECT * FROM "capacities" WHERE (available_on = '2009-09-20') [0m
+  [4;36;1mCapacity Load (2.1ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 15 ) LIMIT 1[0m
+Rendered capacities/_capacity (7.0ms)
+Rendered capacities/_focus (7.7ms)
+Rendered capacities/_new_form (4.4ms)
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 16 ) [0m
+Rendered capacities/_mini_capacity (0.9ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 27 ) [0m
+Rendered capacities/_mini_capacity (0.6ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 22 ) [0m
+Rendered capacities/_mini_capacity (0.6ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 33 ) [0m
+Rendered capacities/_mini_capacity (0.7ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 17 ) [0m
+Rendered capacities/_mini_capacity (0.7ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 28 ) [0m
+Rendered capacities/_mini_capacity (0.7ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 23 ) [0m
+Rendered capacities/_mini_capacity (0.7ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 34 ) [0m
+Rendered capacities/_mini_capacity (0.9ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 18 ) [0m
+Rendered capacities/_mini_capacity (0.7ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 29 ) [0m
+Rendered capacities/_mini_capacity (1.1ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 24 ) [0m
+Rendered capacities/_mini_capacity (0.7ms)
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 35 ) [0m
+Rendered capacities/_mini_capacity (1.2ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 19 ) [0m
+Rendered capacities/_mini_capacity (0.7ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 30 ) [0m
+Rendered capacities/_mini_capacity (0.7ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 14 ) [0m
+Rendered capacities/_mini_capacity (0.7ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 25 ) [0m
+Rendered capacities/_mini_capacity (0.8ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 36 ) [0m
+Rendered capacities/_mini_capacity (0.8ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 20 ) [0m
+Rendered capacities/_mini_capacity (0.8ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 31 ) [0m
+Rendered capacities/_mini_capacity (0.7ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 26 ) [0m
+Rendered capacities/_mini_capacity (0.7ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 21 ) [0m
+Rendered capacities/_mini_capacity (0.7ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 32 ) [0m
+Rendered capacities/_mini_capacity (0.7ms)
+Rendered capacities/_future_capacity (83.6ms)
+Rendered shared/_navigation (0.5ms)
+Completed in 116ms (View: 96, DB: 7) | 200 OK [http://localhost/capacities?focus_date=2009-09-20]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-20 18:44:17) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#new (for 127.0.0.1 at 2009-09-20 18:44:19) [GET]
+  Parameters: {"_"=>"1253490259287"}
+Rendering capacities/new
+Rendered capacities/_new_form (6.0ms)
+Completed in 15ms (View: 8, DB: 0) | 200 OK [http://localhost/capacities/new?_=1253490259287]
+
+
+Processing CapacitiesController#create (for 127.0.0.1 at 2009-09-20 18:44:27) [POST]
+  Parameters: {"authenticity_token"=>"PyvmvNkUtRUUEfUlZ59n0hwu1TrbcW2KGFV+W9IT6DI=", "driver_name"=>"", "capacity"=>{"location"=>"weird", "available_on(1i)"=>"2009", "notes"=>"", "priority"=>"0", "available_on(2i)"=>"9", "available_on(3i)"=>"22"}}
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" WHERE ("drivers"."name" = 'TBD') LIMIT 1[0m
+  [4;35;1mCapacity Create (0.3ms)[0m   [0mINSERT INTO "capacities" ("location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES('weird', '2009-09-22', '2009-09-20 23:44:27', NULL, '', '2009-09-20 23:44:27', 0)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO "capacities_drivers" ("driver_id", "capacity_id") VALUES (1, 37)[0m
+  [4;35;1mCapacity Load (0.3ms)[0m   [0mSELECT * FROM "capacities" WHERE (available_on = '2009-09-22') [0m
+Rendering capacities/create
+Rendered capacities/_mini_capacity (0.2ms)
+Completed in 26ms (View: 4, DB: 1) | 200 OK [http://localhost/capacities]
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-20 18:44:44) [GET]
+  Parameters: {"focus_date"=>"2009-09-20"}
+  [4;36;1mCapacity Load (0.5ms)[0m   [0;1mSELECT * FROM "capacities" WHERE (available_on = '2009-09-20') [0m
+  [4;35;1mCapacity Load (2.1ms)[0m   [0mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 15 ) LIMIT 1[0m
+Rendered capacities/_capacity (7.9ms)
+Rendered capacities/_focus (8.6ms)
+Rendered capacities/_new_form (5.0ms)
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 32 ) [0m
+Rendered capacities/_mini_capacity (1.0ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 21 ) [0m
+Rendered capacities/_mini_capacity (0.7ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 26 ) [0m
+Rendered capacities/_mini_capacity (1.5ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 31 ) [0m
+Rendered capacities/_mini_capacity (0.7ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 20 ) [0m
+Rendered capacities/_mini_capacity (0.7ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 36 ) [0m
+Rendered capacities/_mini_capacity (0.8ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 25 ) [0m
+Rendered capacities/_mini_capacity (0.7ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 14 ) [0m
+Rendered capacities/_mini_capacity (1.0ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 30 ) [0m
+Rendered capacities/_mini_capacity (0.7ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 19 ) [0m
+Rendered capacities/_mini_capacity (0.7ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 35 ) [0m
+Rendered capacities/_mini_capacity (0.7ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 24 ) [0m
+Rendered capacities/_mini_capacity (0.8ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 29 ) [0m
+Rendered capacities/_mini_capacity (0.7ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 18 ) [0m
+Rendered capacities/_mini_capacity (0.8ms)
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 34 ) [0m
+Rendered capacities/_mini_capacity (1.5ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 23 ) [0m
+Rendered capacities/_mini_capacity (0.8ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 28 ) [0m
+Rendered capacities/_mini_capacity (0.7ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 17 ) [0m
+Rendered capacities/_mini_capacity (0.7ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 33 ) [0m
+Rendered capacities/_mini_capacity (0.7ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 22 ) [0m
+Rendered capacities/_mini_capacity (0.7ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 27 ) [0m
+Rendered capacities/_mini_capacity (0.7ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 16 ) [0m
+Rendered capacities/_mini_capacity (0.8ms)
+Rendered capacities/_future_capacity (22.8ms)
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 37 ) [0m
+Rendered capacities/_mini_capacity (1.0ms)
+Rendered capacities/_future_capacity (2.2ms)
+Rendered shared/_navigation (4.2ms)
+Completed in 64ms (View: 43, DB: 8) | 200 OK [http://localhost/capacities?focus_date=2009-09-20]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-20 18:44:44) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#new (for 127.0.0.1 at 2009-09-20 18:44:49) [GET]
+  Parameters: {"_"=>"1253490289698"}
+Rendering capacities/new
+Rendered capacities/_new_form (6.4ms)
+Completed in 78ms (View: 8, DB: 0) | 200 OK [http://localhost/capacities/new?_=1253490289698]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mCREATE TABLE "capacities" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "location" varchar(255), "available_on" date, "fulfilled_on" datetime, "notes" varchar(255), "priority" integer DEFAULT 0, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mCREATE TABLE "capacities_drivers" ("capacity_id" integer, "driver_id" integer) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mCREATE TABLE "drivers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.6ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (1.8ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090907183149')[0m
+  [4;35;1mSQL (2.1ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090904161903')[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090904193840')[0m
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-20 18:45:06) [GET]
+  [4;36;1mCapacity Load (0.4ms)[0m   [0;1mSELECT * FROM "capacities" WHERE (available_on = '2009-09-20') [0m
+  [4;35;1mCapacity Load (0.1ms)[0m   [0mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_focus (0.3ms)
+Rendered capacities/_new_form (8.3ms)
+Rendered shared/_navigation (1.1ms)
+Completed in 23ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-20 18:45:06) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#new (for 127.0.0.1 at 2009-09-20 18:45:09) [GET]
+  Parameters: {"_"=>"1253490309365"}
+Rendering capacities/new
+Rendered capacities/_new_form (6.6ms)
+Completed in 16ms (View: 8, DB: 0) | 200 OK [http://localhost/capacities/new?_=1253490309365]
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-20 18:45:12) [GET]
+  [4;36;1mCapacity Load (0.5ms)[0m   [0;1mSELECT * FROM "capacities" WHERE (available_on = '2009-09-20') [0m
+  [4;35;1mCapacity Load (0.1ms)[0m   [0mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_focus (0.3ms)
+Rendered capacities/_new_form (5.9ms)
+Rendered shared/_navigation (0.5ms)
+Completed in 19ms (View: 10, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-20 18:45:12) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-20 18:45:26) [GET]
+  [4;36;1mCapacity Load (0.4ms)[0m   [0;1mSELECT * FROM "capacities" WHERE (available_on = '2009-09-20') [0m
+  [4;35;1mCapacity Load (0.1ms)[0m   [0mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_focus (0.3ms)
+Rendered capacities/_new_form (6.8ms)
+Rendered shared/_navigation (0.5ms)
+Completed in 22ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-20 18:45:26) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#new (for 127.0.0.1 at 2009-09-20 18:46:35) [GET]
+  Parameters: {"_"=>"1253490395718"}
+Rendering capacities/new
+Rendered capacities/_new_form (6.0ms)
+Completed in 16ms (View: 8, DB: 0) | 200 OK [http://localhost/capacities/new?_=1253490395718]
+
+
+Processing CapacitiesController#create (for 127.0.0.1 at 2009-09-20 18:46:46) [POST]
+  Parameters: {"authenticity_token"=>"PyvmvNkUtRUUEfUlZ59n0hwu1TrbcW2KGFV+W9IT6DI=", "driver_name"=>"", "capacity"=>{"location"=>"denver", "available_on(1i)"=>"2009", "notes"=>"", "priority"=>"0", "available_on(2i)"=>"9", "available_on(3i)"=>"21"}}
+  [4;36;1mDriver Load (0.1ms)[0m   [0;1mSELECT * FROM "drivers" WHERE ("drivers"."name" = 'TBD') LIMIT 1[0m
+  [4;35;1mDriver Create (0.3ms)[0m   [0mINSERT INTO "drivers" ("name", "created_at", "updated_at") VALUES('TBD', '2009-09-20 23:46:46', '2009-09-20 23:46:46')[0m
+  [4;36;1mCapacity Create (0.1ms)[0m   [0;1mINSERT INTO "capacities" ("location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES('denver', '2009-09-21', '2009-09-20 23:46:46', NULL, '', '2009-09-20 23:46:46', 0)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO "capacities_drivers" ("driver_id", "capacity_id") VALUES (1, 1)[0m
+  [4;36;1mCapacity Load (0.3ms)[0m   [0;1mSELECT * FROM "capacities" WHERE (available_on = '2009-09-21') [0m
+Rendering capacities/create
+Rendered capacities/_mini_capacity (0.2ms)
+Completed in 27ms (View: 4, DB: 1) | 200 OK [http://localhost/capacities]
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-20 18:46:48) [GET]
+  [4;35;1mCapacity Load (0.5ms)[0m   [0mSELECT * FROM "capacities" WHERE (available_on = '2009-09-20') [0m
+  [4;36;1mCapacity Load (0.2ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_focus (0.4ms)
+Rendered capacities/_new_form (5.9ms)
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) [0m
+Rendered capacities/_mini_capacity (5.4ms)
+Rendered capacities/_future_capacity (7.1ms)
+Rendered shared/_navigation (0.5ms)
+Completed in 32ms (View: 18, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-20 18:46:48) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-20 18:46:59) [GET]
+  [4;36;1mCapacity Load (0.4ms)[0m   [0;1mSELECT * FROM "capacities" WHERE (available_on = '2009-09-20') [0m
+  [4;35;1mCapacity Load (0.2ms)[0m   [0mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_focus (0.3ms)
+Rendered capacities/_new_form (5.7ms)
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) [0m
+Rendered capacities/_mini_capacity (6.3ms)
+Rendered capacities/_future_capacity (75.5ms)
+Rendered shared/_navigation (0.5ms)
+Completed in 98ms (View: 87, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-20 18:46:59) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#new (for 127.0.0.1 at 2009-09-20 18:47:02) [GET]
+  Parameters: {"_"=>"1253490422253"}
+Rendering capacities/new
+Rendered capacities/_new_form (6.9ms)
+Completed in 18ms (View: 9, DB: 0) | 200 OK [http://localhost/capacities/new?_=1253490422253]
+
+
+Processing CapacitiesController#create (for 127.0.0.1 at 2009-09-20 18:47:11) [POST]
+  Parameters: {"authenticity_token"=>"PyvmvNkUtRUUEfUlZ59n0hwu1TrbcW2KGFV+W9IT6DI=", "driver_name"=>"", "capacity"=>{"location"=>"alert", "available_on(1i)"=>"2009", "notes"=>"", "priority"=>"0", "available_on(2i)"=>"9", "available_on(3i)"=>"22"}}
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" WHERE ("drivers"."name" = 'TBD') LIMIT 1[0m
+  [4;36;1mCapacity Create (0.3ms)[0m   [0;1mINSERT INTO "capacities" ("location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES('alert', '2009-09-22', '2009-09-20 23:47:11', NULL, '', '2009-09-20 23:47:11', 0)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO "capacities_drivers" ("driver_id", "capacity_id") VALUES (1, 2)[0m
+  [4;36;1mCapacity Load (0.3ms)[0m   [0;1mSELECT * FROM "capacities" WHERE (available_on = '2009-09-22') [0m
+Rendering capacities/create
+Rendered capacities/_mini_capacity (0.2ms)
+Completed in 24ms (View: 4, DB: 1) | 200 OK [http://localhost/capacities]
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-20 18:47:41) [GET]
+  [4;35;1mCapacity Load (0.4ms)[0m   [0mSELECT * FROM "capacities" WHERE (available_on = '2009-09-20') [0m
+  [4;36;1mCapacity Load (0.3ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_focus (0.3ms)
+Rendered capacities/_new_form (84.4ms)
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) [0m
+Rendered capacities/_mini_capacity (8.2ms)
+Rendered capacities/_future_capacity (10.9ms)
+  [4;36;1mDriver Load (0.4ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 2 ) [0m
+Rendered capacities/_mini_capacity (1.0ms)
+Rendered capacities/_future_capacity (2.1ms)
+Rendered shared/_navigation (2.8ms)
+Completed in 120ms (View: 105, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-20 18:47:41) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#new (for 127.0.0.1 at 2009-09-20 18:47:43) [GET]
+  Parameters: {"_"=>"1253490463938"}
+Rendering capacities/new
+Rendered capacities/_new_form (10.2ms)
+Completed in 26ms (View: 12, DB: 0) | 200 OK [http://localhost/capacities/new?_=1253490463938]
+
+
+Processing CapacitiesController#create (for 127.0.0.1 at 2009-09-20 18:47:52) [POST]
+  Parameters: {"authenticity_token"=>"PyvmvNkUtRUUEfUlZ59n0hwu1TrbcW2KGFV+W9IT6DI=", "driver_name"=>"", "capacity"=>{"location"=>"", "available_on(1i)"=>"2009", "notes"=>"", "priority"=>"0", "available_on(2i)"=>"9", "available_on(3i)"=>"23"}}
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" WHERE ("drivers"."name" = 'TBD') LIMIT 1[0m
+  [4;36;1mCapacity Create (0.3ms)[0m   [0;1mINSERT INTO "capacities" ("location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES('', '2009-09-23', '2009-09-20 23:47:52', NULL, '', '2009-09-20 23:47:52', 0)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO "capacities_drivers" ("driver_id", "capacity_id") VALUES (1, 3)[0m
+  [4;36;1mCapacity Load (0.3ms)[0m   [0;1mSELECT * FROM "capacities" WHERE (available_on = '2009-09-23') [0m
+Rendering capacities/create
+Rendered capacities/_mini_capacity (0.1ms)
+Completed in 24ms (View: 4, DB: 1) | 200 OK [http://localhost/capacities]
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-20 18:48:38) [GET]
+  [4;35;1mCapacity Load (0.4ms)[0m   [0mSELECT * FROM "capacities" WHERE (available_on = '2009-09-20') [0m
+  [4;36;1mCapacity Load (0.4ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_focus (0.3ms)
+Rendered capacities/_new_form (5.4ms)
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) [0m
+Rendered capacities/_mini_capacity (5.2ms)
+Rendered capacities/_future_capacity (6.3ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 2 ) [0m
+Rendered capacities/_mini_capacity (0.8ms)
+Rendered capacities/_future_capacity (1.8ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 3 ) [0m
+Rendered capacities/_mini_capacity (0.7ms)
+Rendered capacities/_future_capacity (1.4ms)
+Rendered shared/_navigation (0.5ms)
+Completed in 95ms (View: 20, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-20 18:48:38) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.4ms)[0m   [0;1mCREATE TABLE "capacities" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "location" varchar(255), "available_on" date, "fulfilled_on" datetime, "notes" varchar(255), "priority" integer DEFAULT 0, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mCREATE TABLE "capacities_drivers" ("capacity_id" integer, "driver_id" integer) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mCREATE TABLE "drivers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (1.9ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090907183149')[0m
+  [4;35;1mSQL (2.2ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090904161903')[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090904193840')[0m
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-20 18:48:48) [GET]
+  [4;36;1mCapacity Load (0.4ms)[0m   [0;1mSELECT * FROM "capacities" WHERE (available_on = '2009-09-20') [0m
+  [4;35;1mCapacity Load (0.1ms)[0m   [0mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_focus (0.3ms)
+Rendered capacities/_new_form (5.8ms)
+Rendered shared/_navigation (0.6ms)
+Completed in 20ms (View: 10, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-20 18:48:48) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#new (for 127.0.0.1 at 2009-09-20 18:48:49) [GET]
+  Parameters: {"_"=>"1253490529696"}
+Rendering capacities/new
+Rendered capacities/_new_form (6.3ms)
+Completed in 16ms (View: 8, DB: 0) | 200 OK [http://localhost/capacities/new?_=1253490529696]
+
+
+Processing CapacitiesController#create (for 127.0.0.1 at 2009-09-20 18:48:57) [POST]
+  Parameters: {"authenticity_token"=>"PyvmvNkUtRUUEfUlZ59n0hwu1TrbcW2KGFV+W9IT6DI=", "driver_name"=>"", "capacity"=>{"location"=>"denver", "available_on(1i)"=>"2009", "notes"=>"", "priority"=>"0", "available_on(2i)"=>"9", "available_on(3i)"=>"21"}}
+  [4;36;1mDriver Load (0.1ms)[0m   [0;1mSELECT * FROM "drivers" WHERE ("drivers"."name" = 'TBD') LIMIT 1[0m
+  [4;35;1mDriver Create (0.3ms)[0m   [0mINSERT INTO "drivers" ("name", "created_at", "updated_at") VALUES('TBD', '2009-09-20 23:48:57', '2009-09-20 23:48:57')[0m
+  [4;36;1mCapacity Create (0.1ms)[0m   [0;1mINSERT INTO "capacities" ("location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES('denver', '2009-09-21', '2009-09-20 23:48:57', NULL, '', '2009-09-20 23:48:57', 0)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO "capacities_drivers" ("driver_id", "capacity_id") VALUES (1, 1)[0m
+  [4;36;1mCapacity Load (0.2ms)[0m   [0;1mSELECT * FROM "capacities" WHERE (available_on = '2009-09-21') [0m
+Rendering capacities/create
+Rendered capacities/_mini_capacity (0.2ms)
+Completed in 32ms (View: 4, DB: 1) | 200 OK [http://localhost/capacities]
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-20 18:49:01) [GET]
+  [4;35;1mCapacity Load (0.4ms)[0m   [0mSELECT * FROM "capacities" WHERE (available_on = '2009-09-20') [0m
+  [4;36;1mCapacity Load (0.2ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_focus (0.3ms)
+Rendered capacities/_new_form (4.7ms)
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) [0m
+Rendered capacities/_mini_capacity (5.0ms)
+Rendered capacities/_future_capacity (5.9ms)
+Rendered shared/_navigation (0.5ms)
+Completed in 25ms (View: 15, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-20 18:49:01) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#new (for 127.0.0.1 at 2009-09-20 18:49:03) [GET]
+  Parameters: {"_"=>"1253490543266"}
+Rendering capacities/new
+Rendered capacities/_new_form (6.5ms)
+Completed in 16ms (View: 8, DB: 0) | 200 OK [http://localhost/capacities/new?_=1253490543266]
+
+
+Processing CapacitiesController#create (for 127.0.0.1 at 2009-09-20 18:49:10) [POST]
+  Parameters: {"authenticity_token"=>"PyvmvNkUtRUUEfUlZ59n0hwu1TrbcW2KGFV+W9IT6DI=", "driver_name"=>"", "capacity"=>{"location"=>"kc", "available_on(1i)"=>"2009", "notes"=>"", "priority"=>"0", "available_on(2i)"=>"9", "available_on(3i)"=>"21"}}
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" WHERE ("drivers"."name" = 'TBD') LIMIT 1[0m
+  [4;35;1mCapacity Create (0.3ms)[0m   [0mINSERT INTO "capacities" ("location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES('kc', '2009-09-21', '2009-09-20 23:49:10', NULL, '', '2009-09-20 23:49:10', 0)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO "capacities_drivers" ("driver_id", "capacity_id") VALUES (1, 2)[0m
+  [4;35;1mCapacity Load (0.3ms)[0m   [0mSELECT * FROM "capacities" WHERE (available_on = '2009-09-21') [0m
+Rendering capacities/create
+Rendered capacities/_mini_capacity (0.2ms)
+Completed in 22ms (View: 1, DB: 1) | 200 OK [http://localhost/capacities]
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-20 18:49:13) [GET]
+  [4;36;1mCapacity Load (0.3ms)[0m   [0;1mSELECT * FROM "capacities" WHERE (available_on = '2009-09-20') [0m
+  [4;35;1mCapacity Load (0.3ms)[0m   [0mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_focus (0.2ms)
+Rendered capacities/_new_form (4.7ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 2 ) [0m
+Rendered capacities/_mini_capacity (4.5ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) [0m
+Rendered capacities/_mini_capacity (0.8ms)
+Rendered capacities/_future_capacity (6.7ms)
+Rendered shared/_navigation (0.5ms)
+Completed in 26ms (View: 16, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-20 18:49:13) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-20 18:52:03) [GET]
+  [4;36;1mCapacity Load (0.4ms)[0m   [0;1mSELECT * FROM "capacities" WHERE (available_on = '2009-09-20') [0m
+  [4;35;1mCapacity Load (0.3ms)[0m   [0mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_focus (0.3ms)
+Rendered capacities/_new_form (6.1ms)
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 2 ) [0m
+Rendered capacities/_mini_capacity (5.0ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) [0m
+Rendered capacities/_mini_capacity (0.8ms)
+Rendered capacities/_future_capacity (7.5ms)
+Rendered shared/_navigation (0.5ms)
+Completed in 34ms (View: 21, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-20 18:52:03) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-20 18:52:05) [GET]
+  [4;36;1mCapacity Load (0.4ms)[0m   [0;1mSELECT * FROM "capacities" WHERE (available_on = '2009-09-20') [0m
+  [4;35;1mCapacity Load (0.2ms)[0m   [0mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+Rendered capacities/_focus (0.2ms)
+Rendered capacities/_new_form (4.8ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 2 ) [0m
+Rendered capacities/_mini_capacity (4.8ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) [0m
+Rendered capacities/_mini_capacity (0.7ms)
+Rendered capacities/_future_capacity (6.8ms)
+Rendered shared/_navigation (0.5ms)
+Completed in 89ms (View: 78, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-20 18:52:05) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#new (for 127.0.0.1 at 2009-09-20 18:52:06) [GET]
+  Parameters: {"_"=>"1253490726312"}
+Rendering capacities/new
+Rendered capacities/_new_form (6.9ms)
+Completed in 16ms (View: 9, DB: 0) | 200 OK [http://localhost/capacities/new?_=1253490726312]
+
+
+Processing CapacitiesController#create (for 127.0.0.1 at 2009-09-20 18:52:12) [POST]
+  Parameters: {"authenticity_token"=>"PyvmvNkUtRUUEfUlZ59n0hwu1TrbcW2KGFV+W9IT6DI=", "driver_name"=>"", "capacity"=>{"location"=>"should work", "available_on(1i)"=>"2009", "notes"=>"", "priority"=>"0", "available_on(2i)"=>"9", "available_on(3i)"=>"21"}}
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" WHERE ("drivers"."name" = 'TBD') LIMIT 1[0m
+  [4;35;1mCapacity Create (0.3ms)[0m   [0mINSERT INTO "capacities" ("location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES('should work', '2009-09-21', '2009-09-20 23:52:12', NULL, '', '2009-09-20 23:52:12', 0)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO "capacities_drivers" ("driver_id", "capacity_id") VALUES (1, 3)[0m
+  [4;35;1mCapacity Load (0.5ms)[0m   [0mSELECT * FROM "capacities" WHERE (available_on = '2009-09-21') [0m
+Rendering capacities/create
+Rendered capacities/_mini_capacity (0.2ms)
+Completed in 25ms (View: 4, DB: 1) | 200 OK [http://localhost/capacities]
+
+
+Processing CapacitiesController#new (for 127.0.0.1 at 2009-09-20 18:52:16) [GET]
+  Parameters: {"_"=>"1253490736949"}
+Rendering capacities/new
+Rendered capacities/_new_form (6.1ms)
+Completed in 15ms (View: 8, DB: 0) | 200 OK [http://localhost/capacities/new?_=1253490736949]
+
+
+Processing CapacitiesController#create (for 127.0.0.1 at 2009-09-20 18:52:24) [POST]
+  Parameters: {"authenticity_token"=>"PyvmvNkUtRUUEfUlZ59n0hwu1TrbcW2KGFV+W9IT6DI=", "driver_name"=>"", "capacity"=>{"location"=>"should not work", "available_on(1i)"=>"2009", "notes"=>"", "priority"=>"0", "available_on(2i)"=>"9", "available_on(3i)"=>"22"}}
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" WHERE ("drivers"."name" = 'TBD') LIMIT 1[0m
+  [4;35;1mCapacity Create (0.3ms)[0m   [0mINSERT INTO "capacities" ("location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES('should not work', '2009-09-22', '2009-09-20 23:52:24', NULL, '', '2009-09-20 23:52:24', 0)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO "capacities_drivers" ("driver_id", "capacity_id") VALUES (1, 4)[0m
+  [4;35;1mCapacity Load (0.3ms)[0m   [0mSELECT * FROM "capacities" WHERE (available_on = '2009-09-22') [0m
+Rendering capacities/create
+Rendered capacities/_mini_capacity (0.2ms)
+Completed in 22ms (View: 1, DB: 1) | 200 OK [http://localhost/capacities]
+
+
+Processing CapacitiesController#new (for 127.0.0.1 at 2009-09-20 22:36:20) [GET]
+  Parameters: {"_"=>"1253504180824"}
+Rendering capacities/new
+Rendered capacities/_new_form (15.8ms)
+Completed in 218ms (View: 26, DB: 0) | 200 OK [http://localhost/capacities/new?_=1253504180824]
+
+
+Processing CapacitiesController#create (for 127.0.0.1 at 2009-09-20 22:36:45) [POST]
+  Parameters: {"authenticity_token"=>"PyvmvNkUtRUUEfUlZ59n0hwu1TrbcW2KGFV+W9IT6DI=", "driver_name"=>"Tim", "capacity"=>{"location"=>"nowhere", "available_on(1i)"=>"2009", "notes"=>"", "priority"=>"0", "available_on(2i)"=>"9", "available_on(3i)"=>"21"}}
+  [4;36;1mDriver Load (0.1ms)[0m   [0;1mSELECT * FROM "drivers" WHERE ("drivers"."name" = 'Tim') LIMIT 1[0m
+  [4;35;1mCapacity Create (0.3ms)[0m   [0mINSERT INTO "capacities" ("location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES('nowhere', '2009-09-21', '2009-09-21 03:36:45', NULL, '', '2009-09-21 03:36:45', 0)[0m
+  [4;36;1mDriver Create (0.1ms)[0m   [0;1mINSERT INTO "drivers" ("name", "created_at", "updated_at") VALUES('Tim', '2009-09-21 03:36:45', '2009-09-21 03:36:45')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO "capacities_drivers" ("driver_id", "capacity_id") VALUES (2, 5)[0m
+  [4;36;1mCapacity Load (0.4ms)[0m   [0;1mSELECT * FROM "capacities" WHERE (available_on = '2009-09-21') [0m
+Rendering capacities/create
+Rendered capacities/_mini_capacity (0.2ms)
+Completed in 45ms (View: 20, DB: 1) | 200 OK [http://localhost/capacities]
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-20 22:37:00) [GET]
+  Parameters: {"focus_date"=>"2009-09-21"}
+  [4;35;1mCapacity Load (0.7ms)[0m   [0mSELECT * FROM "capacities" WHERE (available_on = '2009-09-21') [0m
+  [4;36;1mCapacity Load (0.4ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 3 ) LIMIT 1[0m
+Rendered capacities/_capacity (6.9ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 2 ) LIMIT 1[0m
+Rendered capacities/_capacity (2.8ms)
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) LIMIT 1[0m
+Rendered capacities/_capacity (67.5ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 5 ) LIMIT 1[0m
+Rendered capacities/_capacity (2.6ms)
+Rendered capacities/_focus (81.3ms)
+Rendered capacities/_new_form (4.7ms)
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 4 ) [0m
+Rendered capacities/_mini_capacity (1.0ms)
+Rendered capacities/_future_capacity (1.9ms)
+Rendered shared/_navigation (0.5ms)
+Completed in 105ms (View: 92, DB: 2) | 200 OK [http://localhost/capacities?focus_date=2009-09-21]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-20 22:37:00) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#edit (for 127.0.0.1 at 2009-09-20 22:37:10) [GET]
+  Parameters: {"id"=>"3", "_"=>"1253504230392"}
+  [4;36;1mCapacity Load (0.2ms)[0m   [0;1mSELECT * FROM "capacities" WHERE ("capacities"."id" = 3) [0m
+Rendering capacities/edit
+  [4;35;1mDriver Load (0.4ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 3 ) LIMIT 1[0m
+Rendered capacities/_edit_form (11.4ms)
+Completed in 21ms (View: 13, DB: 1) | 200 OK [http://localhost/capacities/3/edit?_=1253504230392]
+
+
+Processing CapacitiesController#update (for 127.0.0.1 at 2009-09-20 22:37:12) [PUT]
+  Parameters: {"authenticity_token"=>"PyvmvNkUtRUUEfUlZ59n0hwu1TrbcW2KGFV+W9IT6DI=", "driver_name"=>"TBD", "id"=>"3", "capacity"=>{"location"=>"should work", "available_on(1i)"=>"2009", "notes"=>"", "priority"=>"0", "available_on(2i)"=>"9", "available_on(3i)"=>"21"}}
+  [4;36;1mCapacity Load (0.2ms)[0m   [0;1mSELECT * FROM "capacities" WHERE ("capacities"."id" = 3) [0m
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 3 ) [0m
+Rendering capacities/update
+Rendered capacities/_edit_form (5.1ms)
+Rendered capacities/_capacity (1.9ms)
+Completed in 25ms (View: 9, DB: 0) | 200 OK [http://localhost/capacities/3]
+
+
+Processing CapacitiesController#edit (for 127.0.0.1 at 2009-09-20 22:37:15) [GET]
+  Parameters: {"id"=>"1", "_"=>"1253504235759"}
+  [4;36;1mCapacity Load (0.2ms)[0m   [0;1mSELECT * FROM "capacities" WHERE ("capacities"."id" = 1) [0m
+Rendering capacities/edit
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) LIMIT 1[0m
+Rendered capacities/_edit_form (11.3ms)
+Completed in 90ms (View: 13, DB: 0) | 200 OK [http://localhost/capacities/1/edit?_=1253504235759]
+
+
+Processing CapacitiesController#edit (for 127.0.0.1 at 2009-09-20 22:37:15) [GET]
+  Parameters: {"id"=>"1", "_"=>"1253504235766"}
+  [4;36;1mCapacity Load (0.5ms)[0m   [0;1mSELECT * FROM "capacities" WHERE ("capacities"."id" = 1) [0m
+Rendering capacities/edit
+  [4;35;1mDriver Load (0.4ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) LIMIT 1[0m
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.include?) on line #21 of app/views/capacities/_edit_form.haml:
+18:     = form.date_select :available_on
+19: 
+20:     = form.label :priority, "Priority"
+21:     = form.select :priority, {:normal => 0, :high => 1, :top => 2}
+
+    app/views/capacities/_edit_form.haml:21:in `_run_haml_app47views47capacities47_edit_form46haml_locals_capacity_edit_form_object'
+    haml (2.2.3) lib/haml/helpers/action_view_mods.rb:163:in `call'
+    haml (2.2.3) lib/haml/helpers/action_view_mods.rb:163:in `form_for'
+    haml (2.2.3) lib/haml/helpers.rb:542:in `call'
+    haml (2.2.3) lib/haml/helpers.rb:542:in `haml_bind_proc'
+    haml (2.2.3) lib/haml/helpers/action_view_mods.rb:169:in `form_for'
+    app/views/capacities/_edit_form.haml:1:in `_run_haml_app47views47capacities47_edit_form46haml_locals_capacity_edit_form_object'
+    haml (2.2.3) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/views/capacities/edit.js.erb:2
+    haml (2.2.3) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/controllers/capacities_controller.rb:24:in `edit'
+    app/controllers/capacities_controller.rb:22:in `edit'
+    haml (2.2.3) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (75.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CapacitiesController#update (for 127.0.0.1 at 2009-09-20 22:37:34) [PUT]
+  Parameters: {"authenticity_token"=>"PyvmvNkUtRUUEfUlZ59n0hwu1TrbcW2KGFV+W9IT6DI=", "driver_name"=>"TBD", "id"=>"1", "capacity"=>{"location"=>"denver", "available_on(1i)"=>"2009", "notes"=>"", "priority"=>"0", "available_on(2i)"=>"9", "available_on(3i)"=>"21"}}
+  [4;36;1mCapacity Load (0.2ms)[0m   [0;1mSELECT * FROM "capacities" WHERE ("capacities"."id" = 1) [0m
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) [0m
+Rendering capacities/update
+Rendered capacities/_edit_form (5.2ms)
+Rendered capacities/_capacity (2.5ms)
+Completed in 27ms (View: 10, DB: 0) | 200 OK [http://localhost/capacities/1]
+
+
+Processing CapacitiesController#edit (for 127.0.0.1 at 2009-09-20 22:37:36) [GET]
+  Parameters: {"id"=>"1", "_"=>"1253504256269"}
+  [4;36;1mCapacity Load (0.3ms)[0m   [0;1mSELECT * FROM "capacities" WHERE ("capacities"."id" = 1) [0m
+Rendering capacities/edit
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) LIMIT 1[0m
+Rendered capacities/_edit_form (11.6ms)
+Completed in 21ms (View: 13, DB: 1) | 200 OK [http://localhost/capacities/1/edit?_=1253504256269]
+
+
+Processing CapacitiesController#edit (for 127.0.0.1 at 2009-09-20 22:37:39) [GET]
+  Parameters: {"id"=>"5", "_"=>"1253504259845"}
+  [4;36;1mCapacity Load (0.2ms)[0m   [0;1mSELECT * FROM "capacities" WHERE ("capacities"."id" = 5) [0m
+Rendering capacities/edit
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 5 ) LIMIT 1[0m
+Rendered capacities/_edit_form (12.1ms)
+Completed in 22ms (View: 13, DB: 0) | 200 OK [http://localhost/capacities/5/edit?_=1253504259845]
+
+
+Processing CapacitiesController#edit (for 127.0.0.1 at 2009-09-20 22:37:39) [GET]
+  Parameters: {"id"=>"5", "_"=>"1253504259850"}
+  [4;36;1mCapacity Load (0.5ms)[0m   [0;1mSELECT * FROM "capacities" WHERE ("capacities"."id" = 5) [0m
+Rendering capacities/edit
+  [4;35;1mDriver Load (0.5ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 5 ) LIMIT 1[0m
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.include?) on line #21 of app/views/capacities/_edit_form.haml:
+18:     = form.date_select :available_on
+19: 
+20:     = form.label :priority, "Priority"
+21:     = form.select :priority, {:normal => 0, :high => 1, :top => 2}
+
+    app/views/capacities/_edit_form.haml:21:in `_run_haml_app47views47capacities47_edit_form46haml_locals_capacity_edit_form_object'
+    haml (2.2.3) lib/haml/helpers/action_view_mods.rb:163:in `call'
+    haml (2.2.3) lib/haml/helpers/action_view_mods.rb:163:in `form_for'
+    haml (2.2.3) lib/haml/helpers.rb:542:in `call'
+    haml (2.2.3) lib/haml/helpers.rb:542:in `haml_bind_proc'
+    haml (2.2.3) lib/haml/helpers/action_view_mods.rb:169:in `form_for'
+    app/views/capacities/_edit_form.haml:1:in `_run_haml_app47views47capacities47_edit_form46haml_locals_capacity_edit_form_object'
+    haml (2.2.3) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/views/capacities/edit.js.erb:2
+    haml (2.2.3) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/controllers/capacities_controller.rb:24:in `edit'
+    app/controllers/capacities_controller.rb:22:in `edit'
+    haml (2.2.3) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (63.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CapacitiesController#edit (for 127.0.0.1 at 2009-09-20 22:37:40) [GET]
+  Parameters: {"id"=>"5", "_"=>"1253504259855"}
+  [4;36;1mCapacity Load (0.2ms)[0m   [0;1mSELECT * FROM "capacities" WHERE ("capacities"."id" = 5) [0m
+Rendering capacities/edit
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 5 ) LIMIT 1[0m
+Rendered capacities/_edit_form (17.5ms)
+Completed in 32ms (View: 20, DB: 1) | 200 OK [http://localhost/capacities/5/edit?_=1253504259855]
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-20 22:37:47) [GET]
+  Parameters: {"focus_date"=>"2009-09-21"}
+  [4;36;1mCapacity Load (0.7ms)[0m   [0;1mSELECT * FROM "capacities" WHERE (available_on = '2009-09-21') [0m
+  [4;35;1mCapacity Load (0.5ms)[0m   [0mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 3 ) LIMIT 1[0m
+Rendered capacities/_capacity (7.6ms)
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 2 ) LIMIT 1[0m
+Rendered capacities/_capacity (3.5ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) LIMIT 1[0m
+Rendered capacities/_capacity (3.0ms)
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 5 ) LIMIT 1[0m
+Rendered capacities/_capacity (3.0ms)
+Rendered capacities/_focus (19.0ms)
+Rendered capacities/_new_form (4.7ms)
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 4 ) [0m
+Rendered capacities/_mini_capacity (1.0ms)
+Rendered capacities/_future_capacity (2.1ms)
+Rendered shared/_navigation (0.5ms)
+Completed in 46ms (View: 30, DB: 3) | 200 OK [http://localhost/capacities?focus_date=2009-09-21]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-20 22:37:47) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#edit (for 127.0.0.1 at 2009-09-20 22:37:49) [GET]
+  Parameters: {"id"=>"1", "_"=>"1253504269412"}
+  [4;35;1mCapacity Load (0.2ms)[0m   [0mSELECT * FROM "capacities" WHERE ("capacities"."id" = 1) [0m
+Rendering capacities/edit
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) LIMIT 1[0m
+Rendered capacities/_edit_form (11.6ms)
+Completed in 21ms (View: 13, DB: 0) | 200 OK [http://localhost/capacities/1/edit?_=1253504269412]
+
+
+Processing CapacitiesController#edit (for 127.0.0.1 at 2009-09-20 22:37:51) [GET]
+  Parameters: {"id"=>"5", "_"=>"1253504271696"}
+  [4;35;1mCapacity Load (0.2ms)[0m   [0mSELECT * FROM "capacities" WHERE ("capacities"."id" = 5) [0m
+Rendering capacities/edit
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 5 ) LIMIT 1[0m
+Rendered capacities/_edit_form (11.6ms)
+Completed in 21ms (View: 13, DB: 0) | 200 OK [http://localhost/capacities/5/edit?_=1253504271696]
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-20 22:37:53) [GET]
+  Parameters: {"focus_date"=>"2009-09-21"}
+  [4;35;1mCapacity Load (0.7ms)[0m   [0mSELECT * FROM "capacities" WHERE (available_on = '2009-09-21') [0m
+  [4;36;1mCapacity Load (0.5ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 3 ) LIMIT 1[0m
+Rendered capacities/_capacity (7.5ms)
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 2 ) LIMIT 1[0m
+Rendered capacities/_capacity (2.7ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) LIMIT 1[0m
+Rendered capacities/_capacity (2.3ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 5 ) LIMIT 1[0m
+Rendered capacities/_capacity (2.3ms)
+Rendered capacities/_focus (16.2ms)
+Rendered capacities/_new_form (4.6ms)
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 4 ) [0m
+Rendered capacities/_mini_capacity (1.0ms)
+Rendered capacities/_future_capacity (1.9ms)
+Rendered shared/_navigation (0.5ms)
+Completed in 39ms (View: 26, DB: 2) | 200 OK [http://localhost/capacities?focus_date=2009-09-21]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-20 22:37:54) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#edit (for 127.0.0.1 at 2009-09-20 22:37:57) [GET]
+  Parameters: {"id"=>"5", "_"=>"1253504277612"}
+  [4;36;1mCapacity Load (0.2ms)[0m   [0;1mSELECT * FROM "capacities" WHERE ("capacities"."id" = 5) [0m
+Rendering capacities/edit
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 5 ) LIMIT 1[0m
+Rendered capacities/_edit_form (11.7ms)
+Completed in 21ms (View: 13, DB: 0) | 200 OK [http://localhost/capacities/5/edit?_=1253504277612]
+
+
+Processing CapacitiesController#edit (for 127.0.0.1 at 2009-09-20 22:38:00) [GET]
+  Parameters: {"id"=>"5", "_"=>"1253504280467"}
+  [4;36;1mCapacity Load (0.2ms)[0m   [0;1mSELECT * FROM "capacities" WHERE ("capacities"."id" = 5) [0m
+Rendering capacities/edit
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 5 ) LIMIT 1[0m
+Rendered capacities/_edit_form (11.6ms)
+Completed in 22ms (View: 13, DB: 0) | 200 OK [http://localhost/capacities/5/edit?_=1253504280467]
+
+
+Processing CapacitiesController#edit (for 127.0.0.1 at 2009-09-20 22:38:03) [GET]
+  Parameters: {"id"=>"1", "_"=>"1253504283392"}
+  [4;36;1mCapacity Load (0.2ms)[0m   [0;1mSELECT * FROM "capacities" WHERE ("capacities"."id" = 1) [0m
+Rendering capacities/edit
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) LIMIT 1[0m
+Rendered capacities/_edit_form (10.7ms)
+Completed in 20ms (View: 12, DB: 0) | 200 OK [http://localhost/capacities/1/edit?_=1253504283392]
+
+
+Processing CapacitiesController#edit (for 127.0.0.1 at 2009-09-20 22:38:06) [GET]
+  Parameters: {"id"=>"2", "_"=>"1253504286443"}
+  [4;36;1mCapacity Load (0.3ms)[0m   [0;1mSELECT * FROM "capacities" WHERE ("capacities"."id" = 2) [0m
+Rendering capacities/edit
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 2 ) LIMIT 1[0m
+Rendered capacities/_edit_form (74.2ms)
+Completed in 85ms (View: 76, DB: 1) | 200 OK [http://localhost/capacities/2/edit?_=1253504286443]
+
+
+Processing CapacitiesController#edit (for 127.0.0.1 at 2009-09-20 22:38:09) [GET]
+  Parameters: {"id"=>"3", "_"=>"1253504289067"}
+  [4;36;1mCapacity Load (0.2ms)[0m   [0;1mSELECT * FROM "capacities" WHERE ("capacities"."id" = 3) [0m
+Rendering capacities/edit
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 3 ) LIMIT 1[0m
+Rendered capacities/_edit_form (13.0ms)
+Completed in 23ms (View: 14, DB: 0) | 200 OK [http://localhost/capacities/3/edit?_=1253504289067]
+
+
+Processing CapacitiesController#update (for 127.0.0.1 at 2009-09-20 22:38:11) [PUT]
+  Parameters: {"authenticity_token"=>"PyvmvNkUtRUUEfUlZ59n0hwu1TrbcW2KGFV+W9IT6DI=", "driver_name"=>"TBD", "id"=>"3", "capacity"=>{"location"=>"should work", "available_on(1i)"=>"2009", "notes"=>"", "priority"=>"0", "available_on(2i)"=>"9", "available_on(3i)"=>"21"}}
+  [4;36;1mCapacity Load (0.2ms)[0m   [0;1mSELECT * FROM "capacities" WHERE ("capacities"."id" = 3) [0m
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 3 ) [0m
+Rendering capacities/update
+Rendered capacities/_edit_form (5.4ms)
+Rendered capacities/_capacity (1.9ms)
+Completed in 27ms (View: 10, DB: 0) | 200 OK [http://localhost/capacities/3]
+
+
+Processing CapacitiesController#edit (for 127.0.0.1 at 2009-09-20 22:38:13) [GET]
+  Parameters: {"id"=>"2", "_"=>"1253504293913"}
+  [4;36;1mCapacity Load (0.3ms)[0m   [0;1mSELECT * FROM "capacities" WHERE ("capacities"."id" = 2) [0m
+Rendering capacities/edit
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 2 ) LIMIT 1[0m
+Rendered capacities/_edit_form (11.7ms)
+Completed in 22ms (View: 13, DB: 1) | 200 OK [http://localhost/capacities/2/edit?_=1253504293913]
+
+
+Processing CapacitiesController#edit (for 127.0.0.1 at 2009-09-20 22:38:13) [GET]
+  Parameters: {"id"=>"2", "_"=>"1253504293919"}
+  [4;36;1mCapacity Load (0.5ms)[0m   [0;1mSELECT * FROM "capacities" WHERE ("capacities"."id" = 2) [0m
+Rendering capacities/edit
+  [4;35;1mDriver Load (0.4ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 2 ) LIMIT 1[0m
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.include?) on line #21 of app/views/capacities/_edit_form.haml:
+18:     = form.date_select :available_on
+19: 
+20:     = form.label :priority, "Priority"
+21:     = form.select :priority, {:normal => 0, :high => 1, :top => 2}
+
+    app/views/capacities/_edit_form.haml:21:in `_run_haml_app47views47capacities47_edit_form46haml_locals_capacity_edit_form_object'
+    haml (2.2.3) lib/haml/helpers/action_view_mods.rb:163:in `call'
+    haml (2.2.3) lib/haml/helpers/action_view_mods.rb:163:in `form_for'
+    haml (2.2.3) lib/haml/helpers.rb:542:in `call'
+    haml (2.2.3) lib/haml/helpers.rb:542:in `haml_bind_proc'
+    haml (2.2.3) lib/haml/helpers/action_view_mods.rb:169:in `form_for'
+    app/views/capacities/_edit_form.haml:1:in `_run_haml_app47views47capacities47_edit_form46haml_locals_capacity_edit_form_object'
+    haml (2.2.3) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/views/capacities/edit.js.erb:2
+    haml (2.2.3) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/controllers/capacities_controller.rb:24:in `edit'
+    app/controllers/capacities_controller.rb:22:in `edit'
+    haml (2.2.3) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (68.3ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-21 12:35:27) [GET]
+  Parameters: {"focus_date"=>"2009-09-21"}
+  [4;36;1mCapacity Load (0.7ms)[0m   [0;1mSELECT * FROM "capacities" WHERE (available_on = '2009-09-21') [0m
+  [4;35;1mCapacity Load (0.4ms)[0m   [0mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;36;1mDriver Load (17.0ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 3 ) LIMIT 1[0m
+Rendered capacities/_capacity (123.6ms)
+  [4;35;1mDriver Load (0.4ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 2 ) LIMIT 1[0m
+Rendered capacities/_capacity (4.0ms)
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) LIMIT 1[0m
+Rendered capacities/_capacity (3.1ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 5 ) LIMIT 1[0m
+Rendered capacities/_capacity (2.3ms)
+Rendered capacities/_focus (144.9ms)
+Rendered capacities/_new_form (145.9ms)
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 4 ) [0m
+Rendered capacities/_mini_capacity (8.7ms)
+Rendered capacities/_future_capacity (28.6ms)
+Rendered shared/_navigation (28.2ms)
+Completed in 568ms (View: 421, DB: 19) | 200 OK [http://localhost/capacities?focus_date=2009-09-21]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-21 12:35:28) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#new (for 127.0.0.1 at 2009-09-21 12:36:50) [GET]
+  Parameters: {"_"=>"1253554610253"}
+Rendering capacities/new
+Rendered capacities/_new_form (6.2ms)
+Completed in 33ms (View: 25, DB: 0) | 200 OK [http://localhost/capacities/new?_=1253554610253]
+
+
+Processing CapacitiesController#create (for 127.0.0.1 at 2009-09-21 12:39:27) [POST]
+  Parameters: {"authenticity_token"=>"PyvmvNkUtRUUEfUlZ59n0hwu1TrbcW2KGFV+W9IT6DI=", "driver_name"=>"Tim", "capacity"=>{"location"=>"anywhere", "available_on(1i)"=>"2009", "notes"=>"", "priority"=>"0", "available_on(2i)"=>"9", "available_on(3i)"=>"22"}}
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" WHERE ("drivers"."name" = 'Tim') LIMIT 1[0m
+  [4;36;1mCapacity Create (0.3ms)[0m   [0;1mINSERT INTO "capacities" ("location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES('anywhere', '2009-09-22', '2009-09-21 17:39:27', NULL, '', '2009-09-21 17:39:27', 0)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO "capacities_drivers" ("driver_id", "capacity_id") VALUES (2, 6)[0m
+  [4;36;1mCapacity Load (0.3ms)[0m   [0;1mSELECT * FROM "capacities" WHERE (available_on = '2009-09-22') [0m
+Rendering capacities/create
+Rendered capacities/_mini_capacity (0.1ms)
+Completed in 23ms (View: 3, DB: 1) | 200 OK [http://localhost/capacities]
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-21 12:39:34) [GET]
+  Parameters: {"focus_date"=>"2009-09-21"}
+  [4;35;1mCapacity Load (0.7ms)[0m   [0mSELECT * FROM "capacities" WHERE (available_on = '2009-09-21') [0m
+  [4;36;1mCapacity Load (0.5ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;35;1mDriver Load (0.8ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 3 ) LIMIT 1[0m
+Rendered capacities/_capacity (66.0ms)
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 2 ) LIMIT 1[0m
+Rendered capacities/_capacity (2.8ms)
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) LIMIT 1[0m
+Rendered capacities/_capacity (3.1ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 5 ) LIMIT 1[0m
+Rendered capacities/_capacity (2.3ms)
+Rendered capacities/_focus (76.6ms)
+Rendered capacities/_new_form (4.5ms)
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 4 ) [0m
+Rendered capacities/_mini_capacity (0.9ms)
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 6 ) [0m
+Rendered capacities/_mini_capacity (0.8ms)
+Rendered capacities/_future_capacity (2.7ms)
+Rendered shared/_navigation (0.5ms)
+Completed in 100ms (View: 86, DB: 3) | 200 OK [http://localhost/capacities?focus_date=2009-09-21]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-21 12:39:35) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#new (for 127.0.0.1 at 2009-09-21 12:39:37) [GET]
+  Parameters: {"_"=>"1253554777203"}
+Rendering capacities/new
+Rendered capacities/_new_form (6.2ms)
+Completed in 15ms (View: 8, DB: 0) | 200 OK [http://localhost/capacities/new?_=1253554777203]
+
+
+Processing CapacitiesController#create (for 127.0.0.1 at 2009-09-21 12:39:44) [POST]
+  Parameters: {"authenticity_token"=>"PyvmvNkUtRUUEfUlZ59n0hwu1TrbcW2KGFV+W9IT6DI=", "driver_name"=>"", "capacity"=>{"location"=>"alert", "available_on(1i)"=>"2009", "notes"=>"", "priority"=>"0", "available_on(2i)"=>"9", "available_on(3i)"=>"22"}}
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" WHERE ("drivers"."name" = 'TBD') LIMIT 1[0m
+  [4;36;1mCapacity Create (0.3ms)[0m   [0;1mINSERT INTO "capacities" ("location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES('alert', '2009-09-22', '2009-09-21 17:39:44', NULL, '', '2009-09-21 17:39:44', 0)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO "capacities_drivers" ("driver_id", "capacity_id") VALUES (1, 7)[0m
+  [4;36;1mCapacity Load (0.4ms)[0m   [0;1mSELECT * FROM "capacities" WHERE (available_on = '2009-09-22') [0m
+Rendering capacities/create
+Rendered capacities/_mini_capacity (0.2ms)
+Completed in 21ms (View: 1, DB: 1) | 200 OK [http://localhost/capacities]
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-21 12:40:07) [GET]
+  Parameters: {"focus_date"=>"2009-09-21"}
+  [4;35;1mCapacity Load (0.6ms)[0m   [0mSELECT * FROM "capacities" WHERE (available_on = '2009-09-21') [0m
+  [4;36;1mCapacity Load (0.6ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 3 ) LIMIT 1[0m
+Rendered capacities/_capacity (7.3ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 2 ) LIMIT 1[0m
+Rendered capacities/_capacity (2.9ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) LIMIT 1[0m
+Rendered capacities/_capacity (2.3ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 5 ) LIMIT 1[0m
+Rendered capacities/_capacity (2.1ms)
+Rendered capacities/_focus (16.0ms)
+Rendered capacities/_new_form (4.3ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 4 ) [0m
+Rendered capacities/_mini_capacity (0.8ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 7 ) [0m
+Rendered capacities/_mini_capacity (0.6ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 6 ) [0m
+Rendered capacities/_mini_capacity (0.7ms)
+Rendered capacities/_future_capacity (3.4ms)
+Rendered shared/_navigation (0.5ms)
+Completed in 39ms (View: 27, DB: 3) | 200 OK [http://localhost/capacities?focus_date=2009-09-21]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-21 12:40:07) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#new (for 127.0.0.1 at 2009-09-21 12:40:08) [GET]
+  Parameters: {"_"=>"1253554808922"}
+Rendering capacities/new
+Rendered capacities/_new_form (6.2ms)
+Completed in 15ms (View: 8, DB: 0) | 200 OK [http://localhost/capacities/new?_=1253554808922]
+
+
+Processing CapacitiesController#create (for 127.0.0.1 at 2009-09-21 12:40:15) [POST]
+  Parameters: {"authenticity_token"=>"PyvmvNkUtRUUEfUlZ59n0hwu1TrbcW2KGFV+W9IT6DI=", "driver_name"=>"", "capacity"=>{"location"=>"alert", "available_on(1i)"=>"2009", "notes"=>"", "priority"=>"0", "available_on(2i)"=>"9", "available_on(3i)"=>"22"}}
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" WHERE ("drivers"."name" = 'TBD') LIMIT 1[0m
+  [4;35;1mCapacity Create (0.3ms)[0m   [0mINSERT INTO "capacities" ("location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES('alert', '2009-09-22', '2009-09-21 17:40:15', NULL, '', '2009-09-21 17:40:15', 0)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO "capacities_drivers" ("driver_id", "capacity_id") VALUES (1, 8)[0m
+  [4;35;1mCapacity Load (0.4ms)[0m   [0mSELECT * FROM "capacities" WHERE (available_on = '2009-09-22') [0m
+Rendering capacities/create
+Rendered capacities/_mini_capacity (0.1ms)
+Completed in 23ms (View: 3, DB: 1) | 200 OK [http://localhost/capacities]
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-21 12:40:31) [GET]
+  Parameters: {"focus_date"=>"2009-09-21"}
+  [4;36;1mCapacity Load (0.7ms)[0m   [0;1mSELECT * FROM "capacities" WHERE (available_on = '2009-09-21') [0m
+  [4;35;1mCapacity Load (0.6ms)[0m   [0mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 3 ) LIMIT 1[0m
+Rendered capacities/_capacity (7.9ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 2 ) LIMIT 1[0m
+Rendered capacities/_capacity (2.6ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) LIMIT 1[0m
+Rendered capacities/_capacity (2.2ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 5 ) LIMIT 1[0m
+Rendered capacities/_capacity (2.3ms)
+Rendered capacities/_focus (16.5ms)
+Rendered capacities/_new_form (4.9ms)
+  [4;36;1mDriver Load (0.3ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 6 ) [0m
+Rendered capacities/_mini_capacity (0.9ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 7 ) [0m
+Rendered capacities/_mini_capacity (0.7ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 8 ) [0m
+Rendered capacities/_mini_capacity (0.7ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 4 ) [0m
+Rendered capacities/_mini_capacity (0.7ms)
+Rendered capacities/_future_capacity (4.3ms)
+Rendered shared/_navigation (0.5ms)
+Completed in 44ms (View: 29, DB: 3) | 200 OK [http://localhost/capacities?focus_date=2009-09-21]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-21 12:40:31) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#new (for 127.0.0.1 at 2009-09-21 12:40:33) [GET]
+  Parameters: {"_"=>"1253554833767"}
+Rendering capacities/new
+Rendered capacities/_new_form (6.2ms)
+Completed in 15ms (View: 8, DB: 0) | 200 OK [http://localhost/capacities/new?_=1253554833767]
+
+
+Processing CapacitiesController#create (for 127.0.0.1 at 2009-09-21 12:40:43) [POST]
+  Parameters: {"authenticity_token"=>"PyvmvNkUtRUUEfUlZ59n0hwu1TrbcW2KGFV+W9IT6DI=", "driver_name"=>"", "capacity"=>{"location"=>"alll right", "available_on(1i)"=>"2009", "notes"=>"", "priority"=>"0", "available_on(2i)"=>"9", "available_on(3i)"=>"22"}}
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" WHERE ("drivers"."name" = 'TBD') LIMIT 1[0m
+  [4;35;1mCapacity Create (0.3ms)[0m   [0mINSERT INTO "capacities" ("location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES('alll right', '2009-09-22', '2009-09-21 17:40:43', NULL, '', '2009-09-21 17:40:43', 0)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO "capacities_drivers" ("driver_id", "capacity_id") VALUES (1, 9)[0m
+  [4;35;1mCapacity Load (0.7ms)[0m   [0mSELECT * FROM "capacities" WHERE (available_on = '2009-09-22') [0m
+Rendering capacities/create
+Rendered capacities/_mini_capacity (0.2ms)
+Completed in 28ms (View: 4, DB: 1) | 200 OK [http://localhost/capacities]
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-21 12:41:50) [GET]
+  Parameters: {"focus_date"=>"2009-09-21"}
+  [4;36;1mCapacity Load (0.6ms)[0m   [0;1mSELECT * FROM "capacities" WHERE (available_on = '2009-09-21') [0m
+  [4;35;1mCapacity Load (0.7ms)[0m   [0mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 3 ) LIMIT 1[0m
+Rendered capacities/_capacity (6.9ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 2 ) LIMIT 1[0m
+Rendered capacities/_capacity (2.3ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) LIMIT 1[0m
+Rendered capacities/_capacity (2.1ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 5 ) LIMIT 1[0m
+Rendered capacities/_capacity (2.1ms)
+Rendered capacities/_focus (15.1ms)
+Rendered capacities/_new_form (4.4ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 4 ) [0m
+Rendered capacities/_mini_capacity (0.8ms)
+  [4;35;1mDriver Load (0.4ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 9 ) [0m
+Rendered capacities/_mini_capacity (59.2ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 8 ) [0m
+Rendered capacities/_mini_capacity (0.8ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 7 ) [0m
+Rendered capacities/_mini_capacity (0.7ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 6 ) [0m
+Rendered capacities/_mini_capacity (0.7ms)
+Rendered capacities/_future_capacity (63.8ms)
+Rendered shared/_navigation (0.5ms)
+Completed in 100ms (View: 86, DB: 3) | 200 OK [http://localhost/capacities?focus_date=2009-09-21]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-21 12:41:50) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#new (for 127.0.0.1 at 2009-09-21 12:41:52) [GET]
+  Parameters: {"_"=>"1253554912320"}
+Rendering capacities/new
+Rendered capacities/_new_form (6.8ms)
+Completed in 16ms (View: 8, DB: 0) | 200 OK [http://localhost/capacities/new?_=1253554912320]
+
+
+Processing CapacitiesController#create (for 127.0.0.1 at 2009-09-21 12:41:56) [POST]
+  Parameters: {"authenticity_token"=>"PyvmvNkUtRUUEfUlZ59n0hwu1TrbcW2KGFV+W9IT6DI=", "driver_name"=>"", "capacity"=>{"location"=>"asdf", "available_on(1i)"=>"2009", "notes"=>"", "priority"=>"0", "available_on(2i)"=>"9", "available_on(3i)"=>"22"}}
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" WHERE ("drivers"."name" = 'TBD') LIMIT 1[0m
+  [4;36;1mCapacity Create (0.3ms)[0m   [0;1mINSERT INTO "capacities" ("location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES('asdf', '2009-09-22', '2009-09-21 17:41:56', NULL, '', '2009-09-21 17:41:56', 0)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO "capacities_drivers" ("driver_id", "capacity_id") VALUES (1, 10)[0m
+  [4;36;1mCapacity Load (0.5ms)[0m   [0;1mSELECT * FROM "capacities" WHERE (available_on = '2009-09-22') [0m
+Rendering capacities/create
+Rendered capacities/_mini_capacity (0.2ms)
+Completed in 26ms (View: 4, DB: 1) | 200 OK [http://localhost/capacities]
+
+
+Processing CapacitiesController#new (for 127.0.0.1 at 2009-09-21 12:42:52) [GET]
+  Parameters: {"_"=>"1253554972060"}
+Rendering capacities/new
+Rendered capacities/_new_form (67.2ms)
+Completed in 76ms (View: 69, DB: 0) | 200 OK [http://localhost/capacities/new?_=1253554972060]
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-21 12:46:15) [GET]
+  Parameters: {"focus_date"=>"2009-09-21"}
+  [4;35;1mCapacity Load (0.7ms)[0m   [0mSELECT * FROM "capacities" WHERE (available_on = '2009-09-21') [0m
+  [4;36;1mCapacity Load (0.9ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 3 ) LIMIT 1[0m
+Rendered capacities/_capacity (6.9ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 2 ) LIMIT 1[0m
+Rendered capacities/_capacity (2.5ms)
+  [4;35;1mDriver Load (0.7ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) LIMIT 1[0m
+Rendered capacities/_capacity (2.8ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 5 ) LIMIT 1[0m
+Rendered capacities/_capacity (2.2ms)
+Rendered capacities/_focus (15.7ms)
+Rendered capacities/_new_form (5.0ms)
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 10 ) [0m
+Rendered capacities/_mini_capacity (0.9ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 4 ) [0m
+Rendered capacities/_mini_capacity (0.6ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 9 ) [0m
+Rendered capacities/_mini_capacity (0.7ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 8 ) [0m
+Rendered capacities/_mini_capacity (0.7ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 7 ) [0m
+Rendered capacities/_mini_capacity (0.7ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 6 ) [0m
+Rendered capacities/_mini_capacity (0.7ms)
+Rendered capacities/_future_capacity (5.9ms)
+Rendered shared/_navigation (0.6ms)
+Completed in 44ms (View: 29, DB: 4) | 200 OK [http://localhost/capacities?focus_date=2009-09-21]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-21 12:46:15) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CapacitiesController#new (for 127.0.0.1 at 2009-09-21 12:46:17) [GET]
+  Parameters: {"_"=>"1253555177374"}
+Rendering capacities/new
+Rendered capacities/_new_form (6.2ms)
+Completed in 76ms (View: 8, DB: 0) | 200 OK [http://localhost/capacities/new?_=1253555177374]
+
+
+Processing CapacitiesController#create (for 127.0.0.1 at 2009-09-21 12:46:23) [POST]
+  Parameters: {"authenticity_token"=>"PyvmvNkUtRUUEfUlZ59n0hwu1TrbcW2KGFV+W9IT6DI=", "driver_name"=>"", "capacity"=>{"location"=>"test", "available_on(1i)"=>"2009", "notes"=>"", "priority"=>"0", "available_on(2i)"=>"9", "available_on(3i)"=>"22"}}
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" WHERE ("drivers"."name" = 'TBD') LIMIT 1[0m
+  [4;36;1mCapacity Create (0.3ms)[0m   [0;1mINSERT INTO "capacities" ("location", "available_on", "created_at", "fulfilled_on", "notes", "updated_at", "priority") VALUES('test', '2009-09-22', '2009-09-21 17:46:23', NULL, '', '2009-09-21 17:46:23', 0)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO "capacities_drivers" ("driver_id", "capacity_id") VALUES (1, 11)[0m
+  [4;36;1mCapacity Load (0.6ms)[0m   [0;1mSELECT * FROM "capacities" WHERE (available_on = '2009-09-22') [0m
+Rendering capacities/create
+Rendered capacities/_mini_capacity (0.1ms)
+Completed in 26ms (View: 4, DB: 1) | 200 OK [http://localhost/capacities]
+
+
+Processing CapacitiesController#index (for 127.0.0.1 at 2009-09-21 13:55:53) [GET]
+  Parameters: {"focus_date"=>"2009-09-21"}
+  [4;35;1mCapacity Load (0.7ms)[0m   [0mSELECT * FROM "capacities" WHERE (available_on = '2009-09-21') [0m
+  [4;36;1mCapacity Load (0.9ms)[0m   [0;1mSELECT * FROM "capacities" [0m
+Rendering template within layouts/application
+Rendering capacities/index
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 3 ) LIMIT 1[0m
+Rendered capacities/_capacity (7.9ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 2 ) LIMIT 1[0m
+Rendered capacities/_capacity (2.5ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 1 ) LIMIT 1[0m
+Rendered capacities/_capacity (2.6ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 5 ) LIMIT 1[0m
+Rendered capacities/_capacity (2.2ms)
+Rendered capacities/_focus (16.6ms)
+Rendered capacities/_new_form (17.7ms)
+  [4;35;1mDriver Load (0.3ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 10 ) [0m
+Rendered capacities/_mini_capacity (0.9ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 4 ) [0m
+Rendered capacities/_mini_capacity (0.6ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 9 ) [0m
+Rendered capacities/_mini_capacity (0.6ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 8 ) [0m
+Rendered capacities/_mini_capacity (0.6ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 7 ) [0m
+Rendered capacities/_mini_capacity (0.6ms)
+  [4;36;1mDriver Load (0.2ms)[0m   [0;1mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 6 ) [0m
+Rendered capacities/_mini_capacity (0.7ms)
+  [4;35;1mDriver Load (0.2ms)[0m   [0mSELECT * FROM "drivers" INNER JOIN "capacities_drivers" ON "drivers".id = "capacities_drivers".driver_id WHERE ("capacities_drivers".capacity_id = 11 ) [0m
+Rendered capacities/_mini_capacity (0.7ms)
+Rendered capacities/_future_capacity (6.7ms)
+Rendered shared/_navigation (0.5ms)
+Completed in 77ms (View: 47, DB: 4) | 200 OK [http://localhost/capacities?focus_date=2009-09-21]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-21 13:55:53) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/capacities.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)

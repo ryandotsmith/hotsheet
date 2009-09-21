@@ -1,7 +1,7 @@
 class Capacity < ActiveRecord::Base
   require 'set'
   include ToHash
-  before_save :ensure_driver
+  before_save :ensure_driver, :ensure_availability
   has_and_belongs_to_many :drivers
   accepts_nested_attributes_for :drivers
 
@@ -33,6 +33,10 @@ class Capacity < ActiveRecord::Base
     end
   end
   
+  def ensure_availability
+    self.available_on ||= Date.today
+  end
+
   def covered?
     !fulfilled_on.nil?
   end
@@ -40,4 +44,5 @@ class Capacity < ActiveRecord::Base
   def driver
     self.drivers.first
   end
+
 end
