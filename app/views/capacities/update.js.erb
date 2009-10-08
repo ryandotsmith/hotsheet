@@ -1,30 +1,45 @@
 // Update the form with the new data
-$("#capacity_form").html("<%= escape_javascript(render(:partial => 'capacities/edit_form', :locals => {:capacity => @capacity})) %>");
-// Find the tr in the focus table and then replace it with the new data
-$("#<%=@capacity.id%>").html("<%= escape_javascript(render(:partial => 'capacities/capacity', :locals => {:capacity => @capacity})) %>");
+$("#capacity_form").html("");
 // hide the form. perhaps this makes line #2 redundant
 $("#capacity_form").slideToggle();
-// If you update the priority in the edit form, we need to update the priority css class. 
-// this will setup the right color.
-$("tr#<%= @capacity.id%>").removeClass();
-$("tr#<%= @capacity.id%>").addClass('<%= priority(@capacity)%>');
+
+// Find the tr in the focus table and remove it. We remove it for when we render the _capacity partial 
+// a new tr object will be created and since we do not want nested trs, we must remove the original and
+// replace it with an updated tr
+$("#<%=@capacity.id%>").remove();
+$("#capacity_today_table > tbody").append("<%= escape_javascript(render(:partial => 'capacities/capacity', :locals => {:capacity => @capacity})) %>");
+
 // oh noez! i can haz special effectzzzzz!!!
 $("#<%=@capacity.id%>").effect("highlight");
-// activiate the new edit link
-  $(".edit_link").click( function(){
-    var url = $(this).attr('href');
-    $.ajax({
-      type: 'get',
-      url: url,
-      dataType: "script"
-    });
-    return false;
-  })
-// activate the checkbox for covering capacity
-$(".covered_check_box").click( function(){
+
+// activiate the new edit link. 
+// we need to make sure that we only bind to the newly created table row. 
+// otherwise we will add multiple bindings to links.
+$("#edit_capacity_<%=@capacity.id%> > .covered_check_box").click( function(){
   var url  = '/capacities/' + $(this).attr('id')
   var data = { fulfilled:$(this).is(':checked') , _method: 'put'}
     $.post( url, data, null,"script");
 });
+
+$("#<%=@capacity.id%> > .edit > .edit_link").click( function(){
+  var url = $(this).attr('href');
+  $.ajax({
+    type: 'get',
+    url: url,
+    dataType: "script"
+  });
+  return false;
+})
+
+$("#<%=@capacity.id%> > .delete > .delete_link").click( function(){
+  $.ajax({
+      type: "delete",
+      url: $(this).attr("href"),
+      data: "&authenticity_token="+encodeURIComponent(window.rails_authenticity_token),
+      dataType: "script"
+  });
+  return false;
+});
+
 // 
 $(".driver_autocomplete").autocomplete('/drivers.json');

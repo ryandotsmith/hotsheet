@@ -11,7 +11,7 @@ module CapacitiesHelper
       'normal'
     when 1
       'high'
-    when 2
+    else 2
       'top'
     end
   end

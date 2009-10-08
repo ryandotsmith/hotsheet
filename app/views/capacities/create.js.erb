@@ -1,8 +1,35 @@
 <% if @focus_capacities %>
   // new capacity was added for the date that the user is focusing on 
   // so we need to update the focus table with the new capacity
-  $("#capacity_today_table").html("<%= escape_javascript(render(:partial => 'capacities/focus', 
-                                      :locals => {:focus_capacities => @focus_capacities})) %>");
+  $("#capacity_today_table > tbody").append("<%= escape_javascript(render(:partial => 'capacities/capacity', 
+                                      :locals => {:capacity => @capacity})) %>");
+  // Now we shall hookupl all sorts of listeners on the newly created capacity row
+  $("#edit_capacity_<%=@capacity.id%> > .covered_check_box").click( function(){
+    var url  = '/capacities/' + $(this).attr('id')
+    var data = { fulfilled:$(this).is(':checked') , _method: 'put'}
+      $.post( url, data, null,"script");
+  });
+
+  $("#<%=@capacity.id%> > .edit > .edit_link").click( function(){
+    var url = $(this).attr('href');
+    $.ajax({
+      type: 'get',
+      url: url,
+      dataType: "script"
+    });
+    return false;
+  })
+
+  $("#<%=@capacity.id%> > .delete > .delete_link").click( function(){
+    $.ajax({
+        type: "delete",
+        url: $(this).attr("href"),
+        data: "&authenticity_token="+encodeURIComponent(window.rails_authenticity_token),
+        dataType: "script"
+    });
+    return false;
+  });
+
 <% elsif @capacities %>
   // the new capacity was added for a future date. 
   // so we need to append the capacity if there is already capacity for that future date
@@ -20,8 +47,9 @@
     // highlight the new entry
   }
 <% end %>
-
+// put the form away . . . for now
 $("#capacity_form").slideToggle();
+// send the flash message to the screen
 $("#message").slideToggle( function(){
   $(this).html("<p class='notice'><%= flash[:notice] %></p>")
   setTimeout( function(){
@@ -29,5 +57,8 @@ $("#message").slideToggle( function(){
   }, 
   7000);
 });
-
+// remove the flash from the session
 <% flash[:notice] = "" %>
+
+
+

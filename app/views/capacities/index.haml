@@ -1,9 +1,11 @@
 #center
   #focus_capacities
+    = javascript_tag "var FOCUS_DATE= '#{@focus_date.strftime("%Y-%m-%d")}';" 
+    %h1= @focus_date.strftime("%A %m/%d")
     = render :partial => 'capacities/focus', :locals => { :focus_capacities => @focus_capacities }
   = link_to image_tag('buttons/add_more_capacity.png'), new_capacity_url, :class => "new_link"
   #capacity_form{ :style => "display:none" }
-    = render :partial => 'capacities/new_form', :locals => {:capacity => @new_capacity }
+    // JS will load up form here when the user clicks the new button
 
 #right
   #move_back
@@ -11,7 +13,11 @@
   #capacities
     %ul{:id => 'capacities_list',:class => 'jcarousel jcarousel-skin-tango'}
       - @capacities.each do |date, capacities| 
-        %li
-          = render :partial => 'capacities/future_capacity', :locals => { :capacities  => capacities , :date => date }
+        - if date == Date.today
+          %li.today
+            = render :partial => 'capacities/future_capacity', :locals => { :capacities  => capacities , :date => date }
+        - else 
+          %li
+            = render :partial => 'capacities/future_capacity', :locals => { :capacities  => capacities , :date => date }
   #move_forward
     = link_to image_tag('buttons/down.png'),"#"

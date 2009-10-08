@@ -7,6 +7,7 @@ class CapacitiesController < ApplicationController
       format.js { render :action => 'new.js.erb', :layout => false }
     end
   end
+
   def destroy
     @capacity = Capacity.find( params[:id] )
     # remeber the id of the capacity so that we can remove it from the dom
@@ -17,6 +18,7 @@ class CapacitiesController < ApplicationController
       format.js { render :action => 'destroy.js.erb', :layout => false }
     end
   end
+
   def edit
     @capacity = Capacity.find( params[:id] )
     respond_to do |format|
@@ -59,8 +61,9 @@ class CapacitiesController < ApplicationController
     @capacity = Capacity.new( params[:capacity] )
     set_or_initialize( params[:driver_name] )
     if @capacity.save
-      if params[:focus_date] == @capacity.available_on
+      if params[:focus_date] == @capacity.available_on.strftime("%Y-%m-%d")
         @focus_capacities = Capacity.all_by_availability( @capacity.available_on )
+        @focus_date       = @focus_capacities.keys.pop
       else
         @capacities = Capacity.all_by_availability( @capacity.available_on )
         @capacities_date = @capacity.available_on

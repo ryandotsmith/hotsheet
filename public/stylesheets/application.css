@@ -130,6 +130,8 @@ form label {
   width: 90%; }
   #capacities table td {
     font-size: 10pt; }
+#capacities .today {
+  border: 3px solid #ff6666; }
 
 #move_forward {
   text-align: center;
@@ -147,4 +149,4 @@ form label {
   color: white;
   background-color: #333333;
   padding: 4px 0 0 0;
-  margin: 0 0 20px 0; }
+  margin: 0 0 0 0; }
