@@ -1,5 +1,7 @@
 .capacity{ :id => date.strftime('%m_%d_%y') }
   %h3= link_to date.strftime('%A %m/%d'), capacities_url(:focus_date => date), :title => date.strftime('%m_%d_%y')
   %table
-    - capacities.each do |capacity|
+    - capacities[0..3].each do |capacity|
       = render :partial => 'capacities/mini_capacity', :locals => {:capacity => capacity }
+  - if capacities.length > 4
+    = link_to "more",capacities_url(:focus_date => date), :title => date.strftime('%m_%d_%y')
