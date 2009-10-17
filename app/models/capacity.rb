@@ -1,6 +1,7 @@
 class Capacity < ActiveRecord::Base
   require 'set'
   include ToHash
+
   before_save :ensure_driver, :ensure_availability
   has_and_belongs_to_many :drivers
   accepts_nested_attributes_for :drivers
