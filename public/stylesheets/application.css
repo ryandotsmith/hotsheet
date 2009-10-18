@@ -113,10 +113,18 @@ form label {
   float: right;
   background-color: white;
   width: 25%;
-  height: 550px;
+  height: 525px;
   background: #FFFFFF url(/images/left-bg.gif) repeat-y scroll left center;
   margin: 0 0 0 40px;
   padding: 0 0 0 7px; }
+  #right #link {
+    background-color: #333333;
+    border-bottom: solid 2px #666666;
+    padding: 5px; }
+    #right #link a {
+      text-decoration: none;
+      margin: 0 8px 0 10px;
+      color: white; }
 
 #capacities .capacity {
   margin: 15px 5px 0 0; }
@@ -125,6 +133,11 @@ form label {
     font-weight: normal;
     font-family: Arial;
     font-size: 14pt; }
+    #capacities .capacity h3 a {
+      font-size: 16px; }
+  #capacities .capacity a {
+    font-size: 10px;
+    margin: 5px 0 0 4px; }
 #capacities table {
   margin: 0 0 0 10px;
   width: 90%; }

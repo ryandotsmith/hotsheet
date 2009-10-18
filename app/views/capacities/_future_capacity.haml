@@ -4,4 +4,4 @@
     - capacities[0..3].each do |capacity|
       = render :partial => 'capacities/mini_capacity', :locals => {:capacity => capacity }
   - if capacities.length > 4
-    = link_to "more",capacities_url(:focus_date => date), :title => date.strftime('%m_%d_%y')
+    = link_to "#{capacities.length} more",capacities_url(:focus_date => date), :title => date.strftime('%m_%d_%y')

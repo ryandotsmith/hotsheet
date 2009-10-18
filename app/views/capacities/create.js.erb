@@ -38,8 +38,8 @@
   // the case where we are appending capacity to an existing box
   var date = "<%= @capacities_date.strftime("%m_%d_%y") %>";
   if( $("#"+date).size() > 0 ){
-    $("#" + date + "> table").prepend("<%= escape_javascript(render(:partial => 'capacities/mini_capacity', 
-                                                                    :locals  => {:capacity => @capacity })) %>");
+    $("#"+date).html("<%= escape_javascript(render(:partial => 'capacities/future_capacity',    
+                                                   :locals  => {:capacities=> @capacities[@capacities_date],:date => @capacities_date })) %>");
     $("#" + date ).parent().effect("highlight");
   }else { // if we could not find a div with the capacities date, then we need to create a new future box
     // load the future capacitie's partials. 

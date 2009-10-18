@@ -112,19 +112,31 @@ form label
   float: right
   background-color = !white
   width: 25% 
-  height: 550px
+  height: 525px
   background: #FFFFFF url(/images/left-bg.gif) repeat-y scroll left center
   margin: 0 0 0 40px
   padding: 0 0 0 7px 
-
+  #link
+    :background-color = !dark_gray
+    :border-bottom = "solid" "2px" !med_gray
+    :padding 5px
+    a
+      :text-decoration none
+      :margin 0 8px 0 10px
+      :color = !white
 #capacities
   .capacity
+    margin: 15px 5px 0 0
     h3
       margin: 5px 0 0 5px
       font-weight: normal
       font-family: Arial
       font-size: 14pt
-    margin: 15px 5px 0 0
+      a
+        :font-size 16px
+    a
+      :font-size 10px
+      :margin 5px 0 0 4px
   table 
     margin: 0 0 0 10px
     width: 90%

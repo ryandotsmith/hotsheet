@@ -43,7 +43,7 @@ class CapacitiesController < ApplicationController
     # added the || Date.today for the case when there are no 
     # focus_capacities and a view gets rendered. Views will often
     # call strftime on the focus_date
-    @focus_date = @focus_capacities.keys.pop || Date.today
+    @focus_date = @focus_capacities.keys.first || Date.today
     # load all capacities excluding the one in focus
     # these capacitires will be loaded into the sidebar
     @capacities   = Capacity.all_by_availability
@@ -63,7 +63,7 @@ class CapacitiesController < ApplicationController
     if @capacity.save
       if params[:focus_date] == @capacity.available_on.strftime("%Y-%m-%d")
         @focus_capacities = Capacity.all_by_availability( @capacity.available_on )
-        @focus_date       = @focus_capacities.keys.pop
+        @focus_date       = @focus_capacities.keys.first
       else
         @capacities = Capacity.all_by_availability( @capacity.available_on )
         @capacities_date = @capacity.available_on
