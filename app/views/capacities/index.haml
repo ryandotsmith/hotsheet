@@ -5,7 +5,7 @@
     = render :partial => 'capacities/focus', :locals => { :focus_capacities => @focus_capacities }
   = link_to image_tag('buttons/add_more_capacity.png'), new_capacity_url, :class => "new_link"
   #capacity_form{ :style => "display:none" }
-    // JS will load up form here when the user clicks the new button
+    // JS will load up a new form here when the user clicks the new button
 
 #right
   #link
@@ -13,8 +13,7 @@
     = link_to "Today", capacities_url 
     = link_to "Tomorrow", capacities_url(:focus_date => (Date.today + 1.day).strftime("%Y-%m-%d") ) 
   #move_back
-    #actions
-      = link_to image_tag('buttons/up.png'), "#", :class => "prevPage"
+    = link_to image_tag('buttons/up.png'), "#", :class => "prevPage"
   #capacities{:class => "scrollable vertical"}
     .items
       - scroll_index = 0
@@ -25,5 +24,4 @@
                         :scroll_index => scroll_index, :today => today }  |
         - scroll_index += 1 
   #move_forward
-    #actions
-      = link_to image_tag('buttons/down.png'),"#", :class => "nextPage"
+    = link_to image_tag('buttons/down.png'),"#", :class => "nextPage"

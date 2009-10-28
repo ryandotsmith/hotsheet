@@ -1,4 +1,5 @@
 - today ? css_class = "capacity today" : css_class = "capacity"
+
 %div{ :id => date.strftime('%m_%d_%y'), :class => css_class, :rel => scroll_index }
   %h3= link_to date.strftime('%A %m/%d'), capacities_url(:focus_date => date), :title => date.strftime('%m_%d_%y')
   %table
