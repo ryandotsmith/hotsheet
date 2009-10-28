@@ -14,14 +14,18 @@ module ApplicationHelper
   end
   
   def get_css( controller )
-    [controller.controller_name, 'application', 'jquery.autocomplete.css', 'jquery.jcarousel.css', 'skin.css']
+    [  controller.controller_name, 
+       'application', 
+       'jquery.autocomplete.css', 
+       'jquery.tools.css', 
+       'skin.css']
   end
   
   def get_js( controller )
        ['jquery.min.js',
         "jquery.ui.min.js",
         'jquery.autocomplete.js',
-        "jquery.jcarousel.pack.js",
+        "jquery.tools.min.js",
         "jquery.rest_in_place.js",
         'application.js',
         controller.controller_name ]

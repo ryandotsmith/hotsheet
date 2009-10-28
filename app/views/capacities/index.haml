@@ -13,15 +13,19 @@
     = link_to "Today", capacities_url 
     = link_to "Tomorrow", capacities_url(:focus_date => (Date.today + 1.day).strftime("%Y-%m-%d") ) 
   #move_back
-    = link_to image_tag('buttons/up.png'), "#"
-  #capacities
-    %ul{:id => 'capacities_list',:class => 'jcarousel jcarousel-skin-tango'}
+    #actions
+      = link_to image_tag('buttons/up.png'), "#", :class => "prevPage"
+  #capacities{:class => "scrollable vertical"}
+    .items
+      - i = -1
       - @capacities.each do |date, capacities| 
-        - if date == Date.today
-          %li.today
-            = render :partial => 'capacities/future_capacity', :locals => { :capacities  => capacities , :date => date }
-        - else 
-          %li
+        - i += 1
+        %div{:id => "#{i}"}
+          - if date == Date.today
+            .today
+              = render :partial => 'capacities/future_capacity', :locals => { :capacities  => capacities , :date => date }
+          - else 
             = render :partial => 'capacities/future_capacity', :locals => { :capacities  => capacities , :date => date }
   #move_forward
-    = link_to image_tag('buttons/down.png'),"#"
+    #actions
+      = link_to image_tag('buttons/down.png'),"#", :class => "nextPage"

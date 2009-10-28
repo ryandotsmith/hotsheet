@@ -1,0 +1,19 @@
+/* root element for scrollable */ 
+div.scrollable { 
+ 
+    /* required settings */ 
+    position:relative; 
+    overflow:hidden; 
+ 
+    /* vertical scrollers have typically larger height than width */ 
+    height: 450px; 
+    width: 350px; 
+} 
+ 
+/* root element for scrollable items */ 
+div.scrollable div.items { 
+    position:absolute; 
+    /* this time we have very large space for the height */ 
+    height:20000em; 
+}
+
