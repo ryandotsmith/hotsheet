@@ -16,7 +16,8 @@
     = link_to image_tag('buttons/up.png'), "#", :class => "prevPage"
   #capacities{:class => "scrollable vertical"}
     .items
-      - scroll_index = 0
+      - scroll_index = 0 #- using the scroll index gives us access 
+      -                  #- to the scrollable elements ids via the rel attr
       - @capacities.each do |date, capacities| 
         - date == Date.today ? today = true : today = false
         = render :partial => 'capacities/future_capacity',                |
