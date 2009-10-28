@@ -6,7 +6,7 @@ $(document).ready(function() {
       api: true
   });
   // scroll to today after load
-  var idx = $(".today").parent().attr("id")
+  var idx = $(".today").attr("rel")
   api.seekTo(parseInt(idx-1))
 });
 
