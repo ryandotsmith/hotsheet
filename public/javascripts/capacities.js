@@ -25,20 +25,48 @@ $(document).ajaxSend(function(event, request, settings) {
 
 
 $(document).ready(function() {
-  //
-  // look at the capacity rows and if there are coverd we want to remove the links to edit or delete them!
+  
+  /**************** 
+  * look at the capacity rows and 
+  *  if there are coverd we want to remove 
+  *  the links to edit or delete them!
+  */ 
   if($("#capacity_today_table > tbody > tr ").hasClass("covered")){
     $("#capacity_today_table > tbody > tr ").children('.covered > td.edit ').children('a').css("display","none")
     $("#capacity_today_table > tbody > tr ").children('.covered > td.delete').children('a').css("display","none")
   } else {
   }// end if else
 
-  //turn on default page listeners
+  /**************   
+  * cancel link 
+  */
+  $('#rollup').click( function(){
+    $("#capacity_form").slideToggle();
+    return false;
+  });
+
+  /*************
+  * turn on default page listeners
+  */ 
   $(".covered_check_box").click( function(){
     var url  = '/capacities/' + $(this).attr('id')
     var data = { fulfilled:$(this).is(':checked') , _method: 'put'}
       $.post( url, data, null,"script");
   });
+  /**************   
+  * new link 
+  */
+  $(".new_link").click( function(){
+    $.ajax({
+      type: "get",
+      url: $(this).attr("href"),
+      dataType: "script"
+    });
+    return false;
+  });
+  /**************   
+  * edit link 
+  */
   $(".edit_link").click( function(){
     var url = $(this).attr('href');
     $.ajax({
@@ -47,15 +75,10 @@ $(document).ready(function() {
       dataType: "script"
     });
     return false;
-  })
-  $(".new_link").click( function(){
-    $.ajax({
-      type: "get",
-      url: $(this).attr("href"),
-      dataType: "script"
-    });
-    return false;
-  })
+  });
+ /**************   
+   * delete link 
+  */
   $(".delete_link").click( function(){
     $.ajax({
         type: "delete",
@@ -65,9 +88,6 @@ $(document).ready(function() {
     });
     return false;
   });
-  $('#rollup').click( function(){
-    $("#capacity_form").slideToggle();
-    return false;
-  });
+
 
 });
