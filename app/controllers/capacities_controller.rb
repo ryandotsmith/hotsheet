@@ -1,5 +1,6 @@
 class CapacitiesController < ApplicationController
   resource_controller
+  prawnto :prawn=>{:page_layout=>:portrait}, :inline=>false
 
   def new 
     @capacity = Capacity.new
@@ -30,6 +31,7 @@ class CapacitiesController < ApplicationController
   def show
     @capacity = Capacity.find( params[:id] )
     respond_to do |format|
+      format.pdf
       format.js { render :json => build_hash(@capacity)  } 
     end
   end

@@ -3,4 +3,7 @@ $("tr#<%= @capacity.id%>").addClass('<%= priority(@capacity)%>');
 // disable the edit and delete links
 $("tr#<%= @capacity.id%> > td > .edit_link").toggle();
 $("tr#<%= @capacity.id%> > td > .delete_link").toggle();
+var date = '<%= @capacity.available_on.strftime("%m_%d_%y") %>';
+$("#mini_"+'<%= @capacity.id%>').replaceWith("<%= escape_javascript(render(:partial => 'capacities/mini_capacity', 
+                                    :locals => {:capacity => @capacity})) %>")
 

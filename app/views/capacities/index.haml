@@ -1,4 +1,6 @@
 #center
+  #links
+    = link_to "Print", capacities_url(:format => :pdf)
   #focus_capacities
     = javascript_tag "var FOCUS_DATE= '#{@focus_date.strftime("%Y-%m-%d")}';" 
     %h1= @focus_date.strftime("%A %m/%d")

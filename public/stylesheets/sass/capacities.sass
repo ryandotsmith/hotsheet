@@ -1,4 +1,59 @@
 @import color.sass
+#focus_capacities
+  h1
+    margin-top: 5px
+  #capacity_today_table
+    margin: 0 auto
+    width: 90% 
+    border-collapse: collapse
+  thead
+    tr
+      color = !white
+      background-color = !med_gray
+    th
+      text-align: left
+      font-size: 9pt 
+  tbody
+    tr
+      border = "1px" "solid" !white
+    tr.covered
+      background-color = !light_gray
+      color = !light_gray - 50
+      td
+        text-decoration: line-through
+    tr.normal
+      background-color = !blue
+    tr.high
+      background-color = !orange
+    tr.top
+      background-color = !red
+    td
+      font-size: 14pt
+    td.edit
+      width: 30px
+    td.delete
+      width: 30px
+.new_link
+  margin: 20px 0 0 30px
+  img
+    margin: 10px 0 10px 0
+#capacity_form
+  width: 500px
+  margin: 40px auto 0 auto
+  padding: 0 0 15px 0
+  overflow: hidden
+  .form_box
+    margin: 0 10px 0 10px
+    float: left
+  .form_box_right
+    margin: 0 7px 0 0
+    float: right
+  .buttons
+    clear: both
+    float: right
+    margin: 10px
+  form
+    background-color= !light_gray
 
 #capacities
   .capacity
@@ -22,6 +77,10 @@
     width: 90%
     td
       font-size: 10pt
+    tr.covered
+      td
+        color = !med_gray
+        text-decoration: line-through
   .today
     border = "3px" "solid" !red
 #move_forward

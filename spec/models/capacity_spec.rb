@@ -84,7 +84,14 @@ describe "covering a capacity" do
   end
 end
 
-
+describe "building a multidimensional array of cappacites for prawn tables" do
+  it "should turn an array of capacity objects into an array of specially selected attributes" do
+    #capacity_1 = Factory(:capacity,:notes => "note_1",:location => "KC" )
+    #capacity_2 = Factory(:capacity,:notes => "note_2" )
+    #capacities = Capacity.all_by_availability_for_prawn
+    #capacities.first.should eql(["covered","KC","Ron","note_1"])
+  end
+end
 
 
 

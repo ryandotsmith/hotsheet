@@ -1,3 +1,58 @@
+#focus_capacities h1 {
+  margin-top: 5px; }
+#focus_capacities #capacity_today_table {
+  margin: 0 auto;
+  width: 90%;
+  border-collapse: collapse; }
+#focus_capacities thead tr {
+  color: white;
+  background-color: #666666; }
+#focus_capacities thead th {
+  text-align: left;
+  font-size: 9pt; }
+#focus_capacities tbody tr {
+  border: 1px solid white; }
+#focus_capacities tbody tr.covered {
+  background-color: #e8e8e8;
+  color: #b6b6b6; }
+  #focus_capacities tbody tr.covered td {
+    text-decoration: line-through; }
+#focus_capacities tbody tr.normal {
+  background-color: #99ccff; }
+#focus_capacities tbody tr.high {
+  background-color: #ffcc99; }
+#focus_capacities tbody tr.top {
+  background-color: #ff6666; }
+#focus_capacities tbody td {
+  font-size: 14pt; }
+#focus_capacities tbody td.edit {
+  width: 30px; }
+#focus_capacities tbody td.delete {
+  width: 30px; }
+
+.new_link {
+  margin: 20px 0 0 30px; }
+  .new_link img {
+    margin: 10px 0 10px 0; }
+
+#capacity_form {
+  width: 500px;
+  margin: 40px auto 0 auto;
+  padding: 0 0 15px 0;
+  overflow: hidden; }
+  #capacity_form .form_box {
+    margin: 0 10px 0 10px;
+    float: left; }
+  #capacity_form .form_box_right {
+    margin: 0 7px 0 0;
+    float: right; }
+  #capacity_form .buttons {
+    clear: both;
+    float: right;
+    margin: 10px; }
+  #capacity_form form {
+    background-color: #e8e8e8; }
+
 #capacities .capacity {
   width: 250px;
   height: 125px;
@@ -19,6 +74,9 @@
   width: 90%; }
   #capacities table td {
     font-size: 10pt; }
+  #capacities table tr.covered td {
+    color: #666666;
+    text-decoration: line-through; }
 #capacities .today {
   border: 3px solid #ff6666; }
 

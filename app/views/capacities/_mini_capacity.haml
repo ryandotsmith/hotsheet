@@ -1,4 +1,5 @@
-%tr
+- capacity.covered? ? css_class = "covered" : css_class = ""
+%tr{:id => "mini_#{capacity.id}",:class => css_class}
   %td -
   %td.location= shorten(capacity.location, 6) 
   %td.driver= shorten(capacity.drivers.first.name, 15) 

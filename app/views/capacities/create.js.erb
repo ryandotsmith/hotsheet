@@ -1,5 +1,5 @@
 $(document).ready(function(){
-
+var date = '<%= @capacity.available_on.strftime("%m_%d_%y") %>';
 <% if @focus_capacities %>
   // new capacity was added for the date that the user is focusing on 
   // so we need to update the focus table with the new capacity
@@ -47,7 +47,6 @@ $(document).ready(function(){
   });
   $("div.scrollable").mousewheel();
   // scroll to today after load
-  var date = '<%= @capacity.available_on.strftime("%m_%d_%y") %>';
   var markedCapacity = $("#"+date).attr("rel");
   api.seekTo(parseInt(markedCapacity-1))
   $("#"+date).effect("pulsate",{times:3},500)
