@@ -48,7 +48,7 @@ class CapacitiesController < ApplicationController
     # these capacitires will be loaded into the sidebar
     @capacities   = Capacity.all_by_availability
     # pick the Focus capacities out of the hash
-    @capacities.delete( @focus_date )
+    #@capacities.delete( @focus_date )
     @capacities = @capacities.sort 
     # build a new capacity for the form object
     @new_capacity = Capacity.new 
@@ -67,7 +67,7 @@ class CapacitiesController < ApplicationController
       else
         @capacities   = Capacity.all_by_availability
         # pick the Focus capacities out of the hash
-        @capacities.delete( @focus_date )
+        #@capacities.delete( @focus_date )
         @capacities = @capacities.sort 
         @capacities_date = @capacity.available_on
       end

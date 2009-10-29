@@ -33,15 +33,25 @@ $(document).ready(function(){
   });
 
 <% elsif @capacities %>
-     $("#capacities").replaceWith("<%= escape_javascript(render(:partial => 'capacities/future_capacities',    
-                                                            :locals => {  :capacities=> @capacities })) %>");
+   $("#capacities").replaceWith("<%= escape_javascript(render(:partial => 'capacities/future_capacities',    
+                                                          :locals => {  :capacities=> @capacities })) %>");
+  /* 
+  * Setup the scoller after we have replaced it's contents
+  */
+  var api = $("div.scrollable").scrollable({
+      vertical: true,
+      size: 1,
+      keyboard:false, 
+      api: true
+  });
+  $("div.scrollable").mousewheel();
+  // scroll to today after load
+  var idx = $(".today").attr("rel");
+  api.seekTo(parseInt(idx-1));
+  $("#"+'<%= @capacities_date.strftime("%m_%d_%y") %>').effect("highlight",{},5000)
+
 <% end %>
-$("#capacities").scrollable({
-    vertical: true,
-    size: 1,
-    keyboard:false, 
-    api: true
-});
+
 // put the form away . . . for now
 $("#capacity_form").slideToggle();
 // send the flash message to the scree
@@ -54,5 +64,4 @@ $("#message").slideToggle( function(){
 });
 // remove the flash from the session
 <% flash[:notice] = "" %>
-
-});
+}); // end the document ready business
