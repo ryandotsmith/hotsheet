@@ -1,0 +1,10 @@
+#capacities{:class => "scrollable vertical"}
+  .items
+    - scroll_index = 0 #- using the scroll index gives us access 
+    -                  #- to the scrollable elements ids via the rel attr
+    - capacities.each do |date, capacities| 
+      - date == Date.today ? today = true : today = false
+      = render :partial => 'capacities/future_capacity',                |
+        :locals => {  :capacities  => capacities , :date => date,       |
+                      :scroll_index => scroll_index, :today => today }  |
+      - scroll_index += 1 

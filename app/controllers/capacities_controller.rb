@@ -60,12 +60,15 @@ class CapacitiesController < ApplicationController
     # date is the same date of the capacity's availability. 
     @capacity = Capacity.new( params[:capacity] )
     set_or_initialize( params[:driver_name] )
-    if @capacity.save
+    if @capacity.save!
       if params[:focus_date] == @capacity.available_on.strftime("%Y-%m-%d")
         @focus_capacities = Capacity.all_by_availability( @capacity.available_on )
         @focus_date       = @focus_capacities.keys.first
       else
-        @capacities = Capacity.all_by_availability( @capacity.available_on )
+        @capacities   = Capacity.all_by_availability
+        # pick the Focus capacities out of the hash
+        @capacities.delete( @focus_date )
+        @capacities = @capacities.sort 
         @capacities_date = @capacity.available_on
       end
       flash[:notice] = "More capacity was added in <a>#{ @capacity.location }</a> for <a href='/capacities?focus_date=#{@capacity.available_on.strftime('%Y-%m-%d')}'> #{@capacity.available_on.strftime("%Y-%m-%d")} </a>"

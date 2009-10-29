@@ -1,3 +1,5 @@
+$(document).ready(function(){
+
 <% if @focus_capacities %>
   // new capacity was added for the date that the user is focusing on 
   // so we need to update the focus table with the new capacity
@@ -31,26 +33,18 @@
   });
 
 <% elsif @capacities %>
-  // the new capacity was added for a future date. 
-  // so we need to append the capacity if there is already capacity for that future date
-  // or we need to create a new box and add the capacity to the new box if there is not already capacity for that date.
-
-  // the case where we are appending capacity to an existing box
-  var date = "<%= @capacities_date.strftime("%m_%d_%y") %>";
-  if( $("#"+date).size() > 0 ){
-    $("#"+date).html("<%= escape_javascript(render(:partial => 'capacities/future_capacity',    
-                                                   :locals  => {:capacities=> @capacities[@capacities_date],:date => @capacities_date })) %>");
-    $("#" + date ).parent().effect("highlight");
-  }else { // if we could not find a div with the capacities date, then we need to create a new future box
-    // load the future capacitie's partials. 
-    // set the start index to the new entry
-    // highlight the new entry
-
-  }
+     $("#capacities").replaceWith("<%= escape_javascript(render(:partial => 'capacities/future_capacities',    
+                                                            :locals => {  :capacities=> @capacities })) %>");
 <% end %>
+$("#capacities").scrollable({
+    vertical: true,
+    size: 1,
+    keyboard:false, 
+    api: true
+});
 // put the form away . . . for now
 $("#capacity_form").slideToggle();
-// send the flash message to the screen
+// send the flash message to the scree
 $("#message").slideToggle( function(){
   $(this).html("<p class='notice'><%= flash[:notice] %></p>")
   setTimeout( function(){
@@ -61,5 +55,4 @@ $("#message").slideToggle( function(){
 // remove the flash from the session
 <% flash[:notice] = "" %>
 
-
-
+});
