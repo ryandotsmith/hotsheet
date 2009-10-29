@@ -5,6 +5,7 @@ $(document).ready(function(){
   // so we need to update the focus table with the new capacity
   $("#capacity_today_table > tbody").append("<%= escape_javascript(render(:partial => 'capacities/capacity', 
                                       :locals => {:capacity => @capacity})) %>");
+  $("#<%=@capacity.id%>").effect('highlight',{},3000);
   // Now we shall hookupl all sorts of listeners on the newly created capacity row
   $("#edit_capacity_<%=@capacity.id%> > .covered_check_box").click( function(){
     var url  = '/capacities/' + $(this).attr('id')
