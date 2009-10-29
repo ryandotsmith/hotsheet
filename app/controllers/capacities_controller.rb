@@ -31,7 +31,6 @@ class CapacitiesController < ApplicationController
   def show
     @capacity = Capacity.find( params[:id] )
     respond_to do |format|
-      format.pdf
       format.js { render :json => build_hash(@capacity)  } 
     end
   end
@@ -54,6 +53,10 @@ class CapacitiesController < ApplicationController
     @capacities = @capacities.sort 
     # build a new capacity for the form object
     @new_capacity = Capacity.new 
+    respond_to do |format|
+      format.pdf
+      format.html
+    end
   end
 
   def create
