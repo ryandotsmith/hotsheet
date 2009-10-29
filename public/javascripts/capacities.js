@@ -90,12 +90,14 @@ $(document).ready(function() {
    * delete link 
   */
   $(".delete_link").click( function(){
-    $.ajax({
-        type: "delete",
-        url: $(this).attr("href"),
-        data: "&authenticity_token="+encodeURIComponent(window.rails_authenticity_token),
-        dataType: "script"
-    });
+    if( confirm("Are you sure?")){
+      $.ajax({
+          type: "delete",
+          url: $(this).attr("href"),
+          data: "&authenticity_token="+encodeURIComponent(window.rails_authenticity_token),
+          dataType: "script"
+      });
+    }
     return false;
   });
 
