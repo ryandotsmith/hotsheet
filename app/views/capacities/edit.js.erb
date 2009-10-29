@@ -5,6 +5,9 @@ $("#capacity_form").slideToggle();
 // make sure the form uses JS to post
 $("#edit_capacity_form").submitWithAjax();
 // setup the cancel link and reload a new form
+// hookup autocomplete on the driver input
+$(".driver_autocomplete").autocomplete('/drivers.json');
+// hookup the cancel link
 $('#rollup').click( function(){
   $("#capacity_form").slideToggle();
   return false;

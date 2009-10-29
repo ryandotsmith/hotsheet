@@ -4,8 +4,8 @@
     = form.text_field :location
 
     = label_tag :driver_name, "Driver"
-    = text_field_tag :driver_name, capacity.driver.name, :class => 'driver_autocomplete'
-    
+    = text_field_tag :driver_name, capacity.driver.name, :class => 'driver_autocomplete', :autocomplete => "off" 
+
     %p
     = form.submit "update", :name => 'update'
     or

@@ -102,7 +102,8 @@ private
       if driver
         @capacity.drivers = [driver]
       else
-        @capacity.drivers.build( :name => driver_name )
+        new_driver = Driver.create(:name => driver_name)
+        @capacity.drivers = [new_driver]
       end
     end
   end
