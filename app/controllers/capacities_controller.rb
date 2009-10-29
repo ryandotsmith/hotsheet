@@ -83,7 +83,7 @@ class CapacitiesController < ApplicationController
     @capacity = Capacity.find( params[:id] )
     @capacity.fulfilled_on = DateTime.now if params[:fulfilled] == "true"
     @capacity.fulfilled_on = nil if params[:fulfilled] == "false"
-    set_or_initialize( params[:driver]['name'] ) if params[:driver]
+    set_or_initialize( params[:driver_name] ) if params[:driver_name]
     respond_to do |format|
       if @capacity.update_attributes!( params[:capacity] )
        format.html
