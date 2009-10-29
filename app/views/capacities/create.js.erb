@@ -47,8 +47,10 @@ $(document).ready(function(){
   $("div.scrollable").mousewheel();
   // scroll to today after load
   var idx = $(".today").attr("rel");
-  api.seekTo(parseInt(idx-1));
-  $("#"+'<%= @capacities_date.strftime("%m_%d_%y") %>').effect("highlight",{},5000)
+  var date = '<%= @capacity.available_on.strftime("%m_%d_%y") %>';
+  var markedCapacity = $("#"+date).attr("rel");
+  api.seekTo(parseInt(markedCapacity-1))
+  $("#"+date).effect("pulsate",{times:3},500)
 
 <% end %>
 
