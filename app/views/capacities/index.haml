@@ -9,9 +9,7 @@
 
 #right
   #link
-    = link_to "Yesterday", capacities_url(:focus_date => (Date.today - 1.day).strftime("%Y-%m-%d") ) 
-    = link_to "Today", capacities_url 
-    = link_to "Tomorrow", capacities_url(:focus_date => (Date.today + 1.day).strftime("%Y-%m-%d") ) 
+    = link_to "Today", capacities_url , :id => "today"
   #move_back
     = link_to image_tag('buttons/up.png'), "#", :class => "prevPage"
   = render :partial => 'capacities/future_capacities', :locals => {:capacities => @capacities}

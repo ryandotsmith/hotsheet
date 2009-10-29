@@ -38,6 +38,16 @@ $(document).ready(function() {
   }// end if else
 
   /**************   
+  * today link 
+  */
+  $("#right > #link > #today").click( function(){
+    var api = $("div.scrollable").scrollable({api:true});
+    var idx = $(".today").attr("rel");
+    api.seekTo(parseInt(idx));
+    return false;
+  });
+
+  /**************   
   * cancel link 
   */
   $('#rollup').click( function(){
