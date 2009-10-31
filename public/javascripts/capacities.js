@@ -36,7 +36,18 @@ $(document).ready(function() {
     $("#capacity_today_table > tbody > tr ").children('.covered > td.delete').children('a').css("display","none")
   } else {
   }// end if else
-
+  /**************   
+  * Setup a poller on the focus capacity table 
+  */
+  $.poll(function(retry){
+    $.get('/capacities', function(response, status){
+      if (status == 'success')
+        // Do something
+      else
+        retry()
+    })
+  })
+ 
   /**************   
   * today link 
   */

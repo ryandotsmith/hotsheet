@@ -27,6 +27,7 @@ module ApplicationHelper
         'jquery.autocomplete.js',
         "jquery.tools.min.js",
         "jquery.rest_in_place.js",
+        "jquery.poll.js",
         'application.js',
         controller.controller_name ]
   end
