@@ -1,0 +1,39 @@
+$("#focus_table").html(
+      "<%= escape_javascript(render(:partial => 'capacities/focus',    
+                                    :locals => { :focus_capacities => @focus_capacities })) %>");
+  /*************
+  * turn on default page listeners
+  */ 
+  $(".covered_check_box").click( function(){
+    var url  = '/capacities/' + $(this).attr('id')
+    var data = { fulfilled:$(this).is(':checked') , _method: 'put'}
+      $.post( url, data, null,"script");
+  });
+  /**************   
+  * edit link 
+  */
+  $(".edit_link").click( function(){
+    var url = $(this).attr('href');
+    $.ajax({
+      type: 'get',
+      url: url,
+      dataType: "script"
+    });
+    return false;
+  });
+  /**************   
+  * delete link 
+  */
+  $(".delete_link").click( function(){
+    if( confirm("Are you sure?")){
+      $.ajax({
+          type: "delete",
+          url: $(this).attr("href"),
+          data: "&authenticity_token="+encodeURIComponent(window.rails_authenticity_token),
+          dataType: "script"
+      });
+    }
+    return false;
+  });
+
+

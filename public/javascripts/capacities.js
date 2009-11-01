@@ -39,13 +39,14 @@ $(document).ready(function() {
   /**************   
   * Setup a poller on the focus capacity table 
   */
-  $.poll(function(retry){
-    $.get('/capacities', function(response, status){
-      if (status == 'success')
-        // Do something
-      else
+  $.poll(1000,function(retry){
+    $.get('/capacities?focus_date'+FOCUS_DATE,{},function(response, status){
+      if (status == 'success'){
         retry()
-    })
+      }
+      else{
+      }
+    },"script")
   })
  
   /**************   

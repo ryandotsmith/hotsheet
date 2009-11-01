@@ -54,6 +54,8 @@ class CapacitiesController < ApplicationController
     # build a new capacity for the form object
     @new_capacity = Capacity.new 
     respond_to do |format|
+      #format.js { render :json => {:capacities=>@focus_capacities}}
+      format.js  {render :action => "index.js.erb", :layout => false   }
       format.pdf {render :action => 'index.pdf.prawn', :layout => false}
       format.html
     end

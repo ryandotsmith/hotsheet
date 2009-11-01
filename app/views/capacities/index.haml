@@ -4,7 +4,8 @@
   #focus_capacities
     = javascript_tag "var FOCUS_DATE= '#{@focus_date.strftime("%Y-%m-%d")}';" 
     %h1= @focus_date.strftime("%A %m/%d")
-    = render :partial => 'capacities/focus', :locals => { :focus_capacities => @focus_capacities }
+    #focus_table
+      = render :partial => 'capacities/focus', :locals => { :focus_capacities => @focus_capacities }
   = link_to image_tag('buttons/add_more_capacity.png'), new_capacity_url, :class => "new_link"
   #capacity_form{ :style => "display:none" }
     // JS will load up a new form here when the user clicks the new button

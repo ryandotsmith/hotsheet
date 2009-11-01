@@ -7,4 +7,5 @@ require File.join(File.dirname(__FILE__), 'boot')
 Rails::Initializer.run do |config|
   config.gem "prawn"
   config.time_zone = 'UTC'
+  config.action_controller.perform_caching = false
 end

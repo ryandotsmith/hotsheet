@@ -33,7 +33,7 @@
       setTimeout(function() {
         callback(retry)
       }, ms)
-      ms *= 1.5
+      //ms *= 1.5
     })()
   }
   
