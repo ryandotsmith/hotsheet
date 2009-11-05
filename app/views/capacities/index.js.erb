@@ -1,6 +1,17 @@
 $("#focus_table").html(
       "<%= escape_javascript(render(:partial => 'capacities/focus',    
                                     :locals => { :focus_capacities => @focus_capacities })) %>");
+  /**************** 
+  * look at the capacity rows and 
+  *  if there are coverd we want to remove 
+  *  the links to edit or delete them!
+  */ 
+  if($("#capacity_today_table > tbody > tr ").hasClass("covered")){
+    $("#capacity_today_table > tbody > tr ").children('.covered > td.edit ').children('a').css("display","none")
+    $("#capacity_today_table > tbody > tr ").children('.covered > td.delete').children('a').css("display","none")
+  } else {
+  }// end if else
+
   /*************
   * turn on default page listeners
   */ 

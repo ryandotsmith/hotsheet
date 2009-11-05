@@ -43,7 +43,7 @@ $(document).ready(function() {
   *
   */
   $.poll(3000,function(retry){
-    $.get('/capacities?focus_date'+FOCUS_DATE,{},function(response, status){
+    $.get('/capacities?focus_date='+FOCUS_DATE,{},function(response, status){
       if (status == 'success'){
         retry()
       }
