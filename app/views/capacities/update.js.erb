@@ -24,7 +24,7 @@ $("#edit_capacity_<%=@capacity.id%> > .covered_check_box").click( function(){
 $("#<%=@capacity.id%> > .edit > .edit_link").click( function(){
   var url = $(this).attr('href');
   $.ajax({
-    type: 'get',
+    type: 'GET',
     url: url,
     dataType: "script"
   });

@@ -15,7 +15,7 @@ $("#focus_table").html(
   $(".edit_link").click( function(){
     var url = $(this).attr('href');
     $.ajax({
-      type: 'get',
+      type: 'GET',
       url: url,
       dataType: "script"
     });

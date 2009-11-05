@@ -16,7 +16,7 @@ var date = '<%= @capacity.available_on.strftime("%m_%d_%y") %>';
   $("#<%=@capacity.id%> > .edit > .edit_link").click( function(){
     var url = $(this).attr('href');
     $.ajax({
-      type: 'get',
+      type: 'GET',
       url: url,
       dataType: "script"
     });

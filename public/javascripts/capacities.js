@@ -18,6 +18,8 @@ jQuery.fn.submitWithAjax = function() {
 
 $(document).ajaxSend(function(event, request, settings) {
   if (typeof(AUTH_TOKEN) == "undefined") return;
+  // remove this line and watch internet explorer cry. 
+  if (settings.type == 'GET') return; 
   // settings.data is a serialized string like "foo=bar&baz=boink" (or null)
   settings.data = settings.data || "";
   settings.data += (settings.data ? "&" : "") + "authenticity_token=" + encodeURIComponent(AUTH_TOKEN);
@@ -38,8 +40,9 @@ $(document).ready(function() {
   }// end if else
   /**************   
   * Setup a poller on the focus capacity table 
+  *
   */
-  $.poll(1000,function(retry){
+  $.poll(3000,function(retry){
     $.get('/capacities?focus_date'+FOCUS_DATE,{},function(response, status){
       if (status == 'success'){
         retry()
@@ -80,7 +83,7 @@ $(document).ready(function() {
   */
   $(".new_link").click( function(){
     $.ajax({
-      type: "get",
+      type: "GET",
       url: $(this).attr("href"),
       dataType: "script"
     });
@@ -92,7 +95,7 @@ $(document).ready(function() {
   $(".edit_link").click( function(){
     var url = $(this).attr('href');
     $.ajax({
-      type: 'get',
+      type: 'GET',
       url: url,
       dataType: "script"
     });
@@ -112,6 +115,4 @@ $(document).ready(function() {
     }
     return false;
   });
-
-
 });
